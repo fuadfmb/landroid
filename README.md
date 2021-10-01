@@ -1,4 +1,4 @@
 # landroid
-##This is where you get the source code of the 'Android Examples' App
+## This is where you get the source code of the 'Android Examples' App
 
-###Source code will be posted soon...
+### Source code will be posted soon...
