@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbg">
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:text="CheckBox"
+        android:textColor="#fff"
+        android:textSize="24sp"
+        app:buttonTint="@color/colorAccent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/checkbox_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="8dp"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
+        android:textColor="#FFD600"
+        android:textSize="20sp"
+        android:text="Custom checkboxes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView26">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/check_square"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Square Checkbox"
+                android:paddingStart="10dp"
+                android:textColor="#fff"
+                android:buttonTint="@color/white"
+                android:button="@drawable/check_square"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/tv_check_square"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:textColor="#FFD600"
+                android:textSize="18sp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="13dp"
+                android:text="not checked" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/check_round"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Round Checkbox"
+                android:paddingStart="10dp"
+                android:textColor="#fff"
+                android:buttonTint="@color/white"
+                android:button="@drawable/check_round"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/tv_check_round"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:textColor="#FFD600"
+                android:textSize="18sp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="13dp"
+                android:text="not checked" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/check_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Star Checkbox"
+                android:paddingStart="10dp"
+                android:textColor="#fff"
+                android:buttonTint="@color/white"
+                android:button="@drawable/check_star"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/tv_check_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:textColor="#FFD600"
+                android:textSize="18sp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="13dp"
+                android:text="not checked" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/check_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel Checkbox"
+                android:paddingStart="10dp"
+                android:textColor="#fff"
+                android:buttonTint="@color/white"
+                android:button="@drawable/check_cancel"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/tv_check_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:textColor="#FFD600"
+                android:textSize="18sp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="13dp"
+                android:text="not checked" />
+        </RelativeLayout>
+
+
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
