@@ -12,12 +12,12 @@
  <h3>Screenshots : </h3>
  <br>
 <p align="center">
-  <img src="https://github.com/fuadfmb/landroid/blob/main/screen1.png?raw=true" width="250" height="510" title="Screenshot">
-  <img src="https://github.com/fuadfmb/landroid/blob/main/screen2.png?raw=true" width="250" height="510" title="Screenshot">
-  <img src="https://github.com/fuadfmb/landroid/blob/main/screen3.png?raw=true" width="250" height="510" title="Screenshot">
-  <img src="https://github.com/fuadfmb/landroid/blob/main/screen4.png?raw=true" width="250" height="510" title="Screenshot">
-  <img src="https://github.com/fuadfmb/landroid/blob/main/screen5.png?raw=true" width="250" height="510" title="Screenshot">
-  <img src="https://github.com/fuadfmb/landroid/blob/main/screen6.png?raw=true" width="250" height="510" title="Screenshot">
+  <img src="https://github.com/fuadfmb/landroid/blob/main/assets/screenshots/screen1.png?raw=true" width="250" height="510" title="Screenshot">
+  <img src="https://github.com/fuadfmb/landroid/blob/main/assets/screenshots/screen2.png?raw=true" width="250" height="510" title="Screenshot">
+  <img src="https://github.com/fuadfmb/landroid/blob/main/assets/screenshots/screen3.png?raw=true" width="250" height="510" title="Screenshot">
+  <img src="https://github.com/fuadfmb/landroid/blob/main/assets/screenshots/screen4.png?raw=true" width="250" height="510" title="Screenshot">
+  <img src="https://github.com/fuadfmb/landroid/blob/main/assets/screenshots/screen5.png?raw=true" width="250" height="510" title="Screenshot">
+  <img src="https://github.com/fuadfmb/landroid/blob/main/assets/screenshots/screen6.png?raw=true" width="250" height="510" title="Screenshot">
 </p>
 
 
