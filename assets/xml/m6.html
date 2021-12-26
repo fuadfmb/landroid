@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>code</title>
+        <style>body { margin: 0px; }</style>
+    </head>
+    <body>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008080">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span style="color: #000080; font-weight: bold">&lt;androidx.constraintlayout.widget.ConstraintLayout</span>
+    <span style="color: #FF0000">xmlns:android=</span><span style="color: #0000FF">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+    <span style="color: #FF0000">xmlns:app=</span><span style="color: #0000FF">&quot;http://schemas.android.com/apk/res-auto&quot;</span>
+    <span style="color: #FF0000">xmlns:tools=</span><span style="color: #0000FF">&quot;http://schemas.android.com/tools&quot;</span>
+    <span style="color: #FF0000">android:orientation=</span><span style="color: #0000FF">&quot;vertical&quot;</span>
+    <span style="color: #FF0000">android:background=</span><span style="color: #0000FF">&quot;@drawable/backbg&quot;</span>
+    <span style="color: #FF0000">android:layout_width=</span><span style="color: #0000FF">&quot;match_parent&quot;</span>
+    <span style="color: #FF0000">android:layout_height=</span><span style="color: #0000FF">&quot;match_parent&quot;</span><span style="color: #000080; font-weight: bold">&gt;</span>
+
+    <span style="color: #000080; font-weight: bold">&lt;RelativeLayout</span>
+        <span style="color: #FF0000">android:layout_width=</span><span style="color: #0000FF">&quot;0dp&quot;</span>
+        <span style="color: #FF0000">android:layout_height=</span><span style="color: #0000FF">&quot;0dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginBottom=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginLeft=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginRight=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginTop=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintBottom_toTopOf=</span><span style="color: #0000FF">&quot;@+id/top&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintHorizontal_bias=</span><span style="color: #0000FF">&quot;0.0&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintLeft_toLeftOf=</span><span style="color: #0000FF">&quot;parent&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintRight_toRightOf=</span><span style="color: #0000FF">&quot;parent&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintTop_toTopOf=</span><span style="color: #0000FF">&quot;parent&quot;</span><span style="color: #000080; font-weight: bold">&gt;</span>
+
+        <span style="color: #000080; font-weight: bold">&lt;ImageView</span>
+            <span style="color: #FF0000">android:id=</span><span style="color: #0000FF">&quot;@+id/imageV&quot;</span>
+            <span style="color: #FF0000">android:layout_width=</span><span style="color: #0000FF">&quot;70dp&quot;</span>
+            <span style="color: #FF0000">android:layout_height=</span><span style="color: #0000FF">&quot;70dp&quot;</span>
+            <span style="color: #FF0000">android:layout_centerHorizontal=</span><span style="color: #0000FF">&quot;true&quot;</span>
+            <span style="color: #FF0000">android:layout_centerVertical=</span><span style="color: #0000FF">&quot;true&quot;</span>
+            <span style="color: #FF0000">app:layout_constraintLeft_toLeftOf=</span><span style="color: #0000FF">&quot;parent&quot;</span>
+            <span style="color: #FF0000">app:layout_constraintRight_toRightOf=</span><span style="color: #0000FF">&quot;parent&quot;</span>
+            <span style="color: #FF0000">app:layout_constraintTop_toTopOf=</span><span style="color: #0000FF">&quot;parent&quot;</span>
+            <span style="color: #FF0000">app:srcCompat=</span><span style="color: #0000FF">&quot;@drawable/fav_clicked&quot;</span> <span style="color: #000080; font-weight: bold">/&gt;</span>
+
+
+
+    <span style="color: #000080; font-weight: bold">&lt;/RelativeLayout&gt;</span>
+
+    <span style="color: #000080; font-weight: bold">&lt;androidx.constraintlayout.widget.Guideline</span>
+        <span style="color: #FF0000">android:layout_width=</span><span style="color: #0000FF">&quot;wrap_content&quot;</span>
+        <span style="color: #FF0000">android:layout_height=</span><span style="color: #0000FF">&quot;wrap_content&quot;</span>
+        <span style="color: #FF0000">android:id=</span><span style="color: #0000FF">&quot;@+id/guideline&quot;</span>
+        <span style="color: #FF0000">android:orientation=</span><span style="color: #0000FF">&quot;vertical&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintGuide_percent=</span><span style="color: #0000FF">&quot;0.5&quot;</span>
+        <span style="color: #FF0000">tools:layout_editor_absoluteY=</span><span style="color: #0000FF">&quot;0dp&quot;</span>
+        <span style="color: #FF0000">tools:layout_editor_absoluteX=</span><span style="color: #0000FF">&quot;192dp&quot;</span> <span style="color: #000080; font-weight: bold">/&gt;</span>
+
+    <span style="color: #000080; font-weight: bold">&lt;Button</span>
+        <span style="color: #FF0000">android:id=</span><span style="color: #0000FF">&quot;@+id/zoom&quot;</span>
+        <span style="color: #FF0000">android:layout_width=</span><span style="color: #0000FF">&quot;0dp&quot;</span>
+        <span style="color: #FF0000">style=</span><span style="color: #0000FF">&quot;@style/Widget.AppCompat.Button.Colored&quot;</span>
+        <span style="color: #FF0000">android:layout_height=</span><span style="color: #0000FF">&quot;wrap_content&quot;</span>
+        <span style="color: #FF0000">android:layout_marginBottom=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginEnd=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginLeft=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginRight=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginStart=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:text=</span><span style="color: #0000FF">&quot;Zoom&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintBottom_toBottomOf=</span><span style="color: #0000FF">&quot;parent&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintHorizontal_bias=</span><span style="color: #0000FF">&quot;0.0&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintLeft_toLeftOf=</span><span style="color: #0000FF">&quot;@+id/guideline&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintRight_toRightOf=</span><span style="color: #0000FF">&quot;parent&quot;</span> <span style="color: #000080; font-weight: bold">/&gt;</span>
+
+    <span style="color: #000080; font-weight: bold">&lt;Button</span>
+        <span style="color: #FF0000">android:id=</span><span style="color: #0000FF">&quot;@+id/fadeout&quot;</span>
+        <span style="color: #FF0000">android:layout_width=</span><span style="color: #0000FF">&quot;0dp&quot;</span>
+        <span style="color: #FF0000">style=</span><span style="color: #0000FF">&quot;@style/Widget.AppCompat.Button.Colored&quot;</span>
+        <span style="color: #FF0000">android:layout_height=</span><span style="color: #0000FF">&quot;wrap_content&quot;</span>
+        <span style="color: #FF0000">android:layout_marginBottom=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginEnd=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginLeft=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginRight=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginStart=</span><span style="color: #0000FF">&quot;16dp&quot;</span>
+        <span style="color: #FF0000">android:text=</span><span style="color: #0000FF">&quot;Fade Out&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintBottom_toBottomOf=</span><span style="color: #0000FF">&quot;parent&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintHorizontal_bias=</span><span style="color: #0000FF">&quot;0.0&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintLeft_toLeftOf=</span><span style="color: #0000FF">&quot;parent&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintRight_toLeftOf=</span><span style="color: #0000FF">&quot;@+id/guideline&quot;</span> <span style="color: #000080; font-weight: bold">/&gt;</span>
+
+    <span style="color: #000080; font-weight: bold">&lt;Button</span>
+        <span style="color: #FF0000">android:id=</span><span style="color: #0000FF">&quot;@+id/fadein&quot;</span>
+        <span style="color: #FF0000">android:layout_width=</span><span style="color: #0000FF">&quot;0dp&quot;</span>
+        <span style="color: #FF0000">style=</span><span style="color: #0000FF">&quot;@style/Widget.AppCompat.Button.Colored&quot;</span>
+        <span style="color: #FF0000">android:layout_height=</span><span style="color: #0000FF">&quot;wrap_content&quot;</span>
+        <span style="color: #FF0000">android:layout_marginBottom=</span><span style="color: #0000FF">&quot;0dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginEnd=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginLeft=</span><span style="color: #0000FF">&quot;16dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginRight=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginStart=</span><span style="color: #0000FF">&quot;16dp&quot;</span>
+        <span style="color: #FF0000">android:text=</span><span style="color: #0000FF">&quot;Fade In&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintBottom_toTopOf=</span><span style="color: #0000FF">&quot;@+id/fadeout&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintHorizontal_bias=</span><span style="color: #0000FF">&quot;0.0&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintLeft_toLeftOf=</span><span style="color: #0000FF">&quot;parent&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintRight_toLeftOf=</span><span style="color: #0000FF">&quot;@+id/guideline&quot;</span> <span style="color: #000080; font-weight: bold">/&gt;</span>
+
+    <span style="color: #000080; font-weight: bold">&lt;Button</span>
+        <span style="color: #FF0000">android:id=</span><span style="color: #0000FF">&quot;@+id/shake&quot;</span>
+        <span style="color: #FF0000">android:layout_width=</span><span style="color: #0000FF">&quot;0dp&quot;</span>
+        <span style="color: #FF0000">style=</span><span style="color: #0000FF">&quot;@style/Widget.AppCompat.Button.Colored&quot;</span>
+        <span style="color: #FF0000">android:layout_height=</span><span style="color: #0000FF">&quot;wrap_content&quot;</span>
+        <span style="color: #FF0000">android:layout_marginLeft=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginRight=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:text=</span><span style="color: #0000FF">&quot;Shake&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintLeft_toLeftOf=</span><span style="color: #0000FF">&quot;parent&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintRight_toLeftOf=</span><span style="color: #0000FF">&quot;@+id/guideline&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintHorizontal_bias=</span><span style="color: #0000FF">&quot;0.0&quot;</span>
+        <span style="color: #FF0000">android:layout_marginBottom=</span><span style="color: #0000FF">&quot;0dp&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintBottom_toTopOf=</span><span style="color: #0000FF">&quot;@+id/fadein&quot;</span>
+        <span style="color: #FF0000">android:layout_marginStart=</span><span style="color: #0000FF">&quot;16dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginEnd=</span><span style="color: #0000FF">&quot;8dp&quot;</span> <span style="color: #000080; font-weight: bold">/&gt;</span>
+
+    <span style="color: #000080; font-weight: bold">&lt;Button</span>
+        <span style="color: #FF0000">android:id=</span><span style="color: #0000FF">&quot;@+id/clockwise&quot;</span>
+        <span style="color: #FF0000">android:layout_width=</span><span style="color: #0000FF">&quot;0dp&quot;</span>
+        <span style="color: #FF0000">style=</span><span style="color: #0000FF">&quot;@style/Widget.AppCompat.Button.Colored&quot;</span>
+        <span style="color: #FF0000">android:layout_height=</span><span style="color: #0000FF">&quot;wrap_content&quot;</span>
+        <span style="color: #FF0000">android:layout_marginBottom=</span><span style="color: #0000FF">&quot;0dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginEnd=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginLeft=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginRight=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginStart=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:text=</span><span style="color: #0000FF">&quot;Rotate&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintBottom_toTopOf=</span><span style="color: #0000FF">&quot;@+id/zoom&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintHorizontal_bias=</span><span style="color: #0000FF">&quot;0.0&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintLeft_toLeftOf=</span><span style="color: #0000FF">&quot;@+id/guideline&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintRight_toRightOf=</span><span style="color: #0000FF">&quot;parent&quot;</span> <span style="color: #000080; font-weight: bold">/&gt;</span>
+
+    <span style="color: #000080; font-weight: bold">&lt;Button</span>
+        <span style="color: #FF0000">android:id=</span><span style="color: #0000FF">&quot;@+id/bounce&quot;</span>
+        <span style="color: #FF0000">android:layout_width=</span><span style="color: #0000FF">&quot;0dp&quot;</span>
+        <span style="color: #FF0000">style=</span><span style="color: #0000FF">&quot;@style/Widget.AppCompat.Button.Colored&quot;</span>
+        <span style="color: #FF0000">android:layout_height=</span><span style="color: #0000FF">&quot;wrap_content&quot;</span>
+        <span style="color: #FF0000">android:layout_marginBottom=</span><span style="color: #0000FF">&quot;0dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginEnd=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginLeft=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginRight=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginStart=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:text=</span><span style="color: #0000FF">&quot;Bounce&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintBottom_toTopOf=</span><span style="color: #0000FF">&quot;@+id/clockwise&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintHorizontal_bias=</span><span style="color: #0000FF">&quot;0.0&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintLeft_toLeftOf=</span><span style="color: #0000FF">&quot;@+id/guideline&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintRight_toRightOf=</span><span style="color: #0000FF">&quot;parent&quot;</span> <span style="color: #000080; font-weight: bold">/&gt;</span>
+
+    <span style="color: #000080; font-weight: bold">&lt;Button</span>
+        <span style="color: #FF0000">android:id=</span><span style="color: #0000FF">&quot;@+id/left&quot;</span>
+        <span style="color: #FF0000">style=</span><span style="color: #0000FF">&quot;@style/Widget.AppCompat.Button.Colored&quot;</span>
+        <span style="color: #FF0000">android:layout_width=</span><span style="color: #0000FF">&quot;0dp&quot;</span>
+        <span style="color: #FF0000">android:layout_height=</span><span style="color: #0000FF">&quot;wrap_content&quot;</span>
+        <span style="color: #FF0000">android:layout_marginBottom=</span><span style="color: #0000FF">&quot;0dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginLeft=</span><span style="color: #0000FF">&quot;16dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginRight=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:text=</span><span style="color: #0000FF">&quot;Slide in left&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintBottom_toTopOf=</span><span style="color: #0000FF">&quot;@+id/shake&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintHorizontal_bias=</span><span style="color: #0000FF">&quot;0.0&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintLeft_toLeftOf=</span><span style="color: #0000FF">&quot;parent&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintRight_toLeftOf=</span><span style="color: #0000FF">&quot;@+id/guideline&quot;</span> <span style="color: #000080; font-weight: bold">/&gt;</span>
+
+    <span style="color: #000080; font-weight: bold">&lt;Button</span>
+        <span style="color: #FF0000">android:id=</span><span style="color: #0000FF">&quot;@+id/top&quot;</span>
+        <span style="color: #FF0000">style=</span><span style="color: #0000FF">&quot;@style/Widget.AppCompat.Button.Colored&quot;</span>
+        <span style="color: #FF0000">android:layout_width=</span><span style="color: #0000FF">&quot;0dp&quot;</span>
+        <span style="color: #FF0000">android:layout_height=</span><span style="color: #0000FF">&quot;wrap_content&quot;</span>
+        <span style="color: #FF0000">android:layout_marginBottom=</span><span style="color: #0000FF">&quot;0dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginLeft=</span><span style="color: #0000FF">&quot;16dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginRight=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:text=</span><span style="color: #0000FF">&quot;Slide in top&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintBottom_toTopOf=</span><span style="color: #0000FF">&quot;@+id/left&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintLeft_toLeftOf=</span><span style="color: #0000FF">&quot;parent&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintRight_toLeftOf=</span><span style="color: #0000FF">&quot;@+id/guideline&quot;</span> <span style="color: #000080; font-weight: bold">/&gt;</span>
+
+    <span style="color: #000080; font-weight: bold">&lt;Button</span>
+        <span style="color: #FF0000">android:id=</span><span style="color: #0000FF">&quot;@+id/right&quot;</span>
+        <span style="color: #FF0000">android:layout_width=</span><span style="color: #0000FF">&quot;0dp&quot;</span>
+        <span style="color: #FF0000">style=</span><span style="color: #0000FF">&quot;@style/Widget.AppCompat.Button.Colored&quot;</span>
+        <span style="color: #FF0000">android:layout_height=</span><span style="color: #0000FF">&quot;wrap_content&quot;</span>
+        <span style="color: #FF0000">android:layout_marginBottom=</span><span style="color: #0000FF">&quot;0dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginLeft=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginRight=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:text=</span><span style="color: #0000FF">&quot;Slide in right&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintBottom_toTopOf=</span><span style="color: #0000FF">&quot;@+id/bounce&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintLeft_toLeftOf=</span><span style="color: #0000FF">&quot;@+id/guideline&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintRight_toRightOf=</span><span style="color: #0000FF">&quot;parent&quot;</span> <span style="color: #000080; font-weight: bold">/&gt;</span>
+
+    <span style="color: #000080; font-weight: bold">&lt;Button</span>
+        <span style="color: #FF0000">android:id=</span><span style="color: #0000FF">&quot;@+id/bottom&quot;</span>
+        <span style="color: #FF0000">android:layout_width=</span><span style="color: #0000FF">&quot;0dp&quot;</span>
+        <span style="color: #FF0000">style=</span><span style="color: #0000FF">&quot;@style/Widget.AppCompat.Button.Colored&quot;</span>
+        <span style="color: #FF0000">android:layout_height=</span><span style="color: #0000FF">&quot;wrap_content&quot;</span>
+        <span style="color: #FF0000">android:layout_marginBottom=</span><span style="color: #0000FF">&quot;0dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginLeft=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginRight=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:text=</span><span style="color: #0000FF">&quot;Slide in bottom&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintBottom_toTopOf=</span><span style="color: #0000FF">&quot;@+id/right&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintLeft_toLeftOf=</span><span style="color: #0000FF">&quot;@+id/guideline&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintRight_toRightOf=</span><span style="color: #0000FF">&quot;parent&quot;</span> <span style="color: #000080; font-weight: bold">/&gt;</span>
+<span style="color: #000080; font-weight: bold">&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;</span>
+</pre></div>
+
+
+    </body>
+</html>

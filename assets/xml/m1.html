@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>code</title>
+        <style>body { margin: 0px; }</style>
+    </head>
+    <body>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008080">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span style="color: #000080; font-weight: bold">&lt;androidx.constraintlayout.widget.ConstraintLayout</span>
+    <span style="color: #FF0000">xmlns:android=</span><span style="color: #0000FF">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+    <span style="color: #FF0000">xmlns:app=</span><span style="color: #0000FF">&quot;http://schemas.android.com/apk/res-auto&quot;</span>
+    <span style="color: #FF0000">xmlns:tools=</span><span style="color: #0000FF">&quot;http://schemas.android.com/tools&quot;</span>
+    <span style="color: #FF0000">android:layout_width=</span><span style="color: #0000FF">&quot;match_parent&quot;</span>
+    <span style="color: #FF0000">android:layout_height=</span><span style="color: #0000FF">&quot;match_parent&quot;</span>
+    <span style="color: #FF0000">android:background=</span><span style="color: #0000FF">&quot;@drawable/backbg&quot;</span>
+    <span style="color: #FF0000">android:orientation=</span><span style="color: #0000FF">&quot;vertical&quot;</span><span style="color: #000080; font-weight: bold">&gt;</span>
+
+    <span style="color: #000080; font-weight: bold">&lt;Button</span>
+        <span style="color: #FF0000">android:id=</span><span style="color: #0000FF">&quot;@+id/alert1&quot;</span>
+        <span style="color: #FF0000">style=</span><span style="color: #0000FF">&quot;@style/Widget.AppCompat.Button.Colored&quot;</span>
+        <span style="color: #FF0000">android:layout_width=</span><span style="color: #0000FF">&quot;wrap_content&quot;</span>
+        <span style="color: #FF0000">android:layout_height=</span><span style="color: #0000FF">&quot;wrap_content&quot;</span>
+        <span style="color: #FF0000">android:layout_marginTop=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:text=</span><span style="color: #0000FF">&quot;Basic&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintHorizontal_chainStyle=</span><span style="color: #0000FF">&quot;packed&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintLeft_toLeftOf=</span><span style="color: #0000FF">&quot;parent&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintTop_toTopOf=</span><span style="color: #0000FF">&quot;parent&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintRight_toLeftOf=</span><span style="color: #0000FF">&quot;@+id/alert4&quot;</span> <span style="color: #000080; font-weight: bold">/&gt;</span>
+
+    <span style="color: #000080; font-weight: bold">&lt;Button</span>
+        <span style="color: #FF0000">android:id=</span><span style="color: #0000FF">&quot;@+id/alert2&quot;</span>
+        <span style="color: #FF0000">style=</span><span style="color: #0000FF">&quot;@style/Widget.AppCompat.Button.Colored&quot;</span>
+        <span style="color: #FF0000">android:layout_width=</span><span style="color: #0000FF">&quot;wrap_content&quot;</span>
+        <span style="color: #FF0000">android:layout_height=</span><span style="color: #0000FF">&quot;wrap_content&quot;</span>
+        <span style="color: #FF0000">android:text=</span><span style="color: #0000FF">&quot;with ListView&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintHorizontal_chainStyle=</span><span style="color: #0000FF">&quot;packed&quot;</span>
+        <span style="color: #FF0000">android:textColor=</span><span style="color: #0000FF">&quot;#fff&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintLeft_toLeftOf=</span><span style="color: #0000FF">&quot;parent&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintTop_toBottomOf=</span><span style="color: #0000FF">&quot;@+id/alert1&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintRight_toLeftOf=</span><span style="color: #0000FF">&quot;@+id/alert5&quot;</span> <span style="color: #000080; font-weight: bold">/&gt;</span>
+
+    <span style="color: #000080; font-weight: bold">&lt;Button</span>
+        <span style="color: #FF0000">android:id=</span><span style="color: #0000FF">&quot;@+id/alert3&quot;</span>
+        <span style="color: #FF0000">style=</span><span style="color: #0000FF">&quot;@style/Widget.AppCompat.Button.Colored&quot;</span>
+        <span style="color: #FF0000">android:layout_width=</span><span style="color: #0000FF">&quot;wrap_content&quot;</span>
+        <span style="color: #FF0000">android:layout_height=</span><span style="color: #0000FF">&quot;wrap_content&quot;</span>
+        <span style="color: #FF0000">android:layout_marginTop=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:text=</span><span style="color: #0000FF">&quot;with layout&quot;</span>
+        <span style="color: #FF0000">android:textColor=</span><span style="color: #0000FF">&quot;#fff&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintLeft_toRightOf=</span><span style="color: #0000FF">&quot;@+id/alert4&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintTop_toTopOf=</span><span style="color: #0000FF">&quot;parent&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintRight_toRightOf=</span><span style="color: #0000FF">&quot;parent&quot;</span> <span style="color: #000080; font-weight: bold">/&gt;</span>
+
+    <span style="color: #000080; font-weight: bold">&lt;Button</span>
+        <span style="color: #FF0000">android:id=</span><span style="color: #0000FF">&quot;@+id/alert4&quot;</span>
+        <span style="color: #FF0000">style=</span><span style="color: #0000FF">&quot;@style/Widget.AppCompat.Button.Colored&quot;</span>
+        <span style="color: #FF0000">android:layout_width=</span><span style="color: #0000FF">&quot;wrap_content&quot;</span>
+        <span style="color: #FF0000">android:layout_height=</span><span style="color: #0000FF">&quot;wrap_content&quot;</span>
+        <span style="color: #FF0000">android:layout_marginTop=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:text=</span><span style="color: #0000FF">&quot;FullScreen&quot;</span>
+        <span style="color: #FF0000">android:textColor=</span><span style="color: #0000FF">&quot;#fff&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintTop_toTopOf=</span><span style="color: #0000FF">&quot;parent&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintLeft_toRightOf=</span><span style="color: #0000FF">&quot;@+id/alert1&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintRight_toLeftOf=</span><span style="color: #0000FF">&quot;@+id/alert3&quot;</span> <span style="color: #000080; font-weight: bold">/&gt;</span>
+
+    <span style="color: #000080; font-weight: bold">&lt;Button</span>
+        <span style="color: #FF0000">android:id=</span><span style="color: #0000FF">&quot;@+id/alert5&quot;</span>
+        <span style="color: #FF0000">style=</span><span style="color: #0000FF">&quot;@style/Widget.AppCompat.Button.Colored&quot;</span>
+        <span style="color: #FF0000">android:layout_width=</span><span style="color: #0000FF">&quot;wrap_content&quot;</span>
+        <span style="color: #FF0000">android:layout_height=</span><span style="color: #0000FF">&quot;wrap_content&quot;</span>
+        <span style="color: #FF0000">android:text=</span><span style="color: #0000FF">&quot;Custom AlertDialog&quot;</span>
+        <span style="color: #FF0000">android:textColor=</span><span style="color: #0000FF">&quot;#fff&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintLeft_toRightOf=</span><span style="color: #0000FF">&quot;@+id/alert2&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintTop_toTopOf=</span><span style="color: #0000FF">&quot;@+id/alert2&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintRight_toRightOf=</span><span style="color: #0000FF">&quot;parent&quot;</span> <span style="color: #000080; font-weight: bold">/&gt;</span>
+
+    <span style="color: #000080; font-weight: bold">&lt;Button</span>
+        <span style="color: #FF0000">android:id=</span><span style="color: #0000FF">&quot;@+id/alert6&quot;</span>
+        <span style="color: #FF0000">style=</span><span style="color: #0000FF">&quot;@style/Widget.AppCompat.Button.Colored&quot;</span>
+        <span style="color: #FF0000">android:layout_width=</span><span style="color: #0000FF">&quot;wrap_content&quot;</span>
+        <span style="color: #FF0000">android:layout_height=</span><span style="color: #0000FF">&quot;wrap_content&quot;</span>
+        <span style="color: #FF0000">android:text=</span><span style="color: #0000FF">&quot;Custom alertDialog 2&quot;</span>
+        <span style="color: #FF0000">android:textColor=</span><span style="color: #0000FF">&quot;#fff&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintLeft_toLeftOf=</span><span style="color: #0000FF">&quot;parent&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintTop_toBottomOf=</span><span style="color: #0000FF">&quot;@+id/alert2&quot;</span>
+        <span style="color: #FF0000">android:layout_marginLeft=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginStart=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginTop=</span><span style="color: #0000FF">&quot;0dp&quot;</span>
+        <span style="color: #FF0000">android:layout_marginRight=</span><span style="color: #0000FF">&quot;8dp&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintRight_toRightOf=</span><span style="color: #0000FF">&quot;parent&quot;</span> <span style="color: #000080; font-weight: bold">/&gt;</span>
+
+    <span style="color: #000080; font-weight: bold">&lt;Button</span>
+        <span style="color: #FF0000">android:id=</span><span style="color: #0000FF">&quot;@+id/alert7&quot;</span>
+        <span style="color: #FF0000">style=</span><span style="color: #0000FF">&quot;@style/Widget.AppCompat.Button.Colored&quot;</span>
+        <span style="color: #FF0000">android:layout_width=</span><span style="color: #0000FF">&quot;wrap_content&quot;</span>
+        <span style="color: #FF0000">android:layout_height=</span><span style="color: #0000FF">&quot;wrap_content&quot;</span>
+        <span style="color: #FF0000">android:text=</span><span style="color: #0000FF">&quot;Animated&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintEnd_toEndOf=</span><span style="color: #0000FF">&quot;parent&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintStart_toStartOf=</span><span style="color: #0000FF">&quot;parent&quot;</span>
+        <span style="color: #FF0000">app:layout_constraintTop_toBottomOf=</span><span style="color: #0000FF">&quot;@+id/alert6&quot;</span> <span style="color: #000080; font-weight: bold">/&gt;</span>
+
+<span style="color: #000080; font-weight: bold">&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;</span>
+</pre></div>
+    
+
+
+    </body>
+</html>
+

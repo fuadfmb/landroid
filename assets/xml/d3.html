@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>code</title>
+        <style>body { margin: 0px; }</style>
+    </head>
+    <body>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #75715e">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span style="color: #f92672">&lt;androidx.constraintlayout.widget.ConstraintLayout</span>
+    <span style="color: #a6e22e">xmlns:android=</span><span style="color: #e6db74">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+    <span style="color: #a6e22e">xmlns:tools=</span><span style="color: #e6db74">&quot;http://schemas.android.com/tools&quot;</span>
+    <span style="color: #a6e22e">android:background=</span><span style="color: #e6db74">&quot;@drawable/backbg&quot;</span>
+    <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+    <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+    <span style="color: #a6e22e">xmlns:app=</span><span style="color: #e6db74">&quot;http://schemas.android.com/apk/res-auto&quot;</span><span style="color: #f92672">&gt;</span>
+
+    <span style="color: #f92672">&lt;androidx.appcompat.widget.Toolbar</span>
+        <span style="color: #a6e22e">android:id=</span><span style="color: #e6db74">&quot;@+id/mytoolbar&quot;</span>
+        <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;0dp&quot;</span>
+        <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+        <span style="color: #a6e22e">android:background=</span><span style="color: #e6db74">&quot;?attr/colorPrimary&quot;</span>
+        <span style="color: #a6e22e">android:minHeight=</span><span style="color: #e6db74">&quot;?attr/actionBarSize&quot;</span>
+        <span style="color: #a6e22e">android:theme=</span><span style="color: #e6db74">&quot;@style/ThemeOverlay.AppCompat.Dark&quot;</span>
+        <span style="color: #a6e22e">android:layout_marginRight=</span><span style="color: #e6db74">&quot;0dp&quot;</span>
+        <span style="color: #a6e22e">app:layout_constraintRight_toRightOf=</span><span style="color: #e6db74">&quot;parent&quot;</span>
+        <span style="color: #a6e22e">android:layout_marginLeft=</span><span style="color: #e6db74">&quot;0dp&quot;</span>
+        <span style="color: #a6e22e">app:layout_constraintLeft_toLeftOf=</span><span style="color: #e6db74">&quot;parent&quot;</span>
+        <span style="color: #a6e22e">app:layout_constraintTop_toTopOf=</span><span style="color: #e6db74">&quot;parent&quot;</span>
+        <span style="color: #a6e22e">android:layout_marginTop=</span><span style="color: #e6db74">&quot;0dp&quot;</span> <span style="color: #f92672">/&gt;</span>
+
+    <span style="color: #f92672">&lt;com.google.android.material.tabs.TabLayout</span>
+        <span style="color: #a6e22e">android:id=</span><span style="color: #e6db74">&quot;@+id/tablayout&quot;</span>
+        <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;0dp&quot;</span>
+        <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+        <span style="color: #a6e22e">android:background=</span><span style="color: #e6db74">&quot;?attr/colorPrimary&quot;</span>
+        <span style="color: #a6e22e">app:layout_constraintLeft_toLeftOf=</span><span style="color: #e6db74">&quot;parent&quot;</span>
+        <span style="color: #a6e22e">app:layout_constraintRight_toRightOf=</span><span style="color: #e6db74">&quot;parent&quot;</span>
+        <span style="color: #a6e22e">app:tabGravity=</span><span style="color: #e6db74">&quot;fill&quot;</span>
+        <span style="color: #a6e22e">app:tabMode=</span><span style="color: #e6db74">&quot;fixed&quot;</span>
+        <span style="color: #a6e22e">app:tabSelectedTextColor=</span><span style="color: #e6db74">&quot;#ffea00&quot;</span>
+        <span style="color: #a6e22e">app:tabTextColor=</span><span style="color: #e6db74">&quot;#fff&quot;</span>
+        <span style="color: #a6e22e">android:layout_marginTop=</span><span style="color: #e6db74">&quot;0dp&quot;</span>
+        <span style="color: #a6e22e">app:layout_constraintTop_toBottomOf=</span><span style="color: #e6db74">&quot;@+id/mytoolbar&quot;</span> <span style="color: #f92672">/&gt;</span>
+
+    <span style="color: #f92672">&lt;androidx.viewpager.widget.ViewPager</span>
+        <span style="color: #a6e22e">android:id=</span><span style="color: #e6db74">&quot;@+id/vp&quot;</span>
+        <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;0dp&quot;</span>
+        <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;0dp&quot;</span>
+        <span style="color: #a6e22e">app:layout_constraintLeft_toLeftOf=</span><span style="color: #e6db74">&quot;parent&quot;</span>
+        <span style="color: #a6e22e">app:layout_constraintRight_toRightOf=</span><span style="color: #e6db74">&quot;parent&quot;</span>
+        <span style="color: #a6e22e">app:layout_constraintBottom_toBottomOf=</span><span style="color: #e6db74">&quot;parent&quot;</span>
+        <span style="color: #a6e22e">app:layout_constraintHorizontal_bias=</span><span style="color: #e6db74">&quot;0.0&quot;</span>
+        <span style="color: #a6e22e">app:layout_constraintTop_toBottomOf=</span><span style="color: #e6db74">&quot;@+id/tablayout&quot;</span>
+        <span style="color: #a6e22e">android:layout_marginTop=</span><span style="color: #e6db74">&quot;0dp&quot;</span> <span style="color: #f92672">/&gt;</span>
+
+<span style="color: #f92672">&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;</span>
+</pre></div>
+    </body>
+</html>

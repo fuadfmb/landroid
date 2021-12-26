@@ -1,0 +1,275 @@
+<!-- HTML generated using hilite.me -->
+<style>
+    body {
+        margin: 0px;
+    }
+</style>
+
+<div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #75715e">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span style="color: #f92672">&lt;RelativeLayout</span>
+    <span style="color: #a6e22e">xmlns:android=</span><span style="color: #e6db74">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+    <span style="color: #a6e22e">xmlns:app=</span><span style="color: #e6db74">&quot;http://schemas.android.com/apk/res-auto&quot;</span>
+    <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+    <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+    <span style="color: #a6e22e">android:background=</span><span style="color: #e6db74">&quot;@drawable/backbg&quot;</span><span style="color: #f92672">&gt;</span>
+
+    <span style="color: #f92672">&lt;ScrollView</span>
+        <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+        <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;match_parent&quot;</span><span style="color: #f92672">&gt;</span>
+
+        <span style="color: #f92672">&lt;androidx.constraintlayout.widget.ConstraintLayout</span>
+            <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+            <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span><span style="color: #f92672">&gt;</span>
+
+            <span style="color: #f92672">&lt;Button</span>
+                <span style="color: #a6e22e">android:id=</span><span style="color: #e6db74">&quot;@+id/normaltoast&quot;</span>
+                <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+                <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+                <span style="color: #a6e22e">android:layout_margin=</span><span style="color: #e6db74">&quot;20dp&quot;</span>
+                <span style="color: #a6e22e">android:background=</span><span style="color: #e6db74">&quot;@drawable/btn&quot;</span>
+                <span style="color: #a6e22e">android:padding=</span><span style="color: #e6db74">&quot;10dp&quot;</span>
+                <span style="color: #a6e22e">android:text=</span><span style="color: #e6db74">&quot;Normal Toast&quot;</span>
+                <span style="color: #a6e22e">android:textColor=</span><span style="color: #e6db74">&quot;#fff&quot;</span>
+                <span style="color: #a6e22e">app:layout_constraintLeft_toLeftOf=</span><span style="color: #e6db74">&quot;parent&quot;</span>
+                <span style="color: #a6e22e">app:layout_constraintTop_toTopOf=</span><span style="color: #e6db74">&quot;parent&quot;</span> <span style="color: #f92672">/&gt;</span>
+
+            <span style="color: #f92672">&lt;Button</span>
+                <span style="color: #a6e22e">android:id=</span><span style="color: #e6db74">&quot;@+id/customtoast&quot;</span>
+                <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+                <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+                <span style="color: #a6e22e">android:layout_margin=</span><span style="color: #e6db74">&quot;20dp&quot;</span>
+                <span style="color: #a6e22e">android:background=</span><span style="color: #e6db74">&quot;@drawable/btn&quot;</span>
+                <span style="color: #a6e22e">android:padding=</span><span style="color: #e6db74">&quot;10dp&quot;</span>
+                <span style="color: #a6e22e">android:text=</span><span style="color: #e6db74">&quot;Custom toast&quot;</span>
+                <span style="color: #a6e22e">android:textColor=</span><span style="color: #e6db74">&quot;#fff&quot;</span>
+                <span style="color: #a6e22e">app:layout_constraintRight_toRightOf=</span><span style="color: #e6db74">&quot;parent&quot;</span>
+                <span style="color: #a6e22e">app:layout_constraintTop_toTopOf=</span><span style="color: #e6db74">&quot;parent&quot;</span> <span style="color: #f92672">/&gt;</span>
+
+            <span style="color: #f92672">&lt;LinearLayout</span>
+                <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+                <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+                <span style="color: #a6e22e">android:orientation=</span><span style="color: #e6db74">&quot;vertical&quot;</span>
+                <span style="color: #a6e22e">android:layout_marginTop=</span><span style="color: #e6db74">&quot;50dp&quot;</span>
+                <span style="color: #a6e22e">app:layout_constraintTop_toBottomOf=</span><span style="color: #e6db74">&quot;@+id/normaltoast&quot;</span><span style="color: #f92672">&gt;</span>
+
+                <span style="color: #f92672">&lt;TextView</span>
+                    <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+                    <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+                    <span style="color: #a6e22e">android:layout_margin=</span><span style="color: #e6db74">&quot;20sp&quot;</span>
+                    <span style="color: #a6e22e">android:fontFamily=</span><span style="color: #e6db74">&quot;sans-serif-condensed&quot;</span>
+
+                    <span style="color: #a6e22e">android:text=</span><span style="color: #e6db74">&quot;Best Android Toast Libraries&quot;</span>
+                    <span style="color: #a6e22e">android:textColor=</span><span style="color: #e6db74">&quot;#fff&quot;</span>
+                    <span style="color: #a6e22e">android:textSize=</span><span style="color: #e6db74">&quot;20sp&quot;</span> <span style="color: #f92672">/&gt;</span>
+
+                <span style="color: #f92672">&lt;LinearLayout</span>
+                    <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+                    <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+                    <span style="color: #a6e22e">android:layout_marginStart=</span><span style="color: #e6db74">&quot;30dp&quot;</span>
+                    <span style="color: #a6e22e">android:orientation=</span><span style="color: #e6db74">&quot;vertical&quot;</span><span style="color: #f92672">&gt;</span>
+
+                    <span style="color: #f92672">&lt;LinearLayout</span>
+                        <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+                        <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+                        <span style="color: #a6e22e">android:orientation=</span><span style="color: #e6db74">&quot;horizontal&quot;</span><span style="color: #f92672">&gt;</span>
+
+                        <span style="color: #f92672">&lt;ImageView</span>
+                            <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;40dp&quot;</span>
+                            <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;40dp&quot;</span>
+                            <span style="color: #a6e22e">android:src=</span><span style="color: #e6db74">&quot;@drawable/ic_double_arrow&quot;</span>
+                            <span style="color: #a6e22e">app:tint=</span><span style="color: #e6db74">&quot;#fff&quot;</span> <span style="color: #f92672">/&gt;</span>
+
+                        <span style="color: #f92672">&lt;TextView</span>
+                            <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+                            <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+                            <span style="color: #a6e22e">android:layout_marginStart=</span><span style="color: #e6db74">&quot;10dp&quot;</span>
+                            <span style="color: #a6e22e">android:fontFamily=</span><span style="color: #e6db74">&quot;sans-serif-condensed&quot;</span>
+                            <span style="color: #a6e22e">android:text=</span><span style="color: #e6db74">&quot;Toasty&quot;</span>
+                            <span style="color: #a6e22e">android:textColor=</span><span style="color: #e6db74">&quot;#FFD600&quot;</span>
+                            <span style="color: #a6e22e">android:textSize=</span><span style="color: #e6db74">&quot;25sp&quot;</span> <span style="color: #f92672">/&gt;</span>
+                    <span style="color: #f92672">&lt;/LinearLayout&gt;</span>
+
+                    <span style="color: #f92672">&lt;TextView</span>
+                        <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+                        <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+                        <span style="color: #a6e22e">android:text=</span><span style="color: #e6db74">&quot;github.com/GrenderG/Toasty&quot;</span>
+                        <span style="color: #a6e22e">android:layout_marginStart=</span><span style="color: #e6db74">&quot;50dp&quot;</span>
+                        <span style="color: #a6e22e">android:textColor=</span><span style="color: #e6db74">&quot;#fff&quot;</span><span style="color: #f92672">/&gt;</span>
+
+                    <span style="color: #f92672">&lt;LinearLayout</span>
+                        <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+                        <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+                        <span style="color: #a6e22e">android:orientation=</span><span style="color: #e6db74">&quot;horizontal&quot;</span><span style="color: #f92672">&gt;</span>
+
+                        <span style="color: #f92672">&lt;ImageView</span>
+                            <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;40dp&quot;</span>
+                            <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;40dp&quot;</span>
+                            <span style="color: #a6e22e">android:src=</span><span style="color: #e6db74">&quot;@drawable/ic_double_arrow&quot;</span>
+                            <span style="color: #a6e22e">app:tint=</span><span style="color: #e6db74">&quot;#fff&quot;</span> <span style="color: #f92672">/&gt;</span>
+
+                        <span style="color: #f92672">&lt;TextView</span>
+                            <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+                            <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+                            <span style="color: #a6e22e">android:layout_marginStart=</span><span style="color: #e6db74">&quot;10dp&quot;</span>
+                            <span style="color: #a6e22e">android:fontFamily=</span><span style="color: #e6db74">&quot;sans-serif-condensed&quot;</span>
+                            <span style="color: #a6e22e">android:text=</span><span style="color: #e6db74">&quot;SuperToasts&quot;</span>
+                            <span style="color: #a6e22e">android:textColor=</span><span style="color: #e6db74">&quot;#FFD600&quot;</span>
+                            <span style="color: #a6e22e">android:textSize=</span><span style="color: #e6db74">&quot;25sp&quot;</span> <span style="color: #f92672">/&gt;</span>
+                    <span style="color: #f92672">&lt;/LinearLayout&gt;</span>
+
+                    <span style="color: #f92672">&lt;TextView</span>
+                        <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+                        <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+                        <span style="color: #a6e22e">android:text=</span><span style="color: #e6db74">&quot;github.com/JohnPersano/SuperToasts&quot;</span>
+                        <span style="color: #a6e22e">android:layout_marginStart=</span><span style="color: #e6db74">&quot;50dp&quot;</span>
+                        <span style="color: #a6e22e">android:textColor=</span><span style="color: #e6db74">&quot;#fff&quot;</span><span style="color: #f92672">/&gt;</span>
+
+                    <span style="color: #f92672">&lt;LinearLayout</span>
+                        <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+                        <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+                        <span style="color: #a6e22e">android:orientation=</span><span style="color: #e6db74">&quot;horizontal&quot;</span><span style="color: #f92672">&gt;</span>
+
+                        <span style="color: #f92672">&lt;ImageView</span>
+                            <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;40dp&quot;</span>
+                            <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;40dp&quot;</span>
+                            <span style="color: #a6e22e">android:src=</span><span style="color: #e6db74">&quot;@drawable/ic_double_arrow&quot;</span>
+                            <span style="color: #a6e22e">app:tint=</span><span style="color: #e6db74">&quot;#fff&quot;</span> <span style="color: #f92672">/&gt;</span>
+
+                        <span style="color: #f92672">&lt;TextView</span>
+                            <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+                            <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+                            <span style="color: #a6e22e">android:layout_marginStart=</span><span style="color: #e6db74">&quot;10dp&quot;</span>
+                            <span style="color: #a6e22e">android:fontFamily=</span><span style="color: #e6db74">&quot;sans-serif-condensed&quot;</span>
+                            <span style="color: #a6e22e">android:text=</span><span style="color: #e6db74">&quot;TastyToast&quot;</span>
+                            <span style="color: #a6e22e">android:textColor=</span><span style="color: #e6db74">&quot;#FFD600&quot;</span>
+                            <span style="color: #a6e22e">android:textSize=</span><span style="color: #e6db74">&quot;25sp&quot;</span> <span style="color: #f92672">/&gt;</span>
+                    <span style="color: #f92672">&lt;/LinearLayout&gt;</span>
+
+                    <span style="color: #f92672">&lt;TextView</span>
+                        <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+                        <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+                        <span style="color: #a6e22e">android:text=</span><span style="color: #e6db74">&quot;github.com/yadav-rahul/TastyToast&quot;</span>
+                        <span style="color: #a6e22e">android:layout_marginStart=</span><span style="color: #e6db74">&quot;50dp&quot;</span>
+                        <span style="color: #a6e22e">android:textColor=</span><span style="color: #e6db74">&quot;#fff&quot;</span><span style="color: #f92672">/&gt;</span>
+
+                    <span style="color: #f92672">&lt;LinearLayout</span>
+                        <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+                        <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+                        <span style="color: #a6e22e">android:orientation=</span><span style="color: #e6db74">&quot;horizontal&quot;</span><span style="color: #f92672">&gt;</span>
+
+                        <span style="color: #f92672">&lt;ImageView</span>
+                            <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;40dp&quot;</span>
+                            <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;40dp&quot;</span>
+                            <span style="color: #a6e22e">android:src=</span><span style="color: #e6db74">&quot;@drawable/ic_double_arrow&quot;</span>
+                            <span style="color: #a6e22e">app:tint=</span><span style="color: #e6db74">&quot;#fff&quot;</span> <span style="color: #f92672">/&gt;</span>
+
+                        <span style="color: #f92672">&lt;TextView</span>
+                            <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+                            <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+                            <span style="color: #a6e22e">android:fontFamily=</span><span style="color: #e6db74">&quot;sans-serif-condensed&quot;</span>
+                            <span style="color: #a6e22e">android:text=</span><span style="color: #e6db74">&quot;StyleableToast&quot;</span>
+                            <span style="color: #a6e22e">android:textColor=</span><span style="color: #e6db74">&quot;#FFD600&quot;</span>
+                            <span style="color: #a6e22e">android:layout_marginStart=</span><span style="color: #e6db74">&quot;10dp&quot;</span>
+                            <span style="color: #a6e22e">android:textSize=</span><span style="color: #e6db74">&quot;25sp&quot;</span> <span style="color: #f92672">/&gt;</span>
+                    <span style="color: #f92672">&lt;/LinearLayout&gt;</span>
+
+                    <span style="color: #f92672">&lt;TextView</span>
+                        <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+                        <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+                        <span style="color: #a6e22e">android:text=</span><span style="color: #e6db74">&quot;github.com/Muddz/StyleableToast&quot;</span>
+                        <span style="color: #a6e22e">android:layout_marginStart=</span><span style="color: #e6db74">&quot;50dp&quot;</span>
+                        <span style="color: #a6e22e">android:textColor=</span><span style="color: #e6db74">&quot;#fff&quot;</span><span style="color: #f92672">/&gt;</span>
+
+                    <span style="color: #f92672">&lt;LinearLayout</span>
+                        <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+                        <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+                        <span style="color: #a6e22e">android:orientation=</span><span style="color: #e6db74">&quot;horizontal&quot;</span><span style="color: #f92672">&gt;</span>
+
+                        <span style="color: #f92672">&lt;ImageView</span>
+                            <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;40dp&quot;</span>
+                            <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;40dp&quot;</span>
+                            <span style="color: #a6e22e">android:src=</span><span style="color: #e6db74">&quot;@drawable/ic_double_arrow&quot;</span>
+                            <span style="color: #a6e22e">app:tint=</span><span style="color: #e6db74">&quot;#fff&quot;</span> <span style="color: #f92672">/&gt;</span>
+
+                        <span style="color: #f92672">&lt;TextView</span>
+                            <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+                            <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+                            <span style="color: #a6e22e">android:fontFamily=</span><span style="color: #e6db74">&quot;sans-serif-condensed&quot;</span>
+                            <span style="color: #a6e22e">android:text=</span><span style="color: #e6db74">&quot;SimpleToast&quot;</span>
+                            <span style="color: #a6e22e">android:layout_marginStart=</span><span style="color: #e6db74">&quot;10dp&quot;</span>
+                            <span style="color: #a6e22e">android:textColor=</span><span style="color: #e6db74">&quot;#FFD600&quot;</span>
+                            <span style="color: #a6e22e">android:textSize=</span><span style="color: #e6db74">&quot;25sp&quot;</span> <span style="color: #f92672">/&gt;</span>
+                    <span style="color: #f92672">&lt;/LinearLayout&gt;</span>
+
+                    <span style="color: #f92672">&lt;TextView</span>
+                        <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+                        <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+                        <span style="color: #a6e22e">android:text=</span><span style="color: #e6db74">&quot;github.com/Pirry/SimpleToast&quot;</span>
+                        <span style="color: #a6e22e">android:layout_marginStart=</span><span style="color: #e6db74">&quot;50dp&quot;</span>
+                        <span style="color: #a6e22e">android:textColor=</span><span style="color: #e6db74">&quot;#fff&quot;</span><span style="color: #f92672">/&gt;</span>
+
+                    <span style="color: #f92672">&lt;LinearLayout</span>
+                        <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+                        <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+                        <span style="color: #a6e22e">android:orientation=</span><span style="color: #e6db74">&quot;horizontal&quot;</span><span style="color: #f92672">&gt;</span>
+
+                        <span style="color: #f92672">&lt;ImageView</span>
+                            <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;40dp&quot;</span>
+                            <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;40dp&quot;</span>
+                            <span style="color: #a6e22e">android:src=</span><span style="color: #e6db74">&quot;@drawable/ic_double_arrow&quot;</span>
+                            <span style="color: #a6e22e">app:tint=</span><span style="color: #e6db74">&quot;#fff&quot;</span> <span style="color: #f92672">/&gt;</span>
+
+                        <span style="color: #f92672">&lt;TextView</span>
+                            <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+                            <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+                            <span style="color: #a6e22e">android:fontFamily=</span><span style="color: #e6db74">&quot;sans-serif-condensed&quot;</span>
+                            <span style="color: #a6e22e">android:text=</span><span style="color: #e6db74">&quot;Noty&quot;</span>
+                            <span style="color: #a6e22e">android:layout_marginStart=</span><span style="color: #e6db74">&quot;10dp&quot;</span>
+                            <span style="color: #a6e22e">android:textColor=</span><span style="color: #e6db74">&quot;#FFD600&quot;</span>
+                            <span style="color: #a6e22e">android:textSize=</span><span style="color: #e6db74">&quot;25sp&quot;</span> <span style="color: #f92672">/&gt;</span>
+                    <span style="color: #f92672">&lt;/LinearLayout&gt;</span>
+
+                    <span style="color: #f92672">&lt;TextView</span>
+                        <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+                        <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+                        <span style="color: #a6e22e">android:text=</span><span style="color: #e6db74">&quot;github.com/emre1512/Noty&quot;</span>
+                        <span style="color: #a6e22e">android:layout_marginStart=</span><span style="color: #e6db74">&quot;50dp&quot;</span>
+                        <span style="color: #a6e22e">android:textColor=</span><span style="color: #e6db74">&quot;#fff&quot;</span><span style="color: #f92672">/&gt;</span>
+
+                    <span style="color: #f92672">&lt;LinearLayout</span>
+                        <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+                        <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+                        <span style="color: #a6e22e">android:orientation=</span><span style="color: #e6db74">&quot;horizontal&quot;</span><span style="color: #f92672">&gt;</span>
+
+                        <span style="color: #f92672">&lt;ImageView</span>
+                            <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;40dp&quot;</span>
+                            <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;40dp&quot;</span>
+                            <span style="color: #a6e22e">android:src=</span><span style="color: #e6db74">&quot;@drawable/ic_double_arrow&quot;</span>
+                            <span style="color: #a6e22e">app:tint=</span><span style="color: #e6db74">&quot;#fff&quot;</span> <span style="color: #f92672">/&gt;</span>
+
+                        <span style="color: #f92672">&lt;TextView</span>
+                            <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+                            <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+                            <span style="color: #a6e22e">android:fontFamily=</span><span style="color: #e6db74">&quot;sans-serif-condensed&quot;</span>
+                            <span style="color: #a6e22e">android:text=</span><span style="color: #e6db74">&quot;Dynamic Toasts&quot;</span>
+                            <span style="color: #a6e22e">android:layout_marginStart=</span><span style="color: #e6db74">&quot;10dp&quot;</span>
+                            <span style="color: #a6e22e">android:textColor=</span><span style="color: #e6db74">&quot;#FFD600&quot;</span>
+                            <span style="color: #a6e22e">android:textSize=</span><span style="color: #e6db74">&quot;25sp&quot;</span> <span style="color: #f92672">/&gt;</span>
+                    <span style="color: #f92672">&lt;/LinearLayout&gt;</span>
+
+                    <span style="color: #f92672">&lt;TextView</span>
+                        <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+                        <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+                        <span style="color: #a6e22e">android:text=</span><span style="color: #e6db74">&quot;github.com/pranavpandey/dynamic-toasts&quot;</span>
+                        <span style="color: #a6e22e">android:layout_marginStart=</span><span style="color: #e6db74">&quot;50dp&quot;</span>
+                        <span style="color: #a6e22e">android:textColor=</span><span style="color: #e6db74">&quot;#fff&quot;</span><span style="color: #f92672">/&gt;</span>
+
+                <span style="color: #f92672">&lt;/LinearLayout&gt;</span>
+
+            <span style="color: #f92672">&lt;/LinearLayout&gt;</span>
+
+        <span style="color: #f92672">&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;</span>
+    <span style="color: #f92672">&lt;/ScrollView&gt;</span>
+
+<span style="color: #f92672">&lt;/RelativeLayout&gt;</span>
+</pre></div>
