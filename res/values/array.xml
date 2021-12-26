@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="spinnerEntries">
+        <item>item 1</item>
+        <item>item 2</item>
+        <item>item 3</item>
+        <item>item 4</item>
+    </string-array>
+
+    <string-array name="list_of_countries">
+        <item>United States</item>
+        <item>England</item>
+        <item>UAE</item>
+        <item>Algeria</item>
+        <item>Egypt</item>
+        <item>Spain</item>
+        <item>China</item>
+        <item>Canada</item>
+        <item>Kenya</item>
+        <item>Ethiopia</item>
+        <item>South Africa</item>
+        <item>Australia</item>
+        <item>Brazil</item>
+        <item>India</item>
+    </string-array>
+
+</resources>
+
+
