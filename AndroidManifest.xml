@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.orosoft.landroid">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:hardwareAccelerated="true"
+        
+        android:allowBackup="true"
+        android:icon="@drawable/appicon2"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/appiconround"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-1500047410140952~4014569610" />
+
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme2"/>
+
+        <activity
+            android:name=".B1_Toast"
+            android:label="Toast Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".B2_Button"
+            android:label="Button Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".B3_Switch"
+            android:label="Switch Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".B4_CheckBox"
+            android:label="Checkbox Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".B5_ProgressBar"
+            android:label="Progressbar Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".B6_ToggleButton"
+            android:label="ToggleButton Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".B7_Seekbar"
+            android:label="Seekbar Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".B8_Spinner"
+            android:label="Spinner Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".B9_WebView"
+            android:label="Webview Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".B10_Radiobutton"
+            android:label="RadioButton Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".M1_AlertDialog"
+            android:label="AlertDialog Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".M2_ListView"
+            android:label="ListView Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".M3_AutoCompleteTv"
+            android:label="AutoCompleteTv Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".M4_Notifications"
+            android:label="Notifications Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".M5_SwipeToRefresh"
+            android:label="SwipeToRefresh Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".M6_Animation"
+            android:label="Animation Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".M7_CustomFonts"
+            android:label="CustomFonts Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".M8_TextToSpeech"
+            android:label="TextToSpeech Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".M9_CountDownTimer"
+            android:label="CountDownTimer Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".M10_CheckConnection"
+            android:label="CheckConnection Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".D1_Toolbar"
+            android:label="This is a Toolbar!"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".D2_snackbar"
+            android:label="Snackbar Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".D3_TabLayout"
+            android:label="TabLayout Example"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".D4_NavigationV"
+            android:label="Navigation Example"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".D5_TextInputLayout"
+            android:label="TextInputLayout Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".D6_CardView"
+            android:label="CardView Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".D7_BottomSheet"
+            android:label="BottomSheet Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".D8_RecyclerView"
+            android:label="RecyclerView Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".D9_BottomNav"
+            android:label="BottomNav Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".D10_FAB"
+            android:label="FAB Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".I1_MakeCall"
+            android:label="Call Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".I2_SMS"
+            android:label="SMS Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".I3_Email"
+            android:label="Email Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".I4_ViewPager"
+            android:label="ViewPager Example"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".B11_Menus"
+            android:label="Menus Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".I7_SplashScreen"
+            android:label="SplashScreen Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".I8_Sqlite"
+            android:label="Sqlite Example"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".I10_ViewFlipper"
+            android:label="View Flipper"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".I11_MoreIntents"
+            android:label="More Intents"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".Viewer" />
+        <activity
+            android:name=".MusicPlayer"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".VideoPlayer"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:theme="@style/AppTheme2"
+            android:name=".AboutActivity"/>
+
+        <!-- launcher activity -->
+        <activity
+            android:name=".Splash"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme3">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
+
+
+
+
+
+
