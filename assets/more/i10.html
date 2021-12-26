@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>code</title>
+    <style>body { margin: 0px; }</style>
+</head>
+<body>
+
+	<div style="color: darkblue; font-size: 18px; font-family: verdana; margin:10px;">
+		Frag_Flipper.java
+	</div>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">package</span> <span style="color: #f8f8f2">com</span><span style="color: #f92672">.</span><span style="color: #a6e22e">orosoft</span><span style="color: #f92672">.</span><span style="color: #a6e22e">landroid</span><span style="color: #f92672">;</span>
+
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.os.Bundle</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.LayoutInflater</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.View</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.ViewGroup</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.widget.ImageView</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.widget.ViewFlipper</span><span style="color: #f92672">;</span>
+
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">androidx.fragment.app.Fragment</span><span style="color: #f92672">;</span>
+
+<span style="color: #66d9ef">public</span> <span style="color: #66d9ef">class</span> <span style="color: #a6e22e">Frag_Flipper</span> <span style="color: #66d9ef">extends</span> <span style="color: #f8f8f2">Fragment</span> <span style="color: #f92672">{</span>
+
+    <span style="color: #f8f8f2">ViewFlipper</span> <span style="color: #f8f8f2">viewFlipper</span><span style="color: #f92672">;</span>
+    <span style="color: #75715e">//TextView imgdesc;</span>
+    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">images</span><span style="color: #f92672">[]</span> <span style="color: #f92672">=</span> <span style="color: #f92672">{</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">drawable</span><span style="color: #f92672">.</span><span style="color: #a6e22e">img1</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">drawable</span><span style="color: #f92672">.</span><span style="color: #a6e22e">img2</span><span style="color: #f92672">,</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">drawable</span><span style="color: #f92672">.</span><span style="color: #a6e22e">img3</span><span style="color: #f92672">,</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">drawable</span><span style="color: #f92672">.</span><span style="color: #a6e22e">img4</span><span style="color: #f92672">,</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">drawable</span><span style="color: #f92672">.</span><span style="color: #a6e22e">img5</span><span style="color: #f92672">,</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">drawable</span><span style="color: #f92672">.</span><span style="color: #a6e22e">img6</span><span style="color: #f92672">};</span>
+    <span style="color: #75715e">//String names[] ={&quot;Image 1&quot;, &quot;Image 2&quot;, &quot;Image 3&quot;, &quot;Image 4&quot;, &quot;Image 5&quot;, &quot;Image 6&quot;};</span>
+
+    <span style="color: #a6e22e">@Override</span>
+    <span style="color: #66d9ef">public</span> <span style="color: #f8f8f2">View</span> <span style="color: #a6e22e">onCreateView</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">LayoutInflater</span> <span style="color: #f8f8f2">inflater</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">ViewGroup</span> <span style="color: #f8f8f2">container</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">Bundle</span> <span style="color: #f8f8f2">savedInstanceState</span><span style="color: #f92672">){</span>
+        <span style="color: #f8f8f2">View</span> <span style="color: #f8f8f2">rootView</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">inflater</span><span style="color: #f92672">.</span><span style="color: #a6e22e">inflate</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">layout</span><span style="color: #f92672">.</span><span style="color: #a6e22e">fragment_flipper</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">container</span><span style="color: #f92672">,</span> <span style="color: #66d9ef">false</span><span style="color: #f92672">);</span>
+
+        <span style="color: #f8f8f2">viewFlipper</span> <span style="color: #f92672">=</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">ViewFlipper</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">rootView</span><span style="color: #f92672">.</span><span style="color: #a6e22e">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">viewflip</span><span style="color: #f92672">);</span>
+        <span style="color: #75715e">//imgdesc = (TextView) rootView.findViewById(R.id.imgdesc);</span>
+
+        <span style="color: #66d9ef">for</span><span style="color: #f92672">(</span><span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">i</span><span style="color: #f92672">=</span><span style="color: #ae81ff">0</span><span style="color: #f92672">;</span> <span style="color: #f8f8f2">i</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">images</span><span style="color: #f92672">.</span><span style="color: #a6e22e">length</span><span style="color: #f92672">;</span> <span style="color: #f8f8f2">i</span><span style="color: #f92672">++){</span>
+            <span style="color: #75715e">// This will create dynamic image views and add them to the ViewFlipper.</span>
+            <span style="color: #f8f8f2">setFlipperImage</span><span style="color: #f92672">(</span> <span style="color: #f8f8f2">images</span><span style="color: #f92672">[</span><span style="color: #f8f8f2">i</span><span style="color: #f92672">]</span> <span style="color: #f92672">);</span>
+        <span style="color: #f92672">}</span>
+
+        <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">rootView</span><span style="color: #f92672">;</span>
+    <span style="color: #f92672">}</span>
+
+    <span style="color: #66d9ef">private</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">setFlipperImage</span><span style="color: #f92672">(</span><span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">res</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+        <span style="color: #f8f8f2">ImageView</span> <span style="color: #f8f8f2">image</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">ImageView</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">getActivity</span><span style="color: #f92672">());</span>
+        <span style="color: #f8f8f2">image</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setBackgroundResource</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">res</span><span style="color: #f92672">);</span>
+        <span style="color: #f8f8f2">viewFlipper</span><span style="color: #f92672">.</span><span style="color: #a6e22e">addView</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">image</span><span style="color: #f92672">);</span>
+        <span style="color: #f8f8f2">viewFlipper</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setFlipInterval</span><span style="color: #f92672">(</span><span style="color: #ae81ff">2000</span><span style="color: #f92672">);</span> <span style="color: #75715e">//two seconds interval</span>
+        <span style="color: #f8f8f2">viewFlipper</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setAutoStart</span><span style="color: #f92672">(</span><span style="color: #66d9ef">true</span><span style="color: #f92672">);</span>
+    <span style="color: #f92672">}</span>
+
+<span style="color: #f92672">}</span>
+</pre></div>
+
+
+	<div style="color: darkblue; font-size: 18px; font-family: verdana; margin:10px;">
+		layout/fragment_flipper.xml
+	</div>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #75715e">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span style="color: #f92672">&lt;androidx.constraintlayout.widget.ConstraintLayout</span>
+    <span style="color: #a6e22e">xmlns:android=</span><span style="color: #e6db74">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+    <span style="color: #a6e22e">xmlns:app=</span><span style="color: #e6db74">&quot;http://schemas.android.com/apk/res-auto&quot;</span>
+    <span style="color: #a6e22e">xmlns:tools=</span><span style="color: #e6db74">&quot;http://schemas.android.com/tools&quot;</span>
+    <span style="color: #a6e22e">android:background=</span><span style="color: #e6db74">&quot;@drawable/backbg&quot;</span>
+    <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+    <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;match_parent&quot;</span><span style="color: #f92672">&gt;</span>
+
+    <span style="color: #f92672">&lt;ViewFlipper</span>
+        <span style="color: #a6e22e">android:id=</span><span style="color: #e6db74">&quot;@+id/viewflip&quot;</span>
+        <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;0dp&quot;</span>
+        <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;250dp&quot;</span>
+        <span style="color: #a6e22e">android:layout_weight=</span><span style="color: #e6db74">&quot;1&quot;</span>
+        <span style="color: #a6e22e">android:layout_marginTop=</span><span style="color: #e6db74">&quot;3dp&quot;</span>
+        <span style="color: #a6e22e">app:layout_constraintRight_toRightOf=</span><span style="color: #e6db74">&quot;parent&quot;</span>
+        <span style="color: #a6e22e">app:layout_constraintLeft_toLeftOf=</span><span style="color: #e6db74">&quot;parent&quot;</span>
+        <span style="color: #a6e22e">app:layout_constraintTop_toTopOf=</span><span style="color: #e6db74">&quot;parent&quot;</span>
+        <span style="color: #a6e22e">android:layout_marginRight=</span><span style="color: #e6db74">&quot;3dp&quot;</span>
+        <span style="color: #a6e22e">android:layout_marginLeft=</span><span style="color: #e6db74">&quot;3dp&quot;</span> <span style="color: #f92672">/&gt;</span>
+
+<span style="color: #f92672">&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;</span>
+</pre></div>
+
+
+
+
+
+</body>
+</html>
+

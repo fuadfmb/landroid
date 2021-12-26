@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>code</title>
+    <style>body { margin: 0px; }</style>
+</head>
+<body>
+
+    <div style="color: darkblue; font-size: 18px; font-family: verdana; margin:10px;">
+        <h4>Add this Dependency to app level Build.gradle file</h4>
+        <pre>implementation 'com.google.android.material:material:1.0.0'</pre>
+    </div>
+
+	<div style="color: darkblue; font-size: 18px; font-family: verdana; margin:10px;">
+		Frag1.java
+	</div>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">package</span> <span style="color: #f8f8f2">com</span><span style="color: #f92672">.</span><span style="color: #a6e22e">orosoft</span><span style="color: #f92672">.</span><span style="color: #a6e22e">landroid</span><span style="color: #f92672">;</span>
+
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.os.Bundle</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.LayoutInflater</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.View</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.ViewGroup</span><span style="color: #f92672">;</span>
+
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">androidx.annotation.Nullable</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">androidx.fragment.app.Fragment</span><span style="color: #f92672">;</span>
+
+
+<span style="color: #66d9ef">public</span> <span style="color: #66d9ef">class</span> <span style="color: #a6e22e">Frag1</span> <span style="color: #66d9ef">extends</span> <span style="color: #f8f8f2">Fragment</span> <span style="color: #f92672">{</span>
+
+    <span style="color: #a6e22e">@Nullable</span>
+    <span style="color: #a6e22e">@Override</span>
+    <span style="color: #66d9ef">public</span> <span style="color: #f8f8f2">View</span> <span style="color: #a6e22e">onCreateView</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">LayoutInflater</span> <span style="color: #f8f8f2">inflater</span><span style="color: #f92672">,</span> <span style="color: #a6e22e">@Nullable</span> <span style="color: #f8f8f2">ViewGroup</span> <span style="color: #f8f8f2">container</span><span style="color: #f92672">,</span> <span style="color: #a6e22e">@Nullable</span> <span style="color: #f8f8f2">Bundle</span> <span style="color: #f8f8f2">savedInstanceState</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+
+        <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">inflater</span><span style="color: #f92672">.</span><span style="color: #a6e22e">inflate</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">layout</span><span style="color: #f92672">.</span><span style="color: #a6e22e">frag1</span><span style="color: #f92672">,</span> <span style="color: #66d9ef">null</span><span style="color: #f92672">);</span>
+
+    <span style="color: #f92672">}</span>
+
+
+<span style="color: #f92672">}</span>
+</pre></div>
+
+
+
+	<div style="color: darkblue; font-size: 18px; font-family: verdana; margin:10px;">
+		Frag2.java
+	</div>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">package</span> <span style="color: #f8f8f2">com</span><span style="color: #f92672">.</span><span style="color: #a6e22e">orosoft</span><span style="color: #f92672">.</span><span style="color: #a6e22e">landroid</span><span style="color: #f92672">;</span>
+
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.os.Bundle</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.LayoutInflater</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.View</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.ViewGroup</span><span style="color: #f92672">;</span>
+
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">androidx.annotation.Nullable</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">androidx.fragment.app.Fragment</span><span style="color: #f92672">;</span>
+
+
+<span style="color: #66d9ef">public</span> <span style="color: #66d9ef">class</span> <span style="color: #a6e22e">Frag2</span> <span style="color: #66d9ef">extends</span> <span style="color: #f8f8f2">Fragment</span> <span style="color: #f92672">{</span>
+
+    <span style="color: #a6e22e">@Nullable</span>
+    <span style="color: #a6e22e">@Override</span>
+    <span style="color: #66d9ef">public</span> <span style="color: #f8f8f2">View</span> <span style="color: #a6e22e">onCreateView</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">LayoutInflater</span> <span style="color: #f8f8f2">inflater</span><span style="color: #f92672">,</span> <span style="color: #a6e22e">@Nullable</span> <span style="color: #f8f8f2">ViewGroup</span> <span style="color: #f8f8f2">container</span><span style="color: #f92672">,</span> <span style="color: #a6e22e">@Nullable</span> <span style="color: #f8f8f2">Bundle</span> <span style="color: #f8f8f2">savedInstanceState</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+
+        <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">inflater</span><span style="color: #f92672">.</span><span style="color: #a6e22e">inflate</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">layout</span><span style="color: #f92672">.</span><span style="color: #a6e22e">frag2</span><span style="color: #f92672">,</span> <span style="color: #66d9ef">null</span><span style="color: #f92672">);</span>
+
+    <span style="color: #f92672">}</span>
+
+
+<span style="color: #f92672">}</span>
+</pre></div>
+
+
+
+	<div style="color: darkblue; font-size: 18px; font-family: verdana; margin:10px;">
+		Frag3.java
+	</div>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">package</span> <span style="color: #f8f8f2">com</span><span style="color: #f92672">.</span><span style="color: #a6e22e">orosoft</span><span style="color: #f92672">.</span><span style="color: #a6e22e">landroid</span><span style="color: #f92672">;</span>
+
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.os.Bundle</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.LayoutInflater</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.View</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.ViewGroup</span><span style="color: #f92672">;</span>
+
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">androidx.annotation.Nullable</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">androidx.fragment.app.Fragment</span><span style="color: #f92672">;</span>
+
+<span style="color: #66d9ef">public</span> <span style="color: #66d9ef">class</span> <span style="color: #a6e22e">Frag3</span> <span style="color: #66d9ef">extends</span> <span style="color: #f8f8f2">Fragment</span> <span style="color: #f92672">{</span>
+
+    <span style="color: #a6e22e">@Nullable</span>
+    <span style="color: #a6e22e">@Override</span>
+    <span style="color: #66d9ef">public</span> <span style="color: #f8f8f2">View</span> <span style="color: #a6e22e">onCreateView</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">LayoutInflater</span> <span style="color: #f8f8f2">inflater</span><span style="color: #f92672">,</span> <span style="color: #a6e22e">@Nullable</span> <span style="color: #f8f8f2">ViewGroup</span> <span style="color: #f8f8f2">container</span><span style="color: #f92672">,</span> <span style="color: #a6e22e">@Nullable</span> <span style="color: #f8f8f2">Bundle</span> <span style="color: #f8f8f2">savedInstanceState</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+
+        <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">inflater</span><span style="color: #f92672">.</span><span style="color: #a6e22e">inflate</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">layout</span><span style="color: #f92672">.</span><span style="color: #a6e22e">frag3</span><span style="color: #f92672">,</span> <span style="color: #66d9ef">null</span><span style="color: #f92672">);</span>
+
+    <span style="color: #f92672">}</span>
+
+
+<span style="color: #f92672">}</span>
+</pre></div>
+
+
+
+	<div style="color: darkblue; font-size: 18px; font-family: verdana; margin:10px;">
+		layout/Frag1.xml
+	</div>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #75715e">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span style="color: #f92672">&lt;androidx.constraintlayout.widget.ConstraintLayout</span>
+    <span style="color: #a6e22e">xmlns:android=</span><span style="color: #e6db74">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+    <span style="color: #a6e22e">xmlns:app=</span><span style="color: #e6db74">&quot;http://schemas.android.com/apk/res-auto&quot;</span>
+    <span style="color: #a6e22e">android:background=</span><span style="color: #e6db74">&quot;#123456&quot;</span>
+    <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+    <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;match_parent&quot;</span><span style="color: #f92672">&gt;</span>
+
+    <span style="color: #f92672">&lt;TextView</span>
+        <span style="color: #a6e22e">android:id=</span><span style="color: #e6db74">&quot;@+id/textView8&quot;</span>
+        <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+        <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+        <span style="color: #a6e22e">android:text=</span><span style="color: #e6db74">&quot;Fragment 1&quot;</span>
+        <span style="color: #a6e22e">android:textColor=</span><span style="color: #e6db74">&quot;#fff&quot;</span>
+        <span style="color: #a6e22e">android:textSize=</span><span style="color: #e6db74">&quot;30sp&quot;</span>
+        <span style="color: #a6e22e">app:layout_constraintBottom_toBottomOf=</span><span style="color: #e6db74">&quot;parent&quot;</span>
+        <span style="color: #a6e22e">app:layout_constraintLeft_toLeftOf=</span><span style="color: #e6db74">&quot;parent&quot;</span>
+        <span style="color: #a6e22e">app:layout_constraintRight_toRightOf=</span><span style="color: #e6db74">&quot;parent&quot;</span>
+        <span style="color: #a6e22e">app:layout_constraintTop_toTopOf=</span><span style="color: #e6db74">&quot;parent&quot;</span> <span style="color: #f92672">/&gt;</span>
+
+<span style="color: #f92672">&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;</span>
+</pre></div>
+
+
+
+	<div style="color: darkblue; font-size: 18px; font-family: verdana; margin:10px;">
+		layout/Frag2.xml
+	</div>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #75715e">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span style="color: #f92672">&lt;androidx.constraintlayout.widget.ConstraintLayout</span>
+    <span style="color: #a6e22e">xmlns:android=</span><span style="color: #e6db74">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+    <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+    <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+    <span style="color: #a6e22e">android:background=</span><span style="color: #e6db74">&quot;#f50057&quot;</span>
+    <span style="color: #a6e22e">xmlns:app=</span><span style="color: #e6db74">&quot;http://schemas.android.com/apk/res-auto&quot;</span><span style="color: #f92672">&gt;</span>
+
+    <span style="color: #f92672">&lt;TextView</span>
+        <span style="color: #a6e22e">android:id=</span><span style="color: #e6db74">&quot;@+id/textView8&quot;</span>
+        <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+        <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+        <span style="color: #a6e22e">android:text=</span><span style="color: #e6db74">&quot;Fragment 2&quot;</span>
+        <span style="color: #a6e22e">android:textColor=</span><span style="color: #e6db74">&quot;#fff&quot;</span>
+        <span style="color: #a6e22e">android:textSize=</span><span style="color: #e6db74">&quot;30sp&quot;</span>
+        <span style="color: #a6e22e">app:layout_constraintBottom_toBottomOf=</span><span style="color: #e6db74">&quot;parent&quot;</span>
+        <span style="color: #a6e22e">app:layout_constraintLeft_toLeftOf=</span><span style="color: #e6db74">&quot;parent&quot;</span>
+        <span style="color: #a6e22e">app:layout_constraintRight_toRightOf=</span><span style="color: #e6db74">&quot;parent&quot;</span>
+        <span style="color: #a6e22e">app:layout_constraintTop_toTopOf=</span><span style="color: #e6db74">&quot;parent&quot;</span> <span style="color: #f92672">/&gt;</span>
+
+<span style="color: #f92672">&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;</span>
+</pre></div>
+
+
+
+	<div style="color: darkblue; font-size: 18px; font-family: verdana; margin:10px;">
+		layout/Frag3.xml
+	</div>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #75715e">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span style="color: #f92672">&lt;androidx.constraintlayout.widget.ConstraintLayout</span>
+    <span style="color: #a6e22e">xmlns:android=</span><span style="color: #e6db74">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+    <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+    <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+    <span style="color: #a6e22e">android:background=</span><span style="color: #e6db74">&quot;#00bfa5&quot;</span>
+    <span style="color: #a6e22e">xmlns:app=</span><span style="color: #e6db74">&quot;http://schemas.android.com/apk/res-auto&quot;</span><span style="color: #f92672">&gt;</span>
+
+    <span style="color: #f92672">&lt;TextView</span>
+        <span style="color: #a6e22e">android:id=</span><span style="color: #e6db74">&quot;@+id/textView8&quot;</span>
+        <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+        <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+        <span style="color: #a6e22e">android:text=</span><span style="color: #e6db74">&quot;Fragment 3&quot;</span>
+        <span style="color: #a6e22e">android:textColor=</span><span style="color: #e6db74">&quot;#fff&quot;</span>
+        <span style="color: #a6e22e">android:textSize=</span><span style="color: #e6db74">&quot;30sp&quot;</span>
+        <span style="color: #a6e22e">app:layout_constraintBottom_toBottomOf=</span><span style="color: #e6db74">&quot;parent&quot;</span>
+        <span style="color: #a6e22e">app:layout_constraintLeft_toLeftOf=</span><span style="color: #e6db74">&quot;parent&quot;</span>
+        <span style="color: #a6e22e">app:layout_constraintRight_toRightOf=</span><span style="color: #e6db74">&quot;parent&quot;</span>
+        <span style="color: #a6e22e">app:layout_constraintTop_toTopOf=</span><span style="color: #e6db74">&quot;parent&quot;</span> <span style="color: #f92672">/&gt;</span>
+
+<span style="color: #f92672">&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;</span>
+</pre></div>
+
+
+		<div style="color: darkblue; font-size: 18px; font-family: verdana; margin:10px;">
+		Values/styles.xml or Values/themes.xml
+	</div>
+	
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;style</span> <span style="color: #a6e22e">name=</span><span style="color: #e6db74">&quot;AppTheme2&quot;</span> <span style="color: #a6e22e">parent=</span><span style="color: #e6db74">&quot;Theme.AppCompat.Light.NoActionBar&quot;</span><span style="color: #f92672">&gt;</span>
+        <span style="color: #f92672">&lt;item</span> <span style="color: #a6e22e">name=</span><span style="color: #e6db74">&quot;colorPrimary&quot;</span><span style="color: #f92672">&gt;</span><span style="color:white;">#ff0288d1</span><span style="color: #f92672">&lt;/item&gt;</span>
+        <span style="color: #f92672">&lt;item</span> <span style="color: #a6e22e">name=</span><span style="color: #e6db74">&quot;colorPrimaryDark&quot;</span><span style="color: #f92672">&gt;</span><span style="color:white;">#ff1976d2</span><span style="color: #f92672">&lt;/item&gt;</span>
+        <span style="color: #f92672">&lt;item</span> <span style="color: #a6e22e">name=</span><span style="color: #e6db74">&quot;colorAccent&quot;</span><span style="color: #f92672">&gt;</span><span style="color:white;">#ffea00</span><span style="color: #f92672">&lt;/item&gt;</span>
+    <span style="color: #f92672">&lt;/style&gt;</span>
+</pre></div>
+
+
+
+
+
+</body>
+</html>

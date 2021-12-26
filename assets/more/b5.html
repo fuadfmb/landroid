@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>code</title>
+    <style>body { margin: 0px; }</style>
+</head>
+<body>
+
+	<div style="color: darkblue; font-size: 18px; font-family: verdana; margin:10px;">
+		drawable/custom_progressbar_drawable.xml
+	</div>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #75715e">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span style="color: #f92672">&lt;rotate</span> <span style="color: #a6e22e">xmlns:android=</span><span style="color: #e6db74">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+    <span style="color: #a6e22e">android:fromDegrees=</span><span style="color: #e6db74">&quot;-90&quot;</span>
+    <span style="color: #a6e22e">android:pivotX=</span><span style="color: #e6db74">&quot;50%&quot;</span>
+    <span style="color: #a6e22e">android:pivotY=</span><span style="color: #e6db74">&quot;50%&quot;</span><span style="color: #f92672">&gt;</span>
+    <span style="color: #f92672">&lt;shape</span>
+        <span style="color: #a6e22e">android:shape=</span><span style="color: #e6db74">&quot;ring&quot;</span>
+        <span style="color: #a6e22e">android:useLevel=</span><span style="color: #e6db74">&quot;false&quot;</span><span style="color: #f92672">&gt;</span>
+        <span style="color: #f92672">&lt;gradient</span>
+            <span style="color: #a6e22e">android:centerY=</span><span style="color: #e6db74">&quot;0.5&quot;</span>
+            <span style="color: #a6e22e">android:endColor=</span><span style="color: #e6db74">&quot;#FA5858&quot;</span>
+            <span style="color: #a6e22e">android:startColor=</span><span style="color: #e6db74">&quot;#0099CC&quot;</span>
+            <span style="color: #a6e22e">android:type=</span><span style="color: #e6db74">&quot;sweep&quot;</span>
+            <span style="color: #a6e22e">android:useLevel=</span><span style="color: #e6db74">&quot;false&quot;</span> <span style="color: #f92672">/&gt;</span>
+    <span style="color: #f92672">&lt;/shape&gt;</span>
+<span style="color: #f92672">&lt;/rotate&gt;</span>
+</pre></div>
+
+
+
+
+	<div style="color: darkblue; font-size: 18px; font-family: verdana; margin:10px;">
+		drawable/progress_vertical.xml
+	</div>
+
+	<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #75715e">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span style="color: #f92672">&lt;layer-list</span> <span style="color: #a6e22e">xmlns:android=</span><span style="color: #e6db74">&quot;http://schemas.android.com/apk/res/android&quot;</span><span style="color: #f92672">&gt;</span>
+    <span style="color: #f92672">&lt;item</span> <span style="color: #a6e22e">android:id=</span><span style="color: #e6db74">&quot;@android:id/background&quot;</span><span style="color: #f92672">&gt;</span>
+        <span style="color: #f92672">&lt;shape&gt;</span>
+            <span style="color: #f92672">&lt;corners</span> <span style="color: #a6e22e">android:radius=</span><span style="color: #e6db74">&quot;3dp&quot;</span><span style="color: #f92672">/&gt;</span>
+            <span style="color: #f92672">&lt;solid</span> <span style="color: #a6e22e">android:color=</span><span style="color: #e6db74">&quot;#fff&quot;</span><span style="color: #f92672">/&gt;</span>
+        <span style="color: #f92672">&lt;/shape&gt;</span>
+    <span style="color: #f92672">&lt;/item&gt;</span>
+    <span style="color: #f92672">&lt;item</span> <span style="color: #a6e22e">android:id=</span><span style="color: #e6db74">&quot;@android:id/secondaryProgress&quot;</span><span style="color: #f92672">&gt;</span>
+        <span style="color: #f92672">&lt;clip</span> <span style="color: #a6e22e">android:clipOrientation=</span><span style="color: #e6db74">&quot;vertical&quot;</span> <span style="color: #a6e22e">android:gravity=</span><span style="color: #e6db74">&quot;bottom&quot;</span><span style="color: #f92672">&gt;</span>
+            <span style="color: #f92672">&lt;shape&gt;</span>
+                <span style="color: #f92672">&lt;corners</span> <span style="color: #a6e22e">android:radius=</span><span style="color: #e6db74">&quot;3dp&quot;</span><span style="color: #f92672">/&gt;</span>
+                <span style="color: #f92672">&lt;solid</span> <span style="color: #a6e22e">android:color=</span><span style="color: #e6db74">&quot;@android:color/holo_blue_light&quot;</span><span style="color: #f92672">/&gt;</span>
+            <span style="color: #f92672">&lt;/shape&gt;</span>
+        <span style="color: #f92672">&lt;/clip&gt;</span>
+    <span style="color: #f92672">&lt;/item&gt;</span>
+    <span style="color: #f92672">&lt;item</span> <span style="color: #a6e22e">android:id=</span><span style="color: #e6db74">&quot;@android:id/progress&quot;</span><span style="color: #f92672">&gt;</span>
+        <span style="color: #f92672">&lt;clip</span> <span style="color: #a6e22e">android:clipOrientation=</span><span style="color: #e6db74">&quot;vertical&quot;</span> <span style="color: #a6e22e">android:gravity=</span><span style="color: #e6db74">&quot;bottom&quot;</span><span style="color: #f92672">&gt;</span>
+            <span style="color: #f92672">&lt;shape&gt;</span>
+                <span style="color: #f92672">&lt;corners</span> <span style="color: #a6e22e">android:radius=</span><span style="color: #e6db74">&quot;3dp&quot;</span><span style="color: #f92672">/&gt;</span>
+                <span style="color: #f92672">&lt;solid</span> <span style="color: #a6e22e">android:color=</span><span style="color: #e6db74">&quot;#ff9100&quot;</span><span style="color: #f92672">/&gt;</span>
+            <span style="color: #f92672">&lt;/shape&gt;</span>
+        <span style="color: #f92672">&lt;/clip&gt;</span>
+    <span style="color: #f92672">&lt;/item&gt;</span>
+<span style="color: #f92672">&lt;/layer-list&gt;</span>
+</pre></div>
+
+
+
+
+	<div style="color: darkblue; font-size: 18px; font-family: verdana; margin:10px;">
+		drawable/progress_ring.xml
+	</div>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #75715e">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span style="color: #f92672">&lt;layer-list</span> <span style="color: #a6e22e">xmlns:android=</span><span style="color: #e6db74">&quot;http://schemas.android.com/apk/res/android&quot;</span><span style="color: #f92672">&gt;</span>
+    <span style="color: #f92672">&lt;item</span> <span style="color: #a6e22e">android:id=</span><span style="color: #e6db74">&quot;@android:id/secondaryProgress&quot;</span><span style="color: #f92672">&gt;</span>
+        <span style="color: #f92672">&lt;shape</span>
+            <span style="color: #a6e22e">android:shape=</span><span style="color: #e6db74">&quot;ring&quot;</span>
+            <span style="color: #a6e22e">android:useLevel=</span><span style="color: #e6db74">&quot;true&quot;</span>
+            <span style="color: #a6e22e">android:thicknessRatio=</span><span style="color: #e6db74">&quot;24&quot;</span>
+            <span style="color: #a6e22e">android:innerRadiusRatio=</span><span style="color: #e6db74">&quot;2.2&quot;</span><span style="color: #f92672">&gt;</span>
+            <span style="color: #f92672">&lt;corners</span> <span style="color: #a6e22e">android:radius=</span><span style="color: #e6db74">&quot;3dp&quot;</span><span style="color: #f92672">/&gt;</span>
+            <span style="color: #f92672">&lt;solid</span> <span style="color: #a6e22e">android:color=</span><span style="color: #e6db74">&quot;#fff&quot;</span><span style="color: #f92672">/&gt;</span>
+        <span style="color: #f92672">&lt;/shape&gt;</span>
+    <span style="color: #f92672">&lt;/item&gt;</span>
+    <span style="color: #f92672">&lt;item</span> <span style="color: #a6e22e">android:id=</span><span style="color: #e6db74">&quot;@android:id/progress&quot;</span><span style="color: #f92672">&gt;</span>
+        <span style="color: #f92672">&lt;shape</span>
+            <span style="color: #a6e22e">android:shape=</span><span style="color: #e6db74">&quot;ring&quot;</span>
+            <span style="color: #a6e22e">android:useLevel=</span><span style="color: #e6db74">&quot;true&quot;</span>
+            <span style="color: #a6e22e">android:thicknessRatio=</span><span style="color: #e6db74">&quot;24&quot;</span>
+            <span style="color: #a6e22e">android:innerRadiusRatio=</span><span style="color: #e6db74">&quot;2.2&quot;</span><span style="color: #f92672">&gt;</span>
+            <span style="color: #f92672">&lt;corners</span> <span style="color: #a6e22e">android:radius=</span><span style="color: #e6db74">&quot;3dp&quot;</span><span style="color: #f92672">/&gt;</span>
+            <span style="color: #f92672">&lt;solid</span> <span style="color: #a6e22e">android:color=</span><span style="color: #e6db74">&quot;#00e5ff&quot;</span><span style="color: #f92672">/&gt;</span>
+        <span style="color: #f92672">&lt;/shape&gt;</span>
+    <span style="color: #f92672">&lt;/item&gt;</span>
+    <span style="color: #f92672">&lt;item</span> <span style="color: #a6e22e">android:id=</span><span style="color: #e6db74">&quot;@android:id/background&quot;</span><span style="color: #f92672">&gt;</span>
+        <span style="color: #f92672">&lt;shape</span>
+            <span style="color: #a6e22e">android:shape=</span><span style="color: #e6db74">&quot;ring&quot;</span>
+            <span style="color: #a6e22e">android:useLevel=</span><span style="color: #e6db74">&quot;true&quot;</span>
+            <span style="color: #a6e22e">android:thicknessRatio=</span><span style="color: #e6db74">&quot;24&quot;</span>
+            <span style="color: #a6e22e">android:innerRadiusRatio=</span><span style="color: #e6db74">&quot;2.2&quot;</span><span style="color: #f92672">&gt;</span>
+            <span style="color: #f92672">&lt;corners</span> <span style="color: #a6e22e">android:radius=</span><span style="color: #e6db74">&quot;3dp&quot;</span><span style="color: #f92672">/&gt;</span>
+            <span style="color: #f92672">&lt;solid</span> <span style="color: #a6e22e">android:color=</span><span style="color: #e6db74">&quot;#f5f5f5&quot;</span><span style="color: #f92672">/&gt;</span>
+        <span style="color: #f92672">&lt;/shape&gt;</span>
+    <span style="color: #f92672">&lt;/item&gt;</span>
+<span style="color: #f92672">&lt;/layer-list&gt;</span>
+</pre></div>
+
+
+
+	<div style="color: darkblue; font-size: 18px; font-family: verdana; margin:10px;">
+		drawable/progress_ring2.xml
+	</div>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #75715e">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span style="color: #f92672">&lt;layer-list</span> <span style="color: #a6e22e">xmlns:android=</span><span style="color: #e6db74">&quot;http://schemas.android.com/apk/res/android&quot;</span><span style="color: #f92672">&gt;</span>
+
+    <span style="color: #f92672">&lt;item</span> <span style="color: #a6e22e">android:id=</span><span style="color: #e6db74">&quot;@android:id/secondaryProgress&quot;</span><span style="color: #f92672">&gt;</span>
+        <span style="color: #f92672">&lt;shape</span>
+            <span style="color: #a6e22e">android:shape=</span><span style="color: #e6db74">&quot;ring&quot;</span>
+            <span style="color: #a6e22e">android:useLevel=</span><span style="color: #e6db74">&quot;true&quot;</span>
+            <span style="color: #a6e22e">android:thicknessRatio=</span><span style="color: #e6db74">&quot;12&quot;</span>
+            <span style="color: #a6e22e">android:innerRadiusRatio=</span><span style="color: #e6db74">&quot;2.0&quot;</span><span style="color: #f92672">&gt;</span>
+            <span style="color: #f92672">&lt;corners</span> <span style="color: #a6e22e">android:radius=</span><span style="color: #e6db74">&quot;3dp&quot;</span><span style="color: #f92672">/&gt;</span>
+            <span style="color: #f92672">&lt;solid</span> <span style="color: #a6e22e">android:color=</span><span style="color: #e6db74">&quot;#ffc800&quot;</span><span style="color: #f92672">/&gt;</span>
+        <span style="color: #f92672">&lt;/shape&gt;</span>
+    <span style="color: #f92672">&lt;/item&gt;</span>
+    <span style="color: #f92672">&lt;item</span> <span style="color: #a6e22e">android:id=</span><span style="color: #e6db74">&quot;@android:id/progress&quot;</span><span style="color: #f92672">&gt;</span>
+        <span style="color: #f92672">&lt;shape</span>
+            <span style="color: #a6e22e">android:thicknessRatio=</span><span style="color: #e6db74">&quot;24&quot;</span>
+            <span style="color: #a6e22e">android:shape=</span><span style="color: #e6db74">&quot;ring&quot;</span>
+            <span style="color: #a6e22e">android:innerRadiusRatio=</span><span style="color: #e6db74">&quot;2.3&quot;</span>
+            <span style="color: #a6e22e">android:useLevel=</span><span style="color: #e6db74">&quot;true&quot;</span><span style="color: #f92672">&gt;</span>
+            <span style="color: #f92672">&lt;gradient</span>
+                <span style="color: #a6e22e">android:centerY=</span><span style="color: #e6db74">&quot;0.5&quot;</span>
+                <span style="color: #a6e22e">android:startColor=</span><span style="color: #e6db74">&quot;@android:color/holo_blue_light&quot;</span>
+                <span style="color: #a6e22e">android:endColor=</span><span style="color: #e6db74">&quot;#e040fb&quot;</span>
+                <span style="color: #a6e22e">android:type=</span><span style="color: #e6db74">&quot;linear&quot;</span>
+                <span style="color: #a6e22e">android:useLevel=</span><span style="color: #e6db74">&quot;false&quot;</span> <span style="color: #f92672">/&gt;</span>
+        <span style="color: #f92672">&lt;/shape&gt;</span>
+    <span style="color: #f92672">&lt;/item&gt;</span>
+
+
+<span style="color: #f92672">&lt;/layer-list&gt;</span>
+</pre></div>
+
+
+
+
+
+</body>
+</html>

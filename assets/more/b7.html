@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>code</title>
+    <style>body { margin: 0px; }</style>
+</head>
+<body>
+
+	<div style="color: darkblue; font-size: 18px; font-family: verdana; margin:10px;">
+		drawable/seekbar_style.xml
+	</div>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #75715e">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span style="color: #f92672">&lt;layer-list</span>
+    <span style="color: #a6e22e">xmlns:android=</span><span style="color: #e6db74">&quot;http://schemas.android.com/apk/res/android&quot;</span><span style="color: #f92672">&gt;</span>
+    <span style="color: #f92672">&lt;item</span>
+        <span style="color: #a6e22e">android:id=</span><span style="color: #e6db74">&quot;@android:id/background&quot;</span>
+        <span style="color: #a6e22e">android:drawable=</span><span style="color: #e6db74">&quot;@drawable/seekbar_border_shadow&quot;</span><span style="color: #f92672">/&gt;</span>
+    <span style="color: #f92672">&lt;item</span>
+        <span style="color: #a6e22e">android:id=</span><span style="color: #e6db74">&quot;@android:id/progress&quot;</span><span style="color: #f92672">&gt;</span>
+        <span style="color: #f92672">&lt;clip</span>
+            <span style="color: #a6e22e">android:drawable=</span><span style="color: #e6db74">&quot;@drawable/seekbar_progress&quot;</span><span style="color: #f92672">/&gt;</span>
+    <span style="color: #f92672">&lt;/item&gt;</span>
+<span style="color: #f92672">&lt;/layer-list&gt;</span>
+</pre></div>
+
+
+	<div style="color: darkblue; font-size: 18px; font-family: verdana; margin:10px;">
+		drawable/seekbar_thumb.xml
+	</div>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #75715e">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span style="color: #f92672">&lt;layer-list</span> <span style="color: #a6e22e">xmlns:android=</span><span style="color: #e6db74">&quot;http://schemas.android.com/apk/res/android&quot;</span><span style="color: #f92672">&gt;</span>
+    <span style="color: #f92672">&lt;item&gt;</span>
+        <span style="color: #f92672">&lt;shape</span> <span style="color: #a6e22e">android:shape=</span><span style="color: #e6db74">&quot;oval&quot;</span><span style="color: #f92672">&gt;</span>
+            <span style="color: #f92672">&lt;solid</span> <span style="color: #a6e22e">android:color=</span><span style="color: #e6db74">&quot;#FFAB00&quot;</span><span style="color: #f92672">/&gt;</span>
+            <span style="color: #f92672">&lt;size</span>
+                <span style="color: #a6e22e">android:width=</span><span style="color: #e6db74">&quot;35dp&quot;</span>
+                <span style="color: #a6e22e">android:height=</span><span style="color: #e6db74">&quot;35dp&quot;</span><span style="color: #f92672">/&gt;</span>
+        <span style="color: #f92672">&lt;/shape&gt;</span>
+    <span style="color: #f92672">&lt;/item&gt;</span>
+<span style="color: #f92672">&lt;/layer-list&gt;</span>
+</pre></div>
+
+
+
+	<div style="color: darkblue; font-size: 18px; font-family: verdana; margin:10px;">
+		drawable/seekbar_progress.xml
+	</div>
+	<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #75715e">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span style="color: #f92672">&lt;layer-list</span> <span style="color: #a6e22e">xmlns:android=</span><span style="color: #e6db74">&quot;http://schemas.android.com/apk/res/android&quot;</span><span style="color: #f92672">&gt;</span>
+    <span style="color: #f92672">&lt;item</span>
+        <span style="color: #a6e22e">android:id=</span><span style="color: #e6db74">&quot;@+id/progressshape&quot;</span><span style="color: #f92672">&gt;</span>
+        <span style="color: #f92672">&lt;clip&gt;</span>
+            <span style="color: #f92672">&lt;shape</span>
+                <span style="color: #a6e22e">android:shape=</span><span style="color: #e6db74">&quot;rectangle&quot;</span><span style="color: #f92672">&gt;</span>
+                <span style="color: #f92672">&lt;size</span> <span style="color: #a6e22e">android:height=</span><span style="color: #e6db74">&quot;5dp&quot;</span><span style="color: #f92672">/&gt;</span>
+                <span style="color: #f92672">&lt;corners</span>
+                    <span style="color: #a6e22e">android:radius=</span><span style="color: #e6db74">&quot;5dp&quot;</span><span style="color: #f92672">/&gt;</span>
+                <span style="color: #f92672">&lt;solid</span> <span style="color: #a6e22e">android:color=</span><span style="color: #e6db74">&quot;#FFAB00&quot;</span><span style="color: #f92672">/&gt;</span>
+            <span style="color: #f92672">&lt;/shape&gt;</span>
+        <span style="color: #f92672">&lt;/clip&gt;</span>
+    <span style="color: #f92672">&lt;/item&gt;</span>
+<span style="color: #f92672">&lt;/layer-list&gt;</span>
+</pre></div>
+
+
+
+
+	<div style="color: darkblue; font-size: 18px; font-family: verdana; margin:10px;">
+		drawable/seekbar_border_shadow.xml
+	</div>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #75715e">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span style="color: #f92672">&lt;layer-list</span> <span style="color: #a6e22e">xmlns:android=</span><span style="color: #e6db74">&quot;http://schemas.android.com/apk/res/android&quot;</span><span style="color: #f92672">&gt;</span>
+    <span style="color: #f92672">&lt;item&gt;</span>
+        <span style="color: #f92672">&lt;shape&gt;</span>
+            <span style="color: #f92672">&lt;corners</span> <span style="color: #a6e22e">android:radius=</span><span style="color: #e6db74">&quot;5dp&quot;</span><span style="color: #f92672">/&gt;</span>
+            <span style="color: #f92672">&lt;gradient</span>
+                <span style="color: #a6e22e">android:angle=</span><span style="color: #e6db74">&quot;270&quot;</span>
+                <span style="color: #a6e22e">android:startColor=</span><span style="color: #e6db74">&quot;#DDFFFFFF&quot;</span>
+                <span style="color: #a6e22e">android:centerColor=</span><span style="color: #e6db74">&quot;#DDFFFFFF&quot;</span>
+                <span style="color: #a6e22e">android:endColor=</span><span style="color: #e6db74">&quot;#DDFFFFFF&quot;</span>
+                <span style="color: #a6e22e">android:centerY=</span><span style="color: #e6db74">&quot;0.2&quot;</span>
+                <span style="color: #a6e22e">android:type=</span><span style="color: #e6db74">&quot;linear&quot;</span><span style="color: #f92672">/&gt;</span>
+        <span style="color: #f92672">&lt;/shape&gt;</span>
+    <span style="color: #f92672">&lt;/item&gt;</span>
+<span style="color: #f92672">&lt;/layer-list&gt;</span>
+</pre></div>
+
+	
+
+
+
+
+
+
+
+
+</body>
+</html>

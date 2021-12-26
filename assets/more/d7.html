@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>code</title>
+    <style>body { margin: 0px; }</style>
+</head>
+<body>
+
+
+    <div style="color: darkblue; font-size: 18px; font-family: verdana; margin:10px;">
+        <h4>Add this Dependency to app level Build.gradle file</h4>
+        <pre>implementation 'com.google.android.material:material:1.0.0'</pre>
+    </div>
+
+	<div style="color: darkblue; font-size: 18px; font-family: verdana; margin:10px;">
+		Frag_BottomSheet.java
+	</div>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">package</span> <span style="color: #f8f8f2">com</span><span style="color: #f92672">.</span><span style="color: #a6e22e">orosoft</span><span style="color: #f92672">.</span><span style="color: #a6e22e">landroid</span><span style="color: #f92672">;</span>
+
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.app.Dialog</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.View</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.widget.Button</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.widget.Toast</span><span style="color: #f92672">;</span>
+
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">com.google.android.material.bottomsheet.BottomSheetDialogFragment</span><span style="color: #f92672">;</span>
+
+<span style="color: #66d9ef">public</span> <span style="color: #66d9ef">class</span> <span style="color: #a6e22e">Frag_BottomSheet</span> <span style="color: #66d9ef">extends</span> <span style="color: #f8f8f2">BottomSheetDialogFragment</span> <span style="color: #f92672">{</span>
+
+    <span style="color: #a6e22e">@Override</span>
+    <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">setupDialog</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">Dialog</span> <span style="color: #f8f8f2">dialog</span><span style="color: #f92672">,</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">style</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+        <span style="color: #66d9ef">super</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setupDialog</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">dialog</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">style</span><span style="color: #f92672">);</span>
+
+        <span style="color: #f8f8f2">View</span> <span style="color: #f8f8f2">view</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">View</span><span style="color: #f92672">.</span><span style="color: #a6e22e">inflate</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">getContext</span><span style="color: #f92672">(),</span> <span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">layout</span><span style="color: #f92672">.</span><span style="color: #a6e22e">bottomsheet</span><span style="color: #f92672">,</span> <span style="color: #66d9ef">null</span><span style="color: #f92672">);</span>
+        
+        <span style="color: #f8f8f2">Button</span> <span style="color: #f8f8f2">btn_fragsheet_okay</span> <span style="color: #f92672">=</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">Button</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">view</span><span style="color: #f92672">.</span><span style="color: #a6e22e">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">btn_fragsheet_okay</span><span style="color: #f92672">);</span>
+        <span style="color: #f8f8f2">btn_fragsheet_okay</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setOnClickListener</span><span style="color: #f92672">(</span><span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">View</span><span style="color: #f92672">.</span><span style="color: #a6e22e">OnClickListener</span><span style="color: #f92672">()</span> <span style="color: #f92672">{</span>
+            <span style="color: #a6e22e">@Override</span>
+            <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">onClick</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">View</span> <span style="color: #f8f8f2">v</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+                <span style="color: #f8f8f2">Toast</span><span style="color: #f92672">.</span><span style="color: #a6e22e">makeText</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">getActivity</span><span style="color: #f92672">(),</span> <span style="color: #e6db74">&quot;You clicked okay button&quot;</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">Toast</span><span style="color: #f92672">.</span><span style="color: #a6e22e">LENGTH_SHORT</span><span style="color: #f92672">).</span><span style="color: #a6e22e">show</span><span style="color: #f92672">();</span>
+                <span style="color: #f8f8f2">dialog</span><span style="color: #f92672">.</span><span style="color: #a6e22e">dismiss</span><span style="color: #f92672">();</span>
+            <span style="color: #f92672">}</span>
+        <span style="color: #f92672">});</span>
+        
+        <span style="color: #f8f8f2">dialog</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setContentView</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">view</span><span style="color: #f92672">);</span>
+
+    <span style="color: #f92672">}</span>
+
+
+<span style="color: #f92672">}</span>
+</pre></div>
+
+
+
+	<div style="color: darkblue; font-size: 18px; font-family: verdana; margin:10px;">
+		Layout/bottomsheet.xml
+	</div>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #75715e">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span style="color: #f92672">&lt;LinearLayout</span> <span style="color: #a6e22e">xmlns:android=</span><span style="color: #e6db74">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+    <span style="color: #a6e22e">xmlns:app=</span><span style="color: #e6db74">&quot;http://schemas.android.com/apk/res-auto&quot;</span>
+    <span style="color: #a6e22e">android:id=</span><span style="color: #e6db74">&quot;@+id/bottom_sheet&quot;</span>
+    <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+    <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+    <span style="color: #a6e22e">android:orientation=</span><span style="color: #e6db74">&quot;vertical&quot;</span>
+    <span style="color: #a6e22e">android:padding=</span><span style="color: #e6db74">&quot;16dp&quot;</span>
+    <span style="color: #a6e22e">app:behavior_hideable=</span><span style="color: #e6db74">&quot;true&quot;</span>
+    <span style="color: #a6e22e">app:behavior_peekHeight=</span><span style="color: #e6db74">&quot;0dp&quot;</span>
+    <span style="color: #a6e22e">android:background=</span><span style="color: #e6db74">&quot;#123456&quot;</span>
+    <span style="color: #a6e22e">app:layout_behavior=</span><span style="color: #e6db74">&quot;android.support.design.widget.BottomSheetBehavior&quot;</span><span style="color: #f92672">&gt;</span>
+
+    <span style="color: #f92672">&lt;RelativeLayout</span>
+        <span style="color: #a6e22e">android:id=</span><span style="color: #e6db74">&quot;@+id/giftcontainer&quot;</span>
+        <span style="color: #a6e22e">android:layout_marginBottom=</span><span style="color: #e6db74">&quot;20dp&quot;</span>
+        <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+        <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span><span style="color: #f92672">&gt;</span>
+
+        <span style="color: #f92672">&lt;TextView</span>
+            <span style="color: #a6e22e">android:text=</span><span style="color: #e6db74">&quot;BottomSheet with Fragment&quot;</span>
+            <span style="color: #a6e22e">android:textColor=</span><span style="color: #e6db74">&quot;#fff&quot;</span>
+            <span style="color: #a6e22e">android:layout_marginLeft=</span><span style="color: #e6db74">&quot;5dp&quot;</span>
+            <span style="color: #a6e22e">android:textSize=</span><span style="color: #e6db74">&quot;20sp&quot;</span>
+            <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+            <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span> <span style="color: #f92672">/&gt;</span>
+
+    <span style="color: #f92672">&lt;/RelativeLayout&gt;</span>
+
+    <span style="color: #f92672">&lt;TextView</span>
+        <span style="color: #a6e22e">android:textSize=</span><span style="color: #e6db74">&quot;16sp&quot;</span>
+        <span style="color: #a6e22e">android:textColor=</span><span style="color: #e6db74">&quot;#fff&quot;</span>
+        <span style="color: #a6e22e">android:layout_margin=</span><span style="color: #e6db74">&quot;5dp&quot;</span>
+        <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+        <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+        <span style="color: #a6e22e">android:text=</span><span style="color: #e6db74">&quot;This is BottomSheet fragment. swipe me down or click somewhere else outside this layout to close me.&quot;</span> <span style="color: #f92672">/&gt;</span>
+
+    <span style="color: #f92672">&lt;Button</span>
+        <span style="color: #a6e22e">android:id=</span><span style="color: #e6db74">&quot;@+id/btn_fragsheet_okay&quot;</span>
+        <span style="color: #a6e22e">style=</span><span style="color: #e6db74">&quot;@style/Widget.AppCompat.Button.Colored&quot;</span>
+        <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+        <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;wrap_content&quot;</span>
+        <span style="color: #a6e22e">android:text=</span><span style="color: #e6db74">&quot;Okay&quot;</span> <span style="color: #f92672">/&gt;</span>
+
+    <span style="color: #f92672">&lt;View</span>
+        <span style="color: #a6e22e">android:layout_width=</span><span style="color: #e6db74">&quot;match_parent&quot;</span>
+        <span style="color: #a6e22e">android:layout_height=</span><span style="color: #e6db74">&quot;30dp&quot;</span><span style="color: #f92672">/&gt;</span>
+
+<span style="color: #f92672">&lt;/LinearLayout&gt;</span>
+</pre></div>
+
+
+
+
+
+
+</body>
+</html>
