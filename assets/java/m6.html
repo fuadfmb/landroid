@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>code</title>
+    <style>body { margin: 0px; }</style>
+</head>
+<body>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #000080; font-weight: bold">package</span> com.<span style="color: #FF0000">orosoft</span>.<span style="color: #FF0000">landroid</span>;
+
+<span style="color: #000080; font-weight: bold">import</span> android.content.Intent;
+<span style="color: #000080; font-weight: bold">import</span> android.os.Bundle;
+<span style="color: #000080; font-weight: bold">import</span> android.view.Menu;
+<span style="color: #000080; font-weight: bold">import</span> android.view.MenuItem;
+<span style="color: #000080; font-weight: bold">import</span> android.view.View;
+<span style="color: #000080; font-weight: bold">import</span> android.view.animation.Animation;
+<span style="color: #000080; font-weight: bold">import</span> android.view.animation.AnimationUtils;
+<span style="color: #000080; font-weight: bold">import</span> android.widget.Button;
+<span style="color: #000080; font-weight: bold">import</span> android.widget.ImageView;
+
+<span style="color: #000080; font-weight: bold">import</span> androidx.appcompat.app.AppCompatActivity;
+
+<span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">class</span> M6_Animation <span style="color: #000080; font-weight: bold">extends</span> AppCompatActivity {
+
+    Button animate1, animate2, animate3, animate4, animate5, animate6, animate7, animate8, animate9, animate10;
+    ImageView imageV;
+
+    @Override
+    <span style="color: #000080; font-weight: bold">protected</span> <span style="color: #000080; font-weight: bold">void</span> onCreate(Bundle savedInstanceState) {
+        <span style="color: #000080; font-weight: bold">super</span>.<span style="color: #FF0000">onCreate</span>(savedInstanceState);
+        setContentView(R.<span style="color: #FF0000">layout</span>.<span style="color: #FF0000">activity_m6_anim</span>);
+
+        animate1 = (Button) findViewById(R.<span style="color: #FF0000">id</span>.<span style="color: #FF0000">top</span>);
+        animate2 = (Button) findViewById(R.<span style="color: #FF0000">id</span>.<span style="color: #FF0000">left</span>);
+        animate3 = (Button) findViewById(R.<span style="color: #FF0000">id</span>.<span style="color: #FF0000">bottom</span>);
+        animate4 = (Button) findViewById(R.<span style="color: #FF0000">id</span>.<span style="color: #FF0000">right</span>);
+        animate5 = (Button) findViewById(R.<span style="color: #FF0000">id</span>.<span style="color: #FF0000">shake</span>);
+        animate6 = (Button) findViewById(R.<span style="color: #FF0000">id</span>.<span style="color: #FF0000">fadein</span>);
+        animate7 = (Button) findViewById(R.<span style="color: #FF0000">id</span>.<span style="color: #FF0000">fadeout</span>);
+        animate8 = (Button) findViewById(R.<span style="color: #FF0000">id</span>.<span style="color: #FF0000">bounce</span>);
+        animate9 = (Button) findViewById(R.<span style="color: #FF0000">id</span>.<span style="color: #FF0000">clockwise</span>);
+        animate10 = (Button) findViewById(R.<span style="color: #FF0000">id</span>.<span style="color: #FF0000">zoom</span>);
+
+        imageV = (ImageView) findViewById(R.<span style="color: #FF0000">id</span>.<span style="color: #FF0000">imageV</span>);
+
+        Animation a1 = AnimationUtils.<span style="color: #FF0000">loadAnimation</span>(getApplicationContext(), R.<span style="color: #FF0000">anim</span>.<span style="color: #FF0000">zoom</span>);
+        Animation a2 = AnimationUtils.<span style="color: #FF0000">loadAnimation</span>(getApplicationContext(), R.<span style="color: #FF0000">anim</span>.<span style="color: #FF0000">bounce</span>);
+        animate1.<span style="color: #FF0000">startAnimation</span>(a1);
+        animate2.<span style="color: #FF0000">startAnimation</span>(a2);
+        animate3.<span style="color: #FF0000">startAnimation</span>(a1);
+        animate4.<span style="color: #FF0000">startAnimation</span>(a2);
+        animate5.<span style="color: #FF0000">startAnimation</span>(a1);
+        animate6.<span style="color: #FF0000">startAnimation</span>(a2);
+        animate7.<span style="color: #FF0000">startAnimation</span>(a1);
+        animate8.<span style="color: #FF0000">startAnimation</span>(a2);
+        animate9.<span style="color: #FF0000">startAnimation</span>(a1);
+        animate10.<span style="color: #FF0000">startAnimation</span>(a2);
+
+
+        animate1.<span style="color: #FF0000">setOnClickListener</span>(<span style="color: #000080; font-weight: bold">new</span> View.<span style="color: #FF0000">OnClickListener</span>() {
+            @Override
+            <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> onClick(View v) {
+                Animation anim1 = AnimationUtils.<span style="color: #FF0000">loadAnimation</span>(getApplicationContext(), R.<span style="color: #FF0000">anim</span>.<span style="color: #FF0000">slide_in_top</span>);
+                imageV.<span style="color: #FF0000">startAnimation</span>(anim1);
+            }
+        });
+
+        animate2.<span style="color: #FF0000">setOnClickListener</span>(<span style="color: #000080; font-weight: bold">new</span> View.<span style="color: #FF0000">OnClickListener</span>() {
+            @Override
+            <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> onClick(View v) {
+                Animation anim1 = AnimationUtils.<span style="color: #FF0000">loadAnimation</span>(getApplicationContext(), android.<span style="color: #FF0000">R</span>.<span style="color: #FF0000">anim</span>.<span style="color: #FF0000">slide_in_left</span>);
+                imageV.<span style="color: #FF0000">startAnimation</span>(anim1);
+            }
+        });
+
+        animate3.<span style="color: #FF0000">setOnClickListener</span>(<span style="color: #000080; font-weight: bold">new</span> View.<span style="color: #FF0000">OnClickListener</span>() {
+            @Override
+            <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> onClick(View v) {
+                Animation anim1 = AnimationUtils.<span style="color: #FF0000">loadAnimation</span>(getApplicationContext(), R.<span style="color: #FF0000">anim</span>.<span style="color: #FF0000">slide_in_bottom</span>);
+                imageV.<span style="color: #FF0000">startAnimation</span>(anim1);
+            }
+        });
+
+        animate4.<span style="color: #FF0000">setOnClickListener</span>(<span style="color: #000080; font-weight: bold">new</span> View.<span style="color: #FF0000">OnClickListener</span>() {
+            @Override
+            <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> onClick(View v) {
+                Animation anim1 = AnimationUtils.<span style="color: #FF0000">loadAnimation</span>(getApplicationContext(), R.<span style="color: #FF0000">anim</span>.<span style="color: #FF0000">slide_in_right</span>);
+                imageV.<span style="color: #FF0000">startAnimation</span>(anim1);
+            }
+        });
+
+        animate5.<span style="color: #FF0000">setOnClickListener</span>(<span style="color: #000080; font-weight: bold">new</span> View.<span style="color: #FF0000">OnClickListener</span>() {
+            @Override
+            <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> onClick(View v) {
+                Animation anim1 = AnimationUtils.<span style="color: #FF0000">loadAnimation</span>(getApplicationContext(), R.<span style="color: #FF0000">anim</span>.<span style="color: #FF0000">shake</span>);
+                imageV.<span style="color: #FF0000">startAnimation</span>(anim1);
+            }
+        });
+
+        animate6.<span style="color: #FF0000">setOnClickListener</span>(<span style="color: #000080; font-weight: bold">new</span> View.<span style="color: #FF0000">OnClickListener</span>() {
+            @Override
+            <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> onClick(View v) {
+                Animation anim2 = AnimationUtils.<span style="color: #FF0000">loadAnimation</span>(getApplicationContext(), R.<span style="color: #FF0000">anim</span>.<span style="color: #FF0000">fade_in</span>);
+                imageV.<span style="color: #FF0000">startAnimation</span>(anim2);
+            }
+        });
+        animate7.<span style="color: #FF0000">setOnClickListener</span>(<span style="color: #000080; font-weight: bold">new</span> View.<span style="color: #FF0000">OnClickListener</span>() {
+            @Override
+            <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> onClick(View v) {
+                Animation anim3 = AnimationUtils.<span style="color: #FF0000">loadAnimation</span>(getApplicationContext(), R.<span style="color: #FF0000">anim</span>.<span style="color: #FF0000">fade_out</span>);
+                imageV.<span style="color: #FF0000">startAnimation</span>(anim3);
+            }
+        });
+        animate8.<span style="color: #FF0000">setOnClickListener</span>(<span style="color: #000080; font-weight: bold">new</span> View.<span style="color: #FF0000">OnClickListener</span>() {
+            @Override
+            <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> onClick(View v) {
+                Animation anim4 = AnimationUtils.<span style="color: #FF0000">loadAnimation</span>(getApplicationContext(), R.<span style="color: #FF0000">anim</span>.<span style="color: #FF0000">bounce</span>);
+                imageV.<span style="color: #FF0000">startAnimation</span>(anim4);
+            }
+        });
+        animate9.<span style="color: #FF0000">setOnClickListener</span>(<span style="color: #000080; font-weight: bold">new</span> View.<span style="color: #FF0000">OnClickListener</span>() {
+            @Override
+            <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> onClick(View v) {
+                Animation anim5 = AnimationUtils.<span style="color: #FF0000">loadAnimation</span>(getApplicationContext(), R.<span style="color: #FF0000">anim</span>.<span style="color: #FF0000">clockwise</span>);
+                imageV.<span style="color: #FF0000">startAnimation</span>(anim5);
+            }
+        });
+        animate10.<span style="color: #FF0000">setOnClickListener</span>(<span style="color: #000080; font-weight: bold">new</span> View.<span style="color: #FF0000">OnClickListener</span>() {
+            @Override
+            <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> onClick(View v) {
+                Animation anim6 = AnimationUtils.<span style="color: #FF0000">loadAnimation</span>(getApplicationContext(), R.<span style="color: #FF0000">anim</span>.<span style="color: #FF0000">zoom</span>);
+                imageV.<span style="color: #FF0000">startAnimation</span>(anim6);
+            }
+        });
+
+
+    }
+
+
+    @Override
+    <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">boolean</span> onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().<span style="color: #FF0000">inflate</span>(R.<span style="color: #FF0000">menu</span>.<span style="color: #FF0000">menu2</span>, menu);
+        <span style="color: #000080; font-weight: bold">return</span> <span style="color: #000080; font-weight: bold">super</span>.<span style="color: #FF0000">onCreateOptionsMenu</span>(menu);
+    }
+
+    @Override
+    <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">boolean</span> onOptionsItemSelected(MenuItem item) {
+
+        <span style="color: #000080; font-weight: bold">if</span> (item.<span style="color: #FF0000">getItemId</span>() == R.<span style="color: #FF0000">id</span>.<span style="color: #FF0000">show_source</span>){
+            Intent intent = <span style="color: #000080; font-weight: bold">new</span> Intent(getApplicationContext(), Viewer.<span style="color: #FF0000">class</span>);
+            intent.<span style="color: #FF0000">putExtra</span>(<span style="color: #0000FF">&quot;file&quot;</span>, <span style="color: #0000FF">&quot;m6&quot;</span>);
+            startActivity(intent);
+        }
+
+        <span style="color: #000080; font-weight: bold">return</span> <span style="color: #000080; font-weight: bold">super</span>.<span style="color: #FF0000">onOptionsItemSelected</span>(item);
+    }
+
+
+
+}
+</pre></div>
+
+
+</body>
+</html>

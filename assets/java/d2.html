@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>code</title>
+    <style>body { margin: 0px; }</style>
+</head>
+<body>
+	<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">package</span> <span style="color: #f8f8f2">com</span><span style="color: #f92672">.</span><span style="color: #a6e22e">orosoft</span><span style="color: #f92672">.</span><span style="color: #a6e22e">landroid</span><span style="color: #f92672">;</span>
+
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.content.Intent</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.os.Bundle</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.Menu</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.MenuItem</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.View</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.widget.Button</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.widget.Toast</span><span style="color: #f92672">;</span>
+
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">androidx.appcompat.app.AppCompatActivity</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">androidx.constraintlayout.widget.ConstraintLayout</span><span style="color: #f92672">;</span>
+
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">com.google.android.material.snackbar.Snackbar</span><span style="color: #f92672">;</span>
+
+<span style="color: #66d9ef">public</span> <span style="color: #66d9ef">class</span> <span style="color: #a6e22e">D2_snackbar</span> <span style="color: #66d9ef">extends</span> <span style="color: #f8f8f2">AppCompatActivity</span> <span style="color: #f92672">{</span>
+
+    <span style="color: #f8f8f2">Button</span> <span style="color: #f8f8f2">snack</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">snack2</span><span style="color: #f92672">;</span>
+    <span style="color: #f8f8f2">ConstraintLayout</span> <span style="color: #f8f8f2">container</span><span style="color: #f92672">;</span>
+
+    <span style="color: #a6e22e">@Override</span>
+    <span style="color: #66d9ef">protected</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">onCreate</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">Bundle</span> <span style="color: #f8f8f2">savedInstanceState</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+        <span style="color: #66d9ef">super</span><span style="color: #f92672">.</span><span style="color: #a6e22e">onCreate</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">savedInstanceState</span><span style="color: #f92672">);</span>
+        <span style="color: #f8f8f2">setContentView</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">layout</span><span style="color: #f92672">.</span><span style="color: #a6e22e">activity_d2_snackbar</span><span style="color: #f92672">);</span>
+
+        <span style="color: #f8f8f2">snack</span> <span style="color: #f92672">=</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">Button</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">snackbar</span><span style="color: #f92672">);</span>
+        <span style="color: #f8f8f2">container</span> <span style="color: #f92672">=</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">ConstraintLayout</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">container</span><span style="color: #f92672">);</span>
+        <span style="color: #f8f8f2">snack2</span> <span style="color: #f92672">=</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">Button</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">snack2</span><span style="color: #f92672">);</span>
+
+        <span style="color: #f8f8f2">snack</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setOnClickListener</span><span style="color: #f92672">(</span><span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">View</span><span style="color: #f92672">.</span><span style="color: #a6e22e">OnClickListener</span><span style="color: #f92672">()</span> <span style="color: #f92672">{</span>
+            <span style="color: #a6e22e">@Override</span>
+            <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">onClick</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">View</span> <span style="color: #f8f8f2">v</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+
+                <span style="color: #f8f8f2">Snackbar</span><span style="color: #f92672">.</span><span style="color: #a6e22e">make</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">container</span><span style="color: #f92672">,</span> <span style="color: #e6db74">&quot;This is me, Snackbar!&quot;</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">Snackbar</span><span style="color: #f92672">.</span><span style="color: #a6e22e">LENGTH_LONG</span><span style="color: #f92672">).</span><span style="color: #a6e22e">show</span><span style="color: #f92672">();</span>
+
+            <span style="color: #f92672">}</span>
+        <span style="color: #f92672">});</span>
+
+        <span style="color: #f8f8f2">snack2</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setOnClickListener</span><span style="color: #f92672">(</span><span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">View</span><span style="color: #f92672">.</span><span style="color: #a6e22e">OnClickListener</span><span style="color: #f92672">()</span> <span style="color: #f92672">{</span>
+            <span style="color: #a6e22e">@Override</span>
+            <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">onClick</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">View</span> <span style="color: #f8f8f2">v</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+
+                <span style="color: #f8f8f2">Snackbar</span><span style="color: #f92672">.</span><span style="color: #a6e22e">make</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">container</span><span style="color: #f92672">,</span> <span style="color: #e6db74">&quot;click the action&quot;</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">Snackbar</span><span style="color: #f92672">.</span><span style="color: #a6e22e">LENGTH_LONG</span><span style="color: #f92672">)</span>
+                        <span style="color: #f92672">.</span><span style="color: #a6e22e">setAction</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;Action&quot;</span><span style="color: #f92672">,</span> <span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">View</span><span style="color: #f92672">.</span><span style="color: #a6e22e">OnClickListener</span><span style="color: #f92672">()</span> <span style="color: #f92672">{</span>
+                            <span style="color: #a6e22e">@Override</span>
+                            <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">onClick</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">View</span> <span style="color: #f8f8f2">view</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+                                <span style="color: #f8f8f2">Toast</span><span style="color: #f92672">.</span><span style="color: #a6e22e">makeText</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">D2_snackbar</span><span style="color: #f92672">.</span><span style="color: #a6e22e">this</span><span style="color: #f92672">,</span> <span style="color: #e6db74">&quot;You clicked action button !&quot;</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">Toast</span><span style="color: #f92672">.</span><span style="color: #a6e22e">LENGTH_SHORT</span><span style="color: #f92672">).</span><span style="color: #a6e22e">show</span><span style="color: #f92672">();</span>
+                            <span style="color: #f92672">}</span>
+                        <span style="color: #f92672">})</span>
+                        <span style="color: #f92672">.</span><span style="color: #a6e22e">show</span><span style="color: #f92672">();</span>
+
+            <span style="color: #f92672">}</span>
+        <span style="color: #f92672">});</span>
+
+
+    <span style="color: #f92672">}</span>
+
+
+
+    <span style="color: #a6e22e">@Override</span>
+    <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">boolean</span> <span style="color: #a6e22e">onCreateOptionsMenu</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">Menu</span> <span style="color: #f8f8f2">menu</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+        <span style="color: #f8f8f2">getMenuInflater</span><span style="color: #f92672">().</span><span style="color: #a6e22e">inflate</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">menu</span><span style="color: #f92672">.</span><span style="color: #a6e22e">menu2</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">menu</span><span style="color: #f92672">);</span>
+        <span style="color: #66d9ef">return</span> <span style="color: #66d9ef">super</span><span style="color: #f92672">.</span><span style="color: #a6e22e">onCreateOptionsMenu</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">menu</span><span style="color: #f92672">);</span>
+    <span style="color: #f92672">}</span>
+
+    <span style="color: #a6e22e">@Override</span>
+    <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">boolean</span> <span style="color: #a6e22e">onOptionsItemSelected</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">MenuItem</span> <span style="color: #f8f8f2">item</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+
+        <span style="color: #66d9ef">if</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">item</span><span style="color: #f92672">.</span><span style="color: #a6e22e">getItemId</span><span style="color: #f92672">()</span> <span style="color: #f92672">==</span> <span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">show_source</span><span style="color: #f92672">){</span>
+            <span style="color: #f8f8f2">Intent</span> <span style="color: #f8f8f2">intent</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">Intent</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">getApplicationContext</span><span style="color: #f92672">(),</span> <span style="color: #f8f8f2">Viewer</span><span style="color: #f92672">.</span><span style="color: #a6e22e">class</span><span style="color: #f92672">);</span>
+            <span style="color: #f8f8f2">intent</span><span style="color: #f92672">.</span><span style="color: #a6e22e">putExtra</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;file&quot;</span><span style="color: #f92672">,</span> <span style="color: #e6db74">&quot;snackbar&quot;</span><span style="color: #f92672">);</span>
+            <span style="color: #f8f8f2">startActivity</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">intent</span><span style="color: #f92672">);</span>
+        <span style="color: #f92672">}</span>
+
+        <span style="color: #66d9ef">return</span> <span style="color: #66d9ef">super</span><span style="color: #f92672">.</span><span style="color: #a6e22e">onOptionsItemSelected</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">item</span><span style="color: #f92672">);</span>
+    <span style="color: #f92672">}</span>
+<span style="color: #f92672">}</span>
+</pre></div>
+
+</body>
+</html>

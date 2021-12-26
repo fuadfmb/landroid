@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>code</title>
+    <style>body { margin: 0px; }</style>
+</head>
+<body>
+	
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">package</span> <span style="color: #f8f8f2">com</span><span style="color: #f92672">.</span><span style="color: #a6e22e">orosoft</span><span style="color: #f92672">.</span><span style="color: #a6e22e">landroid</span><span style="color: #f92672">;</span>
+
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.Manifest</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.content.Context</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.content.Intent</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.content.SharedPreferences</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.content.pm.PackageInfo</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.content.pm.PackageManager</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.os.Build</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.os.Bundle</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.os.Handler</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.animation.Animation</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.animation.AnimationUtils</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.widget.ImageView</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.widget.TextView</span><span style="color: #f92672">;</span>
+
+
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">androidx.appcompat.app.AppCompatActivity</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">androidx.core.app.ActivityCompat</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">androidx.core.content.ContextCompat</span><span style="color: #f92672">;</span>
+
+<span style="color: #66d9ef">public</span> <span style="color: #66d9ef">class</span> <span style="color: #a6e22e">Splash</span> <span style="color: #66d9ef">extends</span> <span style="color: #f8f8f2">AppCompatActivity</span> <span style="color: #f92672">{</span>
+    <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">final</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">SPLASH_DISPLAY_LENGTH</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">3000</span><span style="color: #f92672">;</span>
+    <span style="color: #f8f8f2">ImageView</span> <span style="color: #f8f8f2">myicon</span><span style="color: #f92672">;</span>
+    <span style="color: #f8f8f2">SharedPreferences</span> <span style="color: #f8f8f2">settings</span><span style="color: #f92672">;</span>
+    <span style="color: #f8f8f2">TextView</span> <span style="color: #f8f8f2">versiontxt</span><span style="color: #f92672">;</span>
+
+    <span style="color: #a6e22e">@Override</span>
+    <span style="color: #66d9ef">protected</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">onCreate</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">Bundle</span> <span style="color: #f8f8f2">sis</span><span style="color: #f92672">){</span>
+        <span style="color: #66d9ef">super</span><span style="color: #f92672">.</span><span style="color: #a6e22e">onCreate</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">sis</span><span style="color: #f92672">);</span>
+        <span style="color: #f8f8f2">setContentView</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">layout</span><span style="color: #f92672">.</span><span style="color: #a6e22e">activity_splash</span><span style="color: #f92672">);</span>
+
+
+        <span style="color: #f8f8f2">settings</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">getSharedPreferences</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;settings&quot;</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">Context</span><span style="color: #f92672">.</span><span style="color: #a6e22e">MODE_PRIVATE</span><span style="color: #f92672">);</span>
+        <span style="color: #66d9ef">boolean</span> <span style="color: #f8f8f2">showsplash</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">settings</span><span style="color: #f92672">.</span><span style="color: #a6e22e">getBoolean</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;showsplash&quot;</span><span style="color: #f92672">,</span> <span style="color: #66d9ef">false</span><span style="color: #f92672">);</span>
+
+        <span style="color: #f8f8f2">versiontxt</span> <span style="color: #f92672">=</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">TextView</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">versiontxt</span><span style="color: #f92672">);</span>
+        <span style="color: #f8f8f2">myicon</span> <span style="color: #f92672">=</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">ImageView</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">myicon</span><span style="color: #f92672">);</span>
+        <span style="color: #f8f8f2">Animation</span> <span style="color: #f8f8f2">anim1</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">AnimationUtils</span><span style="color: #f92672">.</span><span style="color: #a6e22e">loadAnimation</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">getApplicationContext</span><span style="color: #f92672">(),</span> <span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">anim</span><span style="color: #f92672">.</span><span style="color: #a6e22e">zoom</span><span style="color: #f92672">);</span>
+        <span style="color: #f8f8f2">myicon</span><span style="color: #f92672">.</span><span style="color: #a6e22e">startAnimation</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">anim1</span><span style="color: #f92672">);</span>
+
+        <span style="color: #75715e">// if splash screen is turned on..</span>
+        <span style="color: #66d9ef">if</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">showsplash</span><span style="color: #f92672">){</span>
+            <span style="color: #66d9ef">new</span> <span style="color: #a6e22e">Handler</span><span style="color: #f92672">().</span><span style="color: #a6e22e">postDelayed</span><span style="color: #f92672">(</span><span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">Runnable</span><span style="color: #f92672">()</span> <span style="color: #f92672">{</span>
+                <span style="color: #a6e22e">@Override</span>
+                <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">run</span><span style="color: #f92672">()</span> <span style="color: #f92672">{</span>
+                    <span style="color: #66d9ef">if</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">Build</span><span style="color: #f92672">.</span><span style="color: #a6e22e">VERSION</span><span style="color: #f92672">.</span><span style="color: #a6e22e">SDK_INT</span> <span style="color: #f92672">&gt;=</span> <span style="color: #f8f8f2">Build</span><span style="color: #f92672">.</span><span style="color: #a6e22e">VERSION_CODES</span><span style="color: #f92672">.</span><span style="color: #a6e22e">M</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+                        <span style="color: #f8f8f2">checkPermission</span><span style="color: #f92672">();</span>
+                    <span style="color: #f92672">}</span>
+                    <span style="color: #f8f8f2">startActivity</span><span style="color: #f92672">(</span><span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">Intent</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">Splash</span><span style="color: #f92672">.</span><span style="color: #a6e22e">this</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">MainActivity</span><span style="color: #f92672">.</span><span style="color: #a6e22e">class</span><span style="color: #f92672">));</span>
+                    <span style="color: #f8f8f2">finish</span><span style="color: #f92672">();</span>
+                <span style="color: #f92672">}</span>
+            <span style="color: #f92672">},</span> <span style="color: #f8f8f2">SPLASH_DISPLAY_LENGTH</span><span style="color: #f92672">);</span>
+        <span style="color: #f92672">}</span>
+        <span style="color: #66d9ef">else</span> <span style="color: #f92672">{</span>
+            <span style="color: #f8f8f2">startActivity</span><span style="color: #f92672">(</span><span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">Intent</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">Splash</span><span style="color: #f92672">.</span><span style="color: #a6e22e">this</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">MainActivity</span><span style="color: #f92672">.</span><span style="color: #a6e22e">class</span><span style="color: #f92672">));</span>
+            <span style="color: #f8f8f2">finish</span><span style="color: #f92672">();</span>
+        <span style="color: #f92672">}</span>
+
+    <span style="color: #f92672">}</span>
+
+    <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">onPause</span><span style="color: #f92672">(){</span>
+        <span style="color: #66d9ef">super</span><span style="color: #f92672">.</span><span style="color: #a6e22e">onPause</span><span style="color: #f92672">();</span>
+        <span style="color: #f8f8f2">finish</span><span style="color: #f92672">();</span>
+    <span style="color: #f92672">}</span>
+
+    <span style="color: #66d9ef">private</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">checkPermission</span><span style="color: #f92672">()</span> <span style="color: #f92672">{</span>
+        <span style="color: #66d9ef">if</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">ContextCompat</span><span style="color: #f92672">.</span><span style="color: #a6e22e">checkSelfPermission</span><span style="color: #f92672">(</span><span style="color: #66d9ef">this</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">Manifest</span><span style="color: #f92672">.</span><span style="color: #a6e22e">permission</span><span style="color: #f92672">.</span><span style="color: #a6e22e">WAKE_LOCK</span><span style="color: #f92672">)</span> <span style="color: #f92672">!=</span>
+                <span style="color: #f8f8f2">PackageManager</span><span style="color: #f92672">.</span><span style="color: #a6e22e">PERMISSION_GRANTED</span> <span style="color: #f92672">||</span>
+                <span style="color: #f8f8f2">ContextCompat</span><span style="color: #f92672">.</span><span style="color: #a6e22e">checkSelfPermission</span><span style="color: #f92672">(</span><span style="color: #66d9ef">this</span><span style="color: #f92672">,</span><span style="color: #f8f8f2">Manifest</span><span style="color: #f92672">.</span><span style="color: #a6e22e">permission</span><span style="color: #f92672">.</span><span style="color: #a6e22e">INTERNET</span><span style="color: #f92672">)</span> <span style="color: #f92672">!=</span>
+                        <span style="color: #f8f8f2">PackageManager</span><span style="color: #f92672">.</span><span style="color: #a6e22e">PERMISSION_GRANTED</span> <span style="color: #f92672">||</span>
+                <span style="color: #f8f8f2">ContextCompat</span><span style="color: #f92672">.</span><span style="color: #a6e22e">checkSelfPermission</span><span style="color: #f92672">(</span><span style="color: #66d9ef">this</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">Manifest</span><span style="color: #f92672">.</span><span style="color: #a6e22e">permission</span><span style="color: #f92672">.</span><span style="color: #a6e22e">ACCESS_NETWORK_STATE</span><span style="color: #f92672">)</span>
+                        <span style="color: #f92672">!=</span> <span style="color: #f8f8f2">PackageManager</span><span style="color: #f92672">.</span><span style="color: #a6e22e">PERMISSION_GRANTED</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span><span style="color: #75715e">//Can add more as per requirement</span>
+            <span style="color: #f8f8f2">ActivityCompat</span><span style="color: #f92672">.</span><span style="color: #a6e22e">requestPermissions</span><span style="color: #f92672">(</span><span style="color: #66d9ef">this</span><span style="color: #f92672">,</span>
+                    <span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">String</span><span style="color: #f92672">[]{</span><span style="color: #f8f8f2">Manifest</span><span style="color: #f92672">.</span><span style="color: #a6e22e">permission</span><span style="color: #f92672">.</span><span style="color: #a6e22e">WAKE_LOCK</span><span style="color: #f92672">,</span>
+                            <span style="color: #f8f8f2">Manifest</span><span style="color: #f92672">.</span><span style="color: #a6e22e">permission</span><span style="color: #f92672">.</span><span style="color: #a6e22e">INTERNET</span><span style="color: #f92672">,</span>
+                            <span style="color: #f8f8f2">Manifest</span><span style="color: #f92672">.</span><span style="color: #a6e22e">permission</span><span style="color: #f92672">.</span><span style="color: #a6e22e">ACCESS_NETWORK_STATE</span><span style="color: #f92672">},</span>
+                    <span style="color: #ae81ff">123</span><span style="color: #f92672">);</span>
+        <span style="color: #f92672">}</span>
+    <span style="color: #f92672">}</span>
+
+<span style="color: #f92672">}</span>
+</pre></div>
+
+
+</body>
+</html>

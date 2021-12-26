@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>code</title>
+    <style>body { margin: 0px; }</style>
+</head>
+<body>
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">package</span> <span style="color: #f8f8f2">com</span><span style="color: #f92672">.</span><span style="color: #a6e22e">orosoft</span><span style="color: #f92672">.</span><span style="color: #a6e22e">landroid</span><span style="color: #f92672">;</span>
+
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.content.Intent</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.os.Bundle</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.Gravity</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.LayoutInflater</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.Menu</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.MenuItem</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.View</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.ViewGroup</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.widget.Button</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.widget.CheckBox</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.widget.CompoundButton</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.widget.TextView</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.widget.Toast</span><span style="color: #f92672">;</span>
+
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">androidx.appcompat.app.AppCompatActivity</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">androidx.appcompat.widget.AppCompatCheckBox</span><span style="color: #f92672">;</span>
+
+<span style="color: #66d9ef">public</span> <span style="color: #66d9ef">class</span> <span style="color: #a6e22e">B4_CheckBox</span> <span style="color: #66d9ef">extends</span> <span style="color: #f8f8f2">AppCompatActivity</span> <span style="color: #f92672">{</span>
+
+<span style="color: #f8f8f2">TextView</span> <span style="color: #f8f8f2">checkbox_state</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">tv_square</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">tv_round</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">tv_star</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">tv_cancel</span><span style="color: #f92672">;</span>
+<span style="color: #f8f8f2">CheckBox</span> <span style="color: #f8f8f2">checkBox</span><span style="color: #f92672">;</span>
+<span style="color: #f8f8f2">AppCompatCheckBox</span> <span style="color: #f8f8f2">check_square</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">check_round</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">check_star</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">check_cancel</span><span style="color: #f92672">;</span>
+
+
+<span style="color: #a6e22e">@Override</span>
+<span style="color: #66d9ef">protected</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">onCreate</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">Bundle</span> <span style="color: #f8f8f2">savedInstanceState</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+    <span style="color: #66d9ef">super</span><span style="color: #f92672">.</span><span style="color: #a6e22e">onCreate</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">savedInstanceState</span><span style="color: #f92672">);</span>
+    <span style="color: #f8f8f2">setContentView</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">layout</span><span style="color: #f92672">.</span><span style="color: #a6e22e">activity_b4_checkbox</span><span style="color: #f92672">);</span>
+
+    <span style="color: #f8f8f2">checkbox_state</span> <span style="color: #f92672">=</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">TextView</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">checkbox_state</span><span style="color: #f92672">);</span>
+    <span style="color: #f8f8f2">checkBox</span> <span style="color: #f92672">=</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">CheckBox</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">checkBox</span><span style="color: #f92672">);</span>
+
+    <span style="color: #f8f8f2">tv_square</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">tv_check_square</span><span style="color: #f92672">);</span>
+    <span style="color: #f8f8f2">tv_round</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">tv_check_round</span><span style="color: #f92672">);</span>
+    <span style="color: #f8f8f2">tv_star</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">tv_check_star</span><span style="color: #f92672">);</span>
+    <span style="color: #f8f8f2">tv_cancel</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">tv_check_cancel</span><span style="color: #f92672">);</span>
+
+    <span style="color: #f8f8f2">check_square</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">check_square</span><span style="color: #f92672">);</span>
+    <span style="color: #f8f8f2">check_round</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">check_round</span><span style="color: #f92672">);</span>
+    <span style="color: #f8f8f2">check_star</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">check_star</span><span style="color: #f92672">);</span>
+    <span style="color: #f8f8f2">check_cancel</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">check_cancel</span><span style="color: #f92672">);</span>
+
+    <span style="color: #f8f8f2">checkbox_state</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setText</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;is not checked&quot;</span><span style="color: #f92672">);</span>
+
+    <span style="color: #75715e">// normal checkbox</span>
+    <span style="color: #f8f8f2">checkBox</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setOnCheckedChangeListener</span><span style="color: #f92672">(</span><span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">CompoundButton</span><span style="color: #f92672">.</span><span style="color: #a6e22e">OnCheckedChangeListener</span><span style="color: #f92672">()</span> <span style="color: #f92672">{</span>
+        <span style="color: #a6e22e">@Override</span>
+        <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">onCheckedChanged</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">CompoundButton</span> <span style="color: #f8f8f2">buttonView</span><span style="color: #f92672">,</span> <span style="color: #66d9ef">boolean</span> <span style="color: #f8f8f2">isChecked</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+            <span style="color: #66d9ef">if</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">isChecked</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+                <span style="color: #f8f8f2">checkbox_state</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setText</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;is checked&quot;</span><span style="color: #f92672">);</span>
+            <span style="color: #f92672">}</span>
+            <span style="color: #66d9ef">else</span> <span style="color: #f92672">{</span>
+                <span style="color: #f8f8f2">checkbox_state</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setText</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;is not checked&quot;</span><span style="color: #f92672">);</span>
+            <span style="color: #f92672">}</span>
+        <span style="color: #f92672">}</span>
+    <span style="color: #f92672">});</span>
+    <span style="color: #75715e">// square checkbox</span>
+    <span style="color: #f8f8f2">check_square</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setOnCheckedChangeListener</span><span style="color: #f92672">(</span><span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">CompoundButton</span><span style="color: #f92672">.</span><span style="color: #a6e22e">OnCheckedChangeListener</span><span style="color: #f92672">()</span> <span style="color: #f92672">{</span>
+        <span style="color: #a6e22e">@Override</span>
+        <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">onCheckedChanged</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">CompoundButton</span> <span style="color: #f8f8f2">buttonView</span><span style="color: #f92672">,</span> <span style="color: #66d9ef">boolean</span> <span style="color: #f8f8f2">isChecked</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+            <span style="color: #66d9ef">if</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">isChecked</span><span style="color: #f92672">){</span>
+                <span style="color: #f8f8f2">tv_square</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setText</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;checked&quot;</span><span style="color: #f92672">);</span>
+            <span style="color: #f92672">}</span>
+            <span style="color: #66d9ef">else</span><span style="color: #f92672">{</span>
+                <span style="color: #f8f8f2">tv_square</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setText</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;not checked&quot;</span><span style="color: #f92672">);</span>
+            <span style="color: #f92672">}</span>
+        <span style="color: #f92672">}</span>
+    <span style="color: #f92672">});</span>
+
+    <span style="color: #75715e">// round checkbox</span>
+    <span style="color: #f8f8f2">check_round</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setOnCheckedChangeListener</span><span style="color: #f92672">(</span><span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">CompoundButton</span><span style="color: #f92672">.</span><span style="color: #a6e22e">OnCheckedChangeListener</span><span style="color: #f92672">()</span> <span style="color: #f92672">{</span>
+        <span style="color: #a6e22e">@Override</span>
+        <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">onCheckedChanged</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">CompoundButton</span> <span style="color: #f8f8f2">buttonView</span><span style="color: #f92672">,</span> <span style="color: #66d9ef">boolean</span> <span style="color: #f8f8f2">isChecked</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+            <span style="color: #66d9ef">if</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">isChecked</span><span style="color: #f92672">){</span>
+                <span style="color: #f8f8f2">tv_round</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setText</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;checked&quot;</span><span style="color: #f92672">);</span>
+            <span style="color: #f92672">}</span>
+            <span style="color: #66d9ef">else</span><span style="color: #f92672">{</span>
+                <span style="color: #f8f8f2">tv_round</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setText</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;not checked&quot;</span><span style="color: #f92672">);</span>
+            <span style="color: #f92672">}</span>
+        <span style="color: #f92672">}</span>
+    <span style="color: #f92672">});</span>
+
+    <span style="color: #75715e">// star checkbox</span>
+    <span style="color: #f8f8f2">check_star</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setOnCheckedChangeListener</span><span style="color: #f92672">(</span><span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">CompoundButton</span><span style="color: #f92672">.</span><span style="color: #a6e22e">OnCheckedChangeListener</span><span style="color: #f92672">()</span> <span style="color: #f92672">{</span>
+        <span style="color: #a6e22e">@Override</span>
+        <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">onCheckedChanged</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">CompoundButton</span> <span style="color: #f8f8f2">buttonView</span><span style="color: #f92672">,</span> <span style="color: #66d9ef">boolean</span> <span style="color: #f8f8f2">isChecked</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+            <span style="color: #66d9ef">if</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">isChecked</span><span style="color: #f92672">){</span>
+                <span style="color: #f8f8f2">tv_star</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setText</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;checked&quot;</span><span style="color: #f92672">);</span>
+            <span style="color: #f92672">}</span>
+            <span style="color: #66d9ef">else</span><span style="color: #f92672">{</span>
+                <span style="color: #f8f8f2">tv_star</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setText</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;not checked&quot;</span><span style="color: #f92672">);</span>
+            <span style="color: #f92672">}</span>
+        <span style="color: #f92672">}</span>
+    <span style="color: #f92672">});</span>
+
+    <span style="color: #75715e">// cancel checkbox</span>
+    <span style="color: #f8f8f2">check_cancel</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setOnCheckedChangeListener</span><span style="color: #f92672">(</span><span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">CompoundButton</span><span style="color: #f92672">.</span><span style="color: #a6e22e">OnCheckedChangeListener</span><span style="color: #f92672">()</span> <span style="color: #f92672">{</span>
+        <span style="color: #a6e22e">@Override</span>
+        <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">onCheckedChanged</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">CompoundButton</span> <span style="color: #f8f8f2">buttonView</span><span style="color: #f92672">,</span> <span style="color: #66d9ef">boolean</span> <span style="color: #f8f8f2">isChecked</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+            <span style="color: #66d9ef">if</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">isChecked</span><span style="color: #f92672">){</span>
+                <span style="color: #f8f8f2">tv_cancel</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setText</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;checked&quot;</span><span style="color: #f92672">);</span>
+            <span style="color: #f92672">}</span>
+            <span style="color: #66d9ef">else</span><span style="color: #f92672">{</span>
+                <span style="color: #f8f8f2">tv_cancel</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setText</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;not checked&quot;</span><span style="color: #f92672">);</span>
+            <span style="color: #f92672">}</span>
+        <span style="color: #f92672">}</span>
+    <span style="color: #f92672">});</span>
+
+
+
+
+<span style="color: #f92672">}</span>
+
+<span style="color: #a6e22e">@Override</span>
+<span style="color: #66d9ef">public</span> <span style="color: #66d9ef">boolean</span> <span style="color: #a6e22e">onCreateOptionsMenu</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">Menu</span> <span style="color: #f8f8f2">menu</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+    <span style="color: #f8f8f2">getMenuInflater</span><span style="color: #f92672">().</span><span style="color: #a6e22e">inflate</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">menu</span><span style="color: #f92672">.</span><span style="color: #a6e22e">menu2</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">menu</span><span style="color: #f92672">);</span>
+    <span style="color: #66d9ef">return</span> <span style="color: #66d9ef">super</span><span style="color: #f92672">.</span><span style="color: #a6e22e">onCreateOptionsMenu</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">menu</span><span style="color: #f92672">);</span>
+<span style="color: #f92672">}</span>
+
+<span style="color: #a6e22e">@Override</span>
+<span style="color: #66d9ef">public</span> <span style="color: #66d9ef">boolean</span> <span style="color: #a6e22e">onOptionsItemSelected</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">MenuItem</span> <span style="color: #f8f8f2">item</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+
+    <span style="color: #66d9ef">if</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">item</span><span style="color: #f92672">.</span><span style="color: #a6e22e">getItemId</span><span style="color: #f92672">()</span> <span style="color: #f92672">==</span> <span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">show_source</span><span style="color: #f92672">){</span>
+        <span style="color: #f8f8f2">Intent</span> <span style="color: #f8f8f2">intent</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">Intent</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">getApplicationContext</span><span style="color: #f92672">(),</span> <span style="color: #f8f8f2">Viewer</span><span style="color: #f92672">.</span><span style="color: #a6e22e">class</span><span style="color: #f92672">);</span>
+        <span style="color: #f8f8f2">intent</span><span style="color: #f92672">.</span><span style="color: #a6e22e">putExtra</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;file&quot;</span><span style="color: #f92672">,</span> <span style="color: #e6db74">&quot;&quot;</span><span style="color: #f92672">);</span>
+        <span style="color: #f8f8f2">startActivity</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">intent</span><span style="color: #f92672">);</span>
+    <span style="color: #f92672">}</span>
+
+    <span style="color: #66d9ef">return</span> <span style="color: #66d9ef">super</span><span style="color: #f92672">.</span><span style="color: #a6e22e">onOptionsItemSelected</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">item</span><span style="color: #f92672">);</span>
+<span style="color: #f92672">}</span>
+
+
+
+<span style="color: #f92672">}</span>
+</pre></div>
+
+
+</body>
+</html>

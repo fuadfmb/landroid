@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>code</title>
+    <style>body { margin: 0px; }</style>
+</head>
+<body>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">package</span> <span style="color: #f8f8f2">com</span><span style="color: #f92672">.</span><span style="color: #a6e22e">orosoft</span><span style="color: #f92672">.</span><span style="color: #a6e22e">landroid</span><span style="color: #f92672">;</span>
+
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.content.Intent</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.net.Uri</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.os.Bundle</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.Menu</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.MenuItem</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.View</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.widget.Button</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.widget.ImageView</span><span style="color: #f92672">;</span>
+
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">androidx.appcompat.app.AppCompatActivity</span><span style="color: #f92672">;</span>
+
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">java.util.Locale</span><span style="color: #f92672">;</span>
+
+<span style="color: #66d9ef">public</span> <span style="color: #66d9ef">class</span> <span style="color: #a6e22e">I11_MoreIntents</span> <span style="color: #66d9ef">extends</span> <span style="color: #f8f8f2">AppCompatActivity</span> <span style="color: #f92672">{</span>
+
+	<span style="color: #f8f8f2">Button</span> <span style="color: #f8f8f2">shareintent</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">urlintent</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">openmap</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">shareimgintent</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">filechooser</span><span style="color: #f92672">;</span>
+	<span style="color: #66d9ef">public</span> <span style="color: #66d9ef">static</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">REQUEST_CODE</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">101</span><span style="color: #f92672">;</span> <span style="color: #75715e">//any random  number</span>
+	<span style="color: #f8f8f2">ImageView</span> <span style="color: #f8f8f2">chosenimage</span><span style="color: #f92672">;</span>
+
+	<span style="color: #a6e22e">@Override</span>
+	<span style="color: #66d9ef">protected</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">onCreate</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">Bundle</span> <span style="color: #f8f8f2">savedInstanceState</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+		<span style="color: #66d9ef">super</span><span style="color: #f92672">.</span><span style="color: #a6e22e">onCreate</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">savedInstanceState</span><span style="color: #f92672">);</span>
+		<span style="color: #f8f8f2">setContentView</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">layout</span><span style="color: #f92672">.</span><span style="color: #a6e22e">activity_i11_moreintents</span><span style="color: #f92672">);</span>
+
+		<span style="color: #f8f8f2">shareintent</span> <span style="color: #f92672">=</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">Button</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">shareintent</span><span style="color: #f92672">);</span>
+		<span style="color: #f8f8f2">urlintent</span> <span style="color: #f92672">=</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">Button</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">urlintent</span><span style="color: #f92672">);</span>
+		<span style="color: #f8f8f2">openmap</span> <span style="color: #f92672">=</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">Button</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">openmap</span><span style="color: #f92672">);</span>
+		<span style="color: #f8f8f2">shareimgintent</span> <span style="color: #f92672">=</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">Button</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">shareimg</span><span style="color: #f92672">);</span>
+		<span style="color: #f8f8f2">filechooser</span> <span style="color: #f92672">=</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">Button</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">filechooser</span><span style="color: #f92672">);</span>
+		<span style="color: #f8f8f2">chosenimage</span> <span style="color: #f92672">=</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">ImageView</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">chosenimage</span><span style="color: #f92672">);</span>
+
+		<span style="color: #f8f8f2">shareintent</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setOnClickListener</span><span style="color: #f92672">(</span><span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">View</span><span style="color: #f92672">.</span><span style="color: #a6e22e">OnClickListener</span><span style="color: #f92672">()</span> <span style="color: #f92672">{</span>
+			<span style="color: #a6e22e">@Override</span>
+			<span style="color: #66d9ef">public</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">onClick</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">View</span> <span style="color: #f8f8f2">v</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+
+				<span style="color: #f8f8f2">Intent</span> <span style="color: #f8f8f2">sendIntent</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">Intent</span><span style="color: #f92672">();</span>
+				<span style="color: #f8f8f2">sendIntent</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setAction</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">Intent</span><span style="color: #f92672">.</span><span style="color: #a6e22e">ACTION_SEND</span><span style="color: #f92672">);</span>
+				<span style="color: #f8f8f2">sendIntent</span><span style="color: #f92672">.</span><span style="color: #a6e22e">putExtra</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">Intent</span><span style="color: #f92672">.</span><span style="color: #a6e22e">EXTRA_TEXT</span><span style="color: #f92672">,</span> <span style="color: #e6db74">&quot;Example Description :\n&quot;</span> <span style="color: #f92672">+</span>
+						<span style="color: #e6db74">&quot;This is App ID :\n&quot;</span> <span style="color: #f92672">+</span> <span style="color: #f8f8f2">getApplicationContext</span><span style="color: #f92672">().</span><span style="color: #a6e22e">getPackageName</span><span style="color: #f92672">()</span> <span style="color: #f92672">);</span>
+				<span style="color: #f8f8f2">sendIntent</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setType</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;text/plain&quot;</span><span style="color: #f92672">);</span>
+				<span style="color: #f8f8f2">startActivity</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">Intent</span><span style="color: #f92672">.</span><span style="color: #a6e22e">createChooser</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">sendIntent</span><span style="color: #f92672">,</span> <span style="color: #e6db74">&quot;share via :&quot;</span><span style="color: #f92672">));</span>
+
+			<span style="color: #f92672">}</span>
+		<span style="color: #f92672">});</span>
+
+		<span style="color: #f8f8f2">urlintent</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setOnClickListener</span><span style="color: #f92672">(</span><span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">View</span><span style="color: #f92672">.</span><span style="color: #a6e22e">OnClickListener</span><span style="color: #f92672">()</span> <span style="color: #f92672">{</span>
+			<span style="color: #a6e22e">@Override</span>
+			<span style="color: #66d9ef">public</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">onClick</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">View</span> <span style="color: #f8f8f2">v</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+
+				<span style="color: #f8f8f2">Intent</span> <span style="color: #f8f8f2">intent</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">Intent</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">Intent</span><span style="color: #f92672">.</span><span style="color: #a6e22e">ACTION_VIEW</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">Uri</span><span style="color: #f92672">.</span><span style="color: #a6e22e">parse</span><span style="color: #f92672">(</span> <span style="color: #e6db74">&quot;http://www.google.com&quot;</span> <span style="color: #f92672">));</span>
+				<span style="color: #f8f8f2">Intent</span> <span style="color: #f8f8f2">urlintent</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">Intent</span><span style="color: #f92672">.</span><span style="color: #a6e22e">createChooser</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">intent</span><span style="color: #f92672">,</span> <span style="color: #e6db74">&quot;Browse with&quot;</span><span style="color: #f92672">);</span>
+				<span style="color: #f8f8f2">startActivity</span><span style="color: #f92672">(</span> <span style="color: #f8f8f2">urlintent</span> <span style="color: #f92672">);</span>
+
+			<span style="color: #f92672">}</span>
+		<span style="color: #f92672">});</span>
+
+		<span style="color: #f8f8f2">openmap</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setOnClickListener</span><span style="color: #f92672">(</span><span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">View</span><span style="color: #f92672">.</span><span style="color: #a6e22e">OnClickListener</span><span style="color: #f92672">()</span> <span style="color: #f92672">{</span>
+			<span style="color: #a6e22e">@Override</span>
+			<span style="color: #66d9ef">public</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">onClick</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">View</span> <span style="color: #f8f8f2">v</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+
+				<span style="color: #f8f8f2">String</span> <span style="color: #f8f8f2">uri</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">String</span><span style="color: #f92672">.</span><span style="color: #a6e22e">format</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">Locale</span><span style="color: #f92672">.</span><span style="color: #a6e22e">ENGLISH</span><span style="color: #f92672">,</span> <span style="color: #e6db74">&quot;http://maps.google.com/maps?q=loc:%f,%f&quot;</span><span style="color: #f92672">,</span> <span style="color: #ae81ff">8.9919845</span><span style="color: #f92672">,</span><span style="color: #ae81ff">38.7731445</span><span style="color: #f92672">);</span>
+				<span style="color: #f8f8f2">Intent</span> <span style="color: #f8f8f2">intent</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">Intent</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">Intent</span><span style="color: #f92672">.</span><span style="color: #a6e22e">ACTION_VIEW</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">Uri</span><span style="color: #f92672">.</span><span style="color: #a6e22e">parse</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">uri</span><span style="color: #f92672">));</span>
+				<span style="color: #f8f8f2">startActivity</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">intent</span><span style="color: #f92672">);</span>
+
+			<span style="color: #f92672">}</span>
+		<span style="color: #f92672">});</span>
+
+		<span style="color: #f8f8f2">shareimgintent</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setOnClickListener</span><span style="color: #f92672">(</span><span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">View</span><span style="color: #f92672">.</span><span style="color: #a6e22e">OnClickListener</span><span style="color: #f92672">()</span> <span style="color: #f92672">{</span>
+			<span style="color: #a6e22e">@Override</span>
+			<span style="color: #66d9ef">public</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">onClick</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">View</span> <span style="color: #f8f8f2">v</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+
+				<span style="color: #f8f8f2">Intent</span> <span style="color: #f8f8f2">shareIntent</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">Intent</span><span style="color: #f92672">();</span>
+				<span style="color: #f8f8f2">shareIntent</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setAction</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">Intent</span><span style="color: #f92672">.</span><span style="color: #a6e22e">ACTION_SEND</span><span style="color: #f92672">);</span>
+				<span style="color: #f8f8f2">String</span> <span style="color: #f8f8f2">packageName</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">getApplicationContext</span><span style="color: #f92672">().</span><span style="color: #a6e22e">getPackageName</span><span style="color: #f92672">();</span>
+				<span style="color: #f8f8f2">Uri</span> <span style="color: #f8f8f2">myimage</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">Uri</span><span style="color: #f92672">.</span><span style="color: #a6e22e">parse</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;android.resource://&quot;</span> <span style="color: #f92672">+</span> <span style="color: #f8f8f2">packageName</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&quot;/drawable/img1&quot;</span><span style="color: #f92672">);</span>
+				<span style="color: #f8f8f2">shareIntent</span><span style="color: #f92672">.</span><span style="color: #a6e22e">putExtra</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">Intent</span><span style="color: #f92672">.</span><span style="color: #a6e22e">EXTRA_STREAM</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">myimage</span><span style="color: #f92672">);</span>
+				<span style="color: #f8f8f2">shareIntent</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setType</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;image/jpeg&quot;</span><span style="color: #f92672">);</span>
+				<span style="color: #f8f8f2">startActivity</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">Intent</span><span style="color: #f92672">.</span><span style="color: #a6e22e">createChooser</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">shareIntent</span><span style="color: #f92672">,</span> <span style="color: #e6db74">&quot;Share to&quot;</span><span style="color: #f92672">));</span>
+
+			<span style="color: #f92672">}</span>
+		<span style="color: #f92672">});</span>
+
+		<span style="color: #f8f8f2">filechooser</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setOnClickListener</span><span style="color: #f92672">(</span><span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">View</span><span style="color: #f92672">.</span><span style="color: #a6e22e">OnClickListener</span><span style="color: #f92672">()</span> <span style="color: #f92672">{</span>
+			<span style="color: #a6e22e">@Override</span>
+			<span style="color: #66d9ef">public</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">onClick</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">View</span> <span style="color: #f8f8f2">v</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+
+				<span style="color: #f8f8f2">Intent</span> <span style="color: #f8f8f2">gallery</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">Intent</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">Intent</span><span style="color: #f92672">.</span><span style="color: #a6e22e">ACTION_PICK</span><span style="color: #f92672">);</span>
+				<span style="color: #f8f8f2">gallery</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setType</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;image/*&quot;</span><span style="color: #f92672">);</span>
+				<span style="color: #f8f8f2">startActivityForResult</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">gallery</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">REQUEST_CODE</span><span style="color: #f92672">);</span>
+
+			<span style="color: #f92672">}</span>
+		<span style="color: #f92672">});</span>
+
+	<span style="color: #f92672">}</span>
+
+	<span style="color: #a6e22e">@Override</span>
+	<span style="color: #66d9ef">public</span> <span style="color: #66d9ef">boolean</span> <span style="color: #a6e22e">onCreateOptionsMenu</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">Menu</span> <span style="color: #f8f8f2">menu</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+		<span style="color: #f8f8f2">getMenuInflater</span><span style="color: #f92672">().</span><span style="color: #a6e22e">inflate</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">menu</span><span style="color: #f92672">.</span><span style="color: #a6e22e">menu2</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">menu</span><span style="color: #f92672">);</span>
+		<span style="color: #66d9ef">return</span> <span style="color: #66d9ef">super</span><span style="color: #f92672">.</span><span style="color: #a6e22e">onCreateOptionsMenu</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">menu</span><span style="color: #f92672">);</span>
+	<span style="color: #f92672">}</span>
+
+	<span style="color: #a6e22e">@Override</span>
+	<span style="color: #66d9ef">public</span> <span style="color: #66d9ef">boolean</span> <span style="color: #a6e22e">onOptionsItemSelected</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">MenuItem</span> <span style="color: #f8f8f2">item</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+
+		<span style="color: #66d9ef">if</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">item</span><span style="color: #f92672">.</span><span style="color: #a6e22e">getItemId</span><span style="color: #f92672">()</span> <span style="color: #f92672">==</span> <span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">show_source</span><span style="color: #f92672">){</span>
+			<span style="color: #f8f8f2">Intent</span> <span style="color: #f8f8f2">intent</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">Intent</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">getApplicationContext</span><span style="color: #f92672">(),</span> <span style="color: #f8f8f2">Viewer</span><span style="color: #f92672">.</span><span style="color: #a6e22e">class</span><span style="color: #f92672">);</span>
+			<span style="color: #f8f8f2">intent</span><span style="color: #f92672">.</span><span style="color: #a6e22e">putExtra</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;file&quot;</span><span style="color: #f92672">,</span> <span style="color: #e6db74">&quot;&quot;</span><span style="color: #f92672">);</span>
+			<span style="color: #f8f8f2">startActivity</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">intent</span><span style="color: #f92672">);</span>
+		<span style="color: #f92672">}</span>
+
+		<span style="color: #66d9ef">return</span> <span style="color: #66d9ef">super</span><span style="color: #f92672">.</span><span style="color: #a6e22e">onOptionsItemSelected</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">item</span><span style="color: #f92672">);</span>
+	<span style="color: #f92672">}</span>
+
+	<span style="color: #a6e22e">@Override</span>
+	<span style="color: #66d9ef">protected</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">onActivityResult</span><span style="color: #f92672">(</span><span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">requestCode</span><span style="color: #f92672">,</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">resultCode</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">Intent</span> <span style="color: #f8f8f2">data</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+		<span style="color: #66d9ef">super</span><span style="color: #f92672">.</span><span style="color: #a6e22e">onActivityResult</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">requestCode</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">resultCode</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">data</span><span style="color: #f92672">);</span>
+
+		<span style="color: #f8f8f2">Uri</span> <span style="color: #f8f8f2">imguri</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">null</span><span style="color: #f92672">;</span>
+
+		<span style="color: #66d9ef">if</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">requestCode</span> <span style="color: #f92672">==</span> <span style="color: #f8f8f2">REQUEST_CODE</span> <span style="color: #f92672">&amp;&amp;</span> <span style="color: #f8f8f2">resultCode</span> <span style="color: #f92672">==</span> <span style="color: #f8f8f2">RESULT_OK</span><span style="color: #f92672">){</span>
+
+			<span style="color: #f8f8f2">imguri</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">data</span><span style="color: #f92672">.</span><span style="color: #a6e22e">getData</span><span style="color: #f92672">();</span>
+			<span style="color: #f8f8f2">chosenimage</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setImageURI</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">imguri</span><span style="color: #f92672">);</span>
+
+			<span style="color: #75715e">/////////////////////////</span>
+			<span style="color: #75715e">///    CHECK IMAGE SIZE</span>
+			<span style="color: #75715e">///</span>
+			<span style="color: #75715e">///    Cursor returnCursor = getContentResolver().query(imguri, null, null, null, null);</span>
+			<span style="color: #75715e">///    //int nameIndex = returnCursor.getColumnIndex(OpenableColumns.DISPLAY_NAME);</span>
+			<span style="color: #75715e">///    int sizeIndex = returnCursor.getColumnIndex(OpenableColumns.SIZE);</span>
+			<span style="color: #75715e">///    returnCursor.moveToFirst();</span>
+			<span style="color: #75715e">///    boolean imagesize = Long.toString(returnCursor.getLong(sizeIndex)).length() &lt;= 6;</span>
+			<span style="color: #75715e">///    if (imagesize){</span>
+			<span style="color: #75715e">///        chosenimage.setImageURI(imguri);</span>
+			<span style="color: #75715e">///        imgSelected = true;</span>
+			<span style="color: #75715e">///    }</span>
+			<span style="color: #75715e">///    else{</span>
+			<span style="color: #75715e">///        Toast.makeText(getApplicationContext(), &quot;please try to minimise the size of the image...&quot; , Toast.LENGTH_LONG).show();</span>
+			<span style="color: #75715e">///        imgSelected = false;</span>
+			<span style="color: #75715e">///        Uri uri = Uri.parse(&quot;android.resource://com.orosoft.astunews/drawable/selectimage&quot;);</span>
+			<span style="color: #75715e">///        selectimg.setImageURI(uri);</span>
+			<span style="color: #75715e">///        imguri = null;</span>
+			<span style="color: #75715e">///    }</span>
+			<span style="color: #75715e">///    returnCursor.close();</span>
+			<span style="color: #75715e">/////////////////////////</span>
+
+		<span style="color: #f92672">}</span>
+	<span style="color: #f92672">}</span>
+
+
+<span style="color: #f92672">}</span>
+</pre></div>
+
+</body>
+</html>

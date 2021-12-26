@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>code</title>
+    <style>body { margin: 0px; }</style>
+</head>
+<body>
+	<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">package</span> <span style="color: #f8f8f2">com</span><span style="color: #f92672">.</span><span style="color: #a6e22e">orosoft</span><span style="color: #f92672">.</span><span style="color: #a6e22e">landroid</span><span style="color: #f92672">;</span>
+
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.app.ProgressDialog</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.content.Intent</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.os.Bundle</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.os.Handler</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.Menu</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.MenuItem</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.View</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.widget.Button</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.widget.ProgressBar</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.widget.TextView</span><span style="color: #f92672">;</span>
+
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">androidx.appcompat.app.AppCompatActivity</span><span style="color: #f92672">;</span>
+
+<span style="color: #66d9ef">public</span> <span style="color: #66d9ef">class</span> <span style="color: #a6e22e">B5_ProgressBar</span> <span style="color: #66d9ef">extends</span> <span style="color: #f8f8f2">AppCompatActivity</span> <span style="color: #f92672">{</span>
+
+    <span style="color: #f8f8f2">Button</span> <span style="color: #f8f8f2">progress_hor</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">progress_ver</span><span style="color: #f92672">;</span>
+
+    <span style="color: #66d9ef">private</span> <span style="color: #f8f8f2">TextView</span> <span style="color: #f8f8f2">txtProgress</span><span style="color: #f92672">;</span>
+    <span style="color: #66d9ef">private</span> <span style="color: #f8f8f2">ProgressBar</span> <span style="color: #f8f8f2">progressBar</span><span style="color: #f92672">,</span><span style="color: #f8f8f2">ringprogressBar</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">ringprogressBar2</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">verprogressbar</span><span style="color: #f92672">;</span>
+    <span style="color: #66d9ef">private</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">pStatus</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f92672">;</span>
+    <span style="color: #66d9ef">private</span> <span style="color: #f8f8f2">Handler</span> <span style="color: #f8f8f2">handler</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">Handler</span><span style="color: #f92672">();</span>
+
+    <span style="color: #a6e22e">@Override</span>
+    <span style="color: #66d9ef">protected</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">onCreate</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">Bundle</span> <span style="color: #f8f8f2">savedInstanceState</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+        <span style="color: #66d9ef">super</span><span style="color: #f92672">.</span><span style="color: #a6e22e">onCreate</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">savedInstanceState</span><span style="color: #f92672">);</span>
+        <span style="color: #f8f8f2">setContentView</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">layout</span><span style="color: #f92672">.</span><span style="color: #a6e22e">activity_b5_progressbar</span><span style="color: #f92672">);</span>
+
+        <span style="color: #f8f8f2">progress_hor</span> <span style="color: #f92672">=</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">Button</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">progress_hor</span><span style="color: #f92672">);</span>
+        <span style="color: #f8f8f2">progress_ver</span> <span style="color: #f92672">=</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">Button</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">progress_ver</span><span style="color: #f92672">);</span>
+        <span style="color: #75715e">//customprogress2 = (ProgressBar) findViewById(R.id.customprogress2);</span>
+        <span style="color: #f8f8f2">ringprogressBar</span> <span style="color: #f92672">=</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">ProgressBar</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">ringprogressBar</span><span style="color: #f92672">);</span>
+        <span style="color: #f8f8f2">verprogressbar</span> <span style="color: #f92672">=</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">ProgressBar</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">verprogressBar</span><span style="color: #f92672">);</span>
+        <span style="color: #f8f8f2">ringprogressBar2</span> <span style="color: #f92672">=</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">ProgressBar</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">ringprogressBar2</span><span style="color: #f92672">);</span>
+        <span style="color: #f8f8f2">txtProgress</span> <span style="color: #f92672">=</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">TextView</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">txtProgress</span><span style="color: #f92672">);</span>
+        <span style="color: #f8f8f2">progressBar</span> <span style="color: #f92672">=</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">ProgressBar</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">progressBar</span><span style="color: #f92672">);</span>
+
+<span style="color: #75715e">//        ringprogressBar.setSecondaryProgress(100);</span>
+<span style="color: #75715e">//        verprogressbar.setSecondaryProgress(100);</span>
+
+        <span style="color: #66d9ef">new</span> <span style="color: #a6e22e">Thread</span><span style="color: #f92672">(</span><span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">Runnable</span><span style="color: #f92672">()</span> <span style="color: #f92672">{</span>
+            <span style="color: #a6e22e">@Override</span>
+            <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">run</span><span style="color: #f92672">()</span> <span style="color: #f92672">{</span>
+                <span style="color: #66d9ef">while</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">pStatus</span> <span style="color: #f92672">&lt;=</span> <span style="color: #ae81ff">100</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+                    <span style="color: #f8f8f2">handler</span><span style="color: #f92672">.</span><span style="color: #a6e22e">post</span><span style="color: #f92672">(</span><span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">Runnable</span><span style="color: #f92672">()</span> <span style="color: #f92672">{</span>
+                        <span style="color: #a6e22e">@Override</span>
+                        <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">run</span><span style="color: #f92672">()</span> <span style="color: #f92672">{</span>
+                            <span style="color: #f8f8f2">progressBar</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setProgress</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">pStatus</span><span style="color: #f92672">);</span>
+                            <span style="color: #f8f8f2">ringprogressBar</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setProgress</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">pStatus</span><span style="color: #f92672">);</span>
+                            <span style="color: #f8f8f2">ringprogressBar</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setSecondaryProgress</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">pStatus</span><span style="color: #f92672">+</span><span style="color: #ae81ff">5</span><span style="color: #f92672">);</span>
+                            <span style="color: #f8f8f2">verprogressbar</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setProgress</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">pStatus</span><span style="color: #f92672">);</span>
+                            <span style="color: #f8f8f2">verprogressbar</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setSecondaryProgress</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">pStatus</span><span style="color: #f92672">+</span><span style="color: #ae81ff">5</span><span style="color: #f92672">);</span>
+                            <span style="color: #f8f8f2">ringprogressBar2</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setProgress</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">pStatus</span><span style="color: #f92672">);</span>
+                            <span style="color: #f8f8f2">ringprogressBar2</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setSecondaryProgress</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">pStatus</span><span style="color: #f92672">+</span><span style="color: #ae81ff">5</span><span style="color: #f92672">);</span>
+
+                            <span style="color: #f8f8f2">txtProgress</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setText</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">pStatus</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&quot; %&quot;</span><span style="color: #f92672">);</span>
+                        <span style="color: #f92672">}</span>
+                    <span style="color: #f92672">});</span>
+                    <span style="color: #66d9ef">try</span> <span style="color: #f92672">{</span>
+                        <span style="color: #f8f8f2">Thread</span><span style="color: #f92672">.</span><span style="color: #a6e22e">sleep</span><span style="color: #f92672">(</span><span style="color: #ae81ff">100</span><span style="color: #f92672">);</span>
+                    <span style="color: #f92672">}</span> <span style="color: #66d9ef">catch</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">InterruptedException</span> <span style="color: #f8f8f2">e</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+                        <span style="color: #f8f8f2">e</span><span style="color: #f92672">.</span><span style="color: #a6e22e">printStackTrace</span><span style="color: #f92672">();</span>
+                    <span style="color: #f92672">}</span>
+                    <span style="color: #f8f8f2">pStatus</span><span style="color: #f92672">++;</span>
+                <span style="color: #f92672">}</span>
+            <span style="color: #f92672">}</span>
+        <span style="color: #f92672">}).</span><span style="color: #a6e22e">start</span><span style="color: #f92672">();</span>
+
+
+
+
+        <span style="color: #f8f8f2">progress_hor</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setOnClickListener</span><span style="color: #f92672">(</span><span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">View</span><span style="color: #f92672">.</span><span style="color: #a6e22e">OnClickListener</span><span style="color: #f92672">()</span> <span style="color: #f92672">{</span>
+            <span style="color: #a6e22e">@Override</span>
+            <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">onClick</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">View</span> <span style="color: #f8f8f2">v</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+                <span style="color: #f8f8f2">ProgressDialog</span> <span style="color: #f8f8f2">pd</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">ProgressDialog</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">B5_ProgressBar</span><span style="color: #f92672">.</span><span style="color: #a6e22e">this</span><span style="color: #f92672">);</span>
+                <span style="color: #f8f8f2">pd</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setProgressStyle</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">ProgressDialog</span><span style="color: #f92672">.</span><span style="color: #a6e22e">STYLE_HORIZONTAL</span><span style="color: #f92672">);</span>
+                <span style="color: #f8f8f2">pd</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setMessage</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;Horizontal progress&quot;</span><span style="color: #f92672">);</span>
+                <span style="color: #f8f8f2">pd</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setIndeterminate</span><span style="color: #f92672">(</span><span style="color: #66d9ef">true</span><span style="color: #f92672">);</span>
+                <span style="color: #f8f8f2">pd</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setCancelable</span><span style="color: #f92672">(</span><span style="color: #66d9ef">true</span><span style="color: #f92672">);</span>
+                <span style="color: #f8f8f2">pd</span><span style="color: #f92672">.</span><span style="color: #a6e22e">show</span><span style="color: #f92672">();</span>
+            <span style="color: #f92672">}</span>
+        <span style="color: #f92672">});</span>
+
+
+        <span style="color: #f8f8f2">progress_ver</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setOnClickListener</span><span style="color: #f92672">(</span><span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">View</span><span style="color: #f92672">.</span><span style="color: #a6e22e">OnClickListener</span><span style="color: #f92672">()</span> <span style="color: #f92672">{</span>
+            <span style="color: #a6e22e">@Override</span>
+            <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">onClick</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">View</span> <span style="color: #f8f8f2">v</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+                <span style="color: #f8f8f2">ProgressDialog</span> <span style="color: #f8f8f2">pd</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">ProgressDialog</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">B5_ProgressBar</span><span style="color: #f92672">.</span><span style="color: #a6e22e">this</span><span style="color: #f92672">);</span>
+                <span style="color: #f8f8f2">pd</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setProgressStyle</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">ProgressDialog</span><span style="color: #f92672">.</span><span style="color: #a6e22e">STYLE_SPINNER</span><span style="color: #f92672">);</span>
+                <span style="color: #f8f8f2">pd</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setMessage</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;Spinner progress&quot;</span><span style="color: #f92672">);</span>
+                <span style="color: #f8f8f2">pd</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setIndeterminate</span><span style="color: #f92672">(</span><span style="color: #66d9ef">true</span><span style="color: #f92672">);</span>
+                <span style="color: #f8f8f2">pd</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setCancelable</span><span style="color: #f92672">(</span><span style="color: #66d9ef">true</span><span style="color: #f92672">);</span>
+                <span style="color: #f8f8f2">pd</span><span style="color: #f92672">.</span><span style="color: #a6e22e">show</span><span style="color: #f92672">();</span>
+            <span style="color: #f92672">}</span>
+        <span style="color: #f92672">});</span>
+
+    <span style="color: #f92672">}</span>
+
+    <span style="color: #a6e22e">@Override</span>
+    <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">boolean</span> <span style="color: #a6e22e">onCreateOptionsMenu</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">Menu</span> <span style="color: #f8f8f2">menu</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+        <span style="color: #f8f8f2">getMenuInflater</span><span style="color: #f92672">().</span><span style="color: #a6e22e">inflate</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">menu</span><span style="color: #f92672">.</span><span style="color: #a6e22e">menu2</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">menu</span><span style="color: #f92672">);</span>
+        <span style="color: #66d9ef">return</span> <span style="color: #66d9ef">super</span><span style="color: #f92672">.</span><span style="color: #a6e22e">onCreateOptionsMenu</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">menu</span><span style="color: #f92672">);</span>
+    <span style="color: #f92672">}</span>
+
+    <span style="color: #a6e22e">@Override</span>
+    <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">boolean</span> <span style="color: #a6e22e">onOptionsItemSelected</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">MenuItem</span> <span style="color: #f8f8f2">item</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+
+        <span style="color: #66d9ef">if</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">item</span><span style="color: #f92672">.</span><span style="color: #a6e22e">getItemId</span><span style="color: #f92672">()</span> <span style="color: #f92672">==</span> <span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">show_source</span><span style="color: #f92672">){</span>
+            <span style="color: #f8f8f2">Intent</span> <span style="color: #f8f8f2">intent</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">Intent</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">getApplicationContext</span><span style="color: #f92672">(),</span> <span style="color: #f8f8f2">Viewer</span><span style="color: #f92672">.</span><span style="color: #a6e22e">class</span><span style="color: #f92672">);</span>
+            <span style="color: #f8f8f2">intent</span><span style="color: #f92672">.</span><span style="color: #a6e22e">putExtra</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;file&quot;</span><span style="color: #f92672">,</span> <span style="color: #e6db74">&quot;&quot;</span><span style="color: #f92672">);</span>
+            <span style="color: #f8f8f2">startActivity</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">intent</span><span style="color: #f92672">);</span>
+        <span style="color: #f92672">}</span>
+
+        <span style="color: #66d9ef">return</span> <span style="color: #66d9ef">super</span><span style="color: #f92672">.</span><span style="color: #a6e22e">onOptionsItemSelected</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">item</span><span style="color: #f92672">);</span>
+    <span style="color: #f92672">}</span>
+
+
+<span style="color: #f92672">}</span>
+</pre></div>
+
+</body>
+</html>

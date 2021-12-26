@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>code</title>
+    <style>body { margin: 0px; }</style>
+</head>
+<body>
+	<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">package</span> <span style="color: #f8f8f2">com</span><span style="color: #f92672">.</span><span style="color: #a6e22e">orosoft</span><span style="color: #f92672">.</span><span style="color: #a6e22e">landroid</span><span style="color: #f92672">;</span>
+
+	<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.content.Intent</span><span style="color: #f92672">;</span>
+	<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.database.Cursor</span><span style="color: #f92672">;</span>
+	<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.database.sqlite.SQLiteDatabase</span><span style="color: #f92672">;</span>
+	<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.os.Bundle</span><span style="color: #f92672">;</span>
+	<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.Menu</span><span style="color: #f92672">;</span>
+	<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.MenuItem</span><span style="color: #f92672">;</span>
+	<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.View</span><span style="color: #f92672">;</span>
+	<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.widget.Button</span><span style="color: #f92672">;</span>
+	<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.widget.EditText</span><span style="color: #f92672">;</span>
+	<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.widget.TextView</span><span style="color: #f92672">;</span>
+	<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.widget.Toast</span><span style="color: #f92672">;</span>
+
+	<span style="color: #f92672">import</span> <span style="color: #f8f8f2">androidx.appcompat.app.AppCompatActivity</span><span style="color: #f92672">;</span>
+
+	<span style="color: #66d9ef">public</span> <span style="color: #66d9ef">class</span> <span style="color: #a6e22e">I8_Sqlite</span> <span style="color: #66d9ef">extends</span> <span style="color: #f8f8f2">AppCompatActivity</span> <span style="color: #f92672">{</span>
+
+	    <span style="color: #f8f8f2">Button</span> <span style="color: #f8f8f2">btnsave</span><span style="color: #f92672">,</span><span style="color: #f8f8f2">btnclear</span><span style="color: #f92672">;</span>
+	    <span style="color: #f8f8f2">EditText</span> <span style="color: #f8f8f2">etNewData</span><span style="color: #f92672">;</span>
+	    <span style="color: #f8f8f2">SQLiteDatabase</span> <span style="color: #f8f8f2">mydatabase</span><span style="color: #f92672">;</span>
+	    <span style="color: #f8f8f2">String</span> <span style="color: #f8f8f2">entriesText</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;&quot;</span><span style="color: #f92672">;</span>
+	    <span style="color: #f8f8f2">TextView</span> <span style="color: #f8f8f2">tventries</span><span style="color: #f92672">;</span>
+
+	    <span style="color: #a6e22e">@Override</span>
+	    <span style="color: #66d9ef">protected</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">onCreate</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">Bundle</span> <span style="color: #f8f8f2">savedInstanceState</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+	        <span style="color: #66d9ef">super</span><span style="color: #f92672">.</span><span style="color: #a6e22e">onCreate</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">savedInstanceState</span><span style="color: #f92672">);</span>
+	        <span style="color: #f8f8f2">setContentView</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">layout</span><span style="color: #f92672">.</span><span style="color: #a6e22e">activity_i8_sqlite</span><span style="color: #f92672">);</span>
+
+	        <span style="color: #f8f8f2">btnsave</span> <span style="color: #f92672">=</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">Button</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">btnsave</span><span style="color: #f92672">);</span>
+	        <span style="color: #f8f8f2">etNewData</span> <span style="color: #f92672">=</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">EditText</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">etyourname</span><span style="color: #f92672">);</span>
+	        <span style="color: #f8f8f2">tventries</span> <span style="color: #f92672">=</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">TextView</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">entries</span><span style="color: #f92672">);</span>
+	        <span style="color: #f8f8f2">btnclear</span> <span style="color: #f92672">=</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">Button</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">btnclear</span><span style="color: #f92672">);</span>
+
+	        <span style="color: #75715e">//create table IF NOT EXISTS!</span>
+	        <span style="color: #f8f8f2">mydatabase</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">openOrCreateDatabase</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;exampledb&quot;</span><span style="color: #f92672">,</span><span style="color: #f8f8f2">MODE_PRIVATE</span><span style="color: #f92672">,</span> <span style="color: #66d9ef">null</span><span style="color: #f92672">);</span>
+	        <span style="color: #f8f8f2">mydatabase</span><span style="color: #f92672">.</span><span style="color: #a6e22e">execSQL</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;CREATE TABLE IF NOT EXISTS exampletable (name VARCHAR);&quot;</span><span style="color: #f92672">);</span>
+
+	        <span style="color: #75715e">//mirror all entries to string array</span>
+	        <span style="color: #f8f8f2">Cursor</span> <span style="color: #f8f8f2">cursor</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">mydatabase</span><span style="color: #f92672">.</span><span style="color: #a6e22e">rawQuery</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;Select * from exampletable&quot;</span><span style="color: #f92672">,</span><span style="color: #66d9ef">null</span><span style="color: #f92672">);</span>
+	        <span style="color: #f8f8f2">cursor</span><span style="color: #f92672">.</span><span style="color: #a6e22e">moveToFirst</span><span style="color: #f92672">();</span>
+	        <span style="color: #75715e">//append first item !!</span>
+	        <span style="color: #66d9ef">if</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">cursor</span><span style="color: #f92672">.</span><span style="color: #a6e22e">getCount</span><span style="color: #f92672">()</span> <span style="color: #f92672">!=</span> <span style="color: #ae81ff">0</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">entriesText</span> <span style="color: #f92672">+=</span> <span style="color: #f8f8f2">cursor</span><span style="color: #f92672">.</span><span style="color: #a6e22e">getString</span><span style="color: #f92672">(</span><span style="color: #ae81ff">0</span><span style="color: #f92672">)</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&quot;\n&quot;</span><span style="color: #f92672">;</span>
+	        <span style="color: #75715e">//prepare a list of string for TVentries</span>
+	        <span style="color: #66d9ef">while</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">cursor</span><span style="color: #f92672">.</span><span style="color: #a6e22e">moveToNext</span><span style="color: #f92672">()){</span>
+	            <span style="color: #f8f8f2">entriesText</span> <span style="color: #f92672">+=</span> <span style="color: #f8f8f2">cursor</span><span style="color: #f92672">.</span><span style="color: #a6e22e">getString</span><span style="color: #f92672">(</span><span style="color: #ae81ff">0</span><span style="color: #f92672">)</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&quot;\n&quot;</span><span style="color: #f92672">;</span>
+	        <span style="color: #f92672">}</span>
+	        <span style="color: #f8f8f2">tventries</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setText</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">entriesText</span><span style="color: #f92672">);</span>
+
+	        <span style="color: #f8f8f2">btnsave</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setOnClickListener</span><span style="color: #f92672">(</span><span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">View</span><span style="color: #f92672">.</span><span style="color: #a6e22e">OnClickListener</span><span style="color: #f92672">()</span> <span style="color: #f92672">{</span>
+	            <span style="color: #a6e22e">@Override</span>
+	            <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">onClick</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">View</span> <span style="color: #f8f8f2">v</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+
+	                <span style="color: #f8f8f2">String</span> <span style="color: #f8f8f2">name</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">etNewData</span><span style="color: #f92672">.</span><span style="color: #a6e22e">getText</span><span style="color: #f92672">().</span><span style="color: #a6e22e">toString</span><span style="color: #f92672">();</span>
+	                <span style="color: #66d9ef">if</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">name</span><span style="color: #f92672">.</span><span style="color: #a6e22e">length</span><span style="color: #f92672">()</span> <span style="color: #f92672">!=</span> <span style="color: #ae81ff">0</span><span style="color: #f92672">){</span>
+
+	                    <span style="color: #f8f8f2">String</span> <span style="color: #f8f8f2">stmt</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">String</span><span style="color: #f92672">.</span><span style="color: #a6e22e">format</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;INSERT INTO exampletable VALUES(&#39;%s&#39;);&quot;</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">name</span><span style="color: #f92672">);</span>
+	                    <span style="color: #f8f8f2">mydatabase</span><span style="color: #f92672">.</span><span style="color: #a6e22e">execSQL</span><span style="color: #f92672">(</span> <span style="color: #f8f8f2">stmt</span> <span style="color: #f92672">);</span>
+	                    <span style="color: #f8f8f2">I8_Sqlite</span><span style="color: #f92672">.</span><span style="color: #a6e22e">this</span><span style="color: #f92672">.</span><span style="color: #a6e22e">recreate</span><span style="color: #f92672">();</span>
+
+	                <span style="color: #f92672">}</span>
+	                <span style="color: #66d9ef">else</span><span style="color: #f92672">{</span>
+	                    <span style="color: #f8f8f2">Toast</span><span style="color: #f92672">.</span><span style="color: #a6e22e">makeText</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">I8_Sqlite</span><span style="color: #f92672">.</span><span style="color: #a6e22e">this</span><span style="color: #f92672">,</span> <span style="color: #e6db74">&quot;type something please...&quot;</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">Toast</span><span style="color: #f92672">.</span><span style="color: #a6e22e">LENGTH_SHORT</span><span style="color: #f92672">).</span><span style="color: #a6e22e">show</span><span style="color: #f92672">();</span>
+	                <span style="color: #f92672">}</span>
+
+	            <span style="color: #f92672">}</span>
+	        <span style="color: #f92672">});</span>
+
+	        <span style="color: #f8f8f2">btnclear</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setOnClickListener</span><span style="color: #f92672">(</span><span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">View</span><span style="color: #f92672">.</span><span style="color: #a6e22e">OnClickListener</span><span style="color: #f92672">()</span> <span style="color: #f92672">{</span>
+	            <span style="color: #a6e22e">@Override</span>
+	            <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">onClick</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">View</span> <span style="color: #f8f8f2">v</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+	                <span style="color: #f8f8f2">String</span> <span style="color: #f8f8f2">stmt</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;DELETE FROM exampletable WHERE 1&quot;</span><span style="color: #f92672">;</span>
+	                <span style="color: #f8f8f2">mydatabase</span><span style="color: #f92672">.</span><span style="color: #a6e22e">execSQL</span><span style="color: #f92672">(</span> <span style="color: #f8f8f2">stmt</span> <span style="color: #f92672">);</span>
+	                <span style="color: #f8f8f2">I8_Sqlite</span><span style="color: #f92672">.</span><span style="color: #a6e22e">this</span><span style="color: #f92672">.</span><span style="color: #a6e22e">recreate</span><span style="color: #f92672">();</span>
+	            <span style="color: #f92672">}</span>
+	        <span style="color: #f92672">});</span>
+
+	    <span style="color: #f92672">}</span>
+
+	    <span style="color: #a6e22e">@Override</span>
+	    <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">boolean</span> <span style="color: #a6e22e">onCreateOptionsMenu</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">Menu</span> <span style="color: #f8f8f2">menu</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+	        <span style="color: #f8f8f2">getMenuInflater</span><span style="color: #f92672">().</span><span style="color: #a6e22e">inflate</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">menu</span><span style="color: #f92672">.</span><span style="color: #a6e22e">menu2</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">menu</span><span style="color: #f92672">);</span>
+	        <span style="color: #66d9ef">return</span> <span style="color: #66d9ef">super</span><span style="color: #f92672">.</span><span style="color: #a6e22e">onCreateOptionsMenu</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">menu</span><span style="color: #f92672">);</span>
+	    <span style="color: #f92672">}</span>
+
+	    <span style="color: #a6e22e">@Override</span>
+	    <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">boolean</span> <span style="color: #a6e22e">onOptionsItemSelected</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">MenuItem</span> <span style="color: #f8f8f2">item</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+
+	        <span style="color: #66d9ef">if</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">item</span><span style="color: #f92672">.</span><span style="color: #a6e22e">getItemId</span><span style="color: #f92672">()</span> <span style="color: #f92672">==</span> <span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">show_source</span><span style="color: #f92672">){</span>
+	            <span style="color: #f8f8f2">Intent</span> <span style="color: #f8f8f2">intent</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">Intent</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">getApplicationContext</span><span style="color: #f92672">(),</span> <span style="color: #f8f8f2">Viewer</span><span style="color: #f92672">.</span><span style="color: #a6e22e">class</span><span style="color: #f92672">);</span>
+	            <span style="color: #f8f8f2">intent</span><span style="color: #f92672">.</span><span style="color: #a6e22e">putExtra</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;file&quot;</span><span style="color: #f92672">,</span> <span style="color: #e6db74">&quot;&quot;</span><span style="color: #f92672">);</span>
+	            <span style="color: #f8f8f2">startActivity</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">intent</span><span style="color: #f92672">);</span>
+	        <span style="color: #f92672">}</span>
+
+	        <span style="color: #66d9ef">return</span> <span style="color: #66d9ef">super</span><span style="color: #f92672">.</span><span style="color: #a6e22e">onOptionsItemSelected</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">item</span><span style="color: #f92672">);</span>
+	    <span style="color: #f92672">}</span>
+
+
+
+	<span style="color: #f92672">}</span>
+	</pre></div>
+
+</body>
+</html>

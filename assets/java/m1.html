@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>code</title>
+    <style>body { margin: 0px; }</style>
+</head>
+<body>
+<!-- HTML generated using hilite.me -->
+<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #000080; font-weight: bold">package</span> com.<span style="color: #FF0000">orosoft</span>.<span style="color: #FF0000">landroid</span>;
+
+<span style="color: #000080; font-weight: bold">import</span> android.app.Dialog;
+<span style="color: #000080; font-weight: bold">import</span> android.content.DialogInterface;
+<span style="color: #000080; font-weight: bold">import</span> android.content.Intent;
+<span style="color: #000080; font-weight: bold">import</span> android.graphics.Color;
+<span style="color: #000080; font-weight: bold">import</span> android.graphics.drawable.ColorDrawable;
+<span style="color: #000080; font-weight: bold">import</span> android.os.Bundle;
+<span style="color: #000080; font-weight: bold">import</span> android.view.LayoutInflater;
+<span style="color: #000080; font-weight: bold">import</span> android.view.Menu;
+<span style="color: #000080; font-weight: bold">import</span> android.view.MenuItem;
+<span style="color: #000080; font-weight: bold">import</span> android.view.View;
+<span style="color: #000080; font-weight: bold">import</span> android.view.Window;
+<span style="color: #000080; font-weight: bold">import</span> android.view.animation.Animation;
+<span style="color: #000080; font-weight: bold">import</span> android.view.animation.AnimationUtils;
+<span style="color: #000080; font-weight: bold">import</span> android.widget.ArrayAdapter;
+<span style="color: #000080; font-weight: bold">import</span> android.widget.Button;
+<span style="color: #000080; font-weight: bold">import</span> android.widget.EditText;
+<span style="color: #000080; font-weight: bold">import</span> android.widget.ImageButton;
+<span style="color: #000080; font-weight: bold">import</span> android.widget.Toast;
+
+<span style="color: #000080; font-weight: bold">import</span> androidx.appcompat.app.AlertDialog;
+<span style="color: #000080; font-weight: bold">import</span> androidx.appcompat.app.AppCompatActivity;
+
+<span style="color: #000080; font-weight: bold">import</span> java.util.ArrayList;
+<span style="color: #000080; font-weight: bold">import</span> java.util.List;
+
+<span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">class</span> M1_AlertDialog <span style="color: #000080; font-weight: bold">extends</span> AppCompatActivity {
+
+    Button alert1, alert2, alert3, alert4, alert5, alert6, alert7;
+
+    @Override
+    <span style="color: #000080; font-weight: bold">protected</span> <span style="color: #000080; font-weight: bold">void</span> onCreate(Bundle savedInstanceState) {
+        <span style="color: #000080; font-weight: bold">super</span>.<span style="color: #FF0000">onCreate</span>(savedInstanceState);
+        setContentView(R.<span style="color: #FF0000">layout</span>.<span style="color: #FF0000">activity_m1_alert</span>);
+
+        alert1 = (Button) findViewById(R.<span style="color: #FF0000">id</span>.<span style="color: #FF0000">alert1</span>);
+        alert2 = (Button) findViewById(R.<span style="color: #FF0000">id</span>.<span style="color: #FF0000">alert2</span>);
+        alert3 = (Button) findViewById(R.<span style="color: #FF0000">id</span>.<span style="color: #FF0000">alert3</span>);
+        alert4 = (Button) findViewById(R.<span style="color: #FF0000">id</span>.<span style="color: #FF0000">alert4</span>);
+        alert5 = (Button) findViewById(R.<span style="color: #FF0000">id</span>.<span style="color: #FF0000">alert5</span>);
+        alert6 = (Button) findViewById(R.<span style="color: #FF0000">id</span>.<span style="color: #FF0000">alert6</span>);
+        alert7 = (Button) findViewById(R.<span style="color: #FF0000">id</span>.<span style="color: #FF0000">alert7</span>);
+
+
+        Animation anim1 = AnimationUtils.<span style="color: #FF0000">loadAnimation</span>(getApplicationContext(), R.<span style="color: #FF0000">anim</span>.<span style="color: #FF0000">bounce</span>);
+        Animation anim2 = AnimationUtils.<span style="color: #FF0000">loadAnimation</span>(getApplicationContext(), R.<span style="color: #FF0000">anim</span>.<span style="color: #FF0000">zoom</span>);
+        alert1.<span style="color: #FF0000">startAnimation</span>(anim1);
+        alert2.<span style="color: #FF0000">startAnimation</span>(anim2);
+        alert3.<span style="color: #FF0000">startAnimation</span>(anim1);
+        alert4.<span style="color: #FF0000">startAnimation</span>(anim2);
+        alert5.<span style="color: #FF0000">startAnimation</span>(anim1);
+        alert6.<span style="color: #FF0000">startAnimation</span>(anim2);
+        alert7.<span style="color: #FF0000">startAnimation</span>(anim1);
+
+        alert1.<span style="color: #FF0000">setOnClickListener</span>(<span style="color: #000080; font-weight: bold">new</span> View.<span style="color: #FF0000">OnClickListener</span>() {
+            @Override
+            <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> onClick(View v) {
+                <span style="color: #000080; font-weight: bold">final</span> AlertDialog.<span style="color: #FF0000">Builder</span> builder = <span style="color: #000080; font-weight: bold">new</span> AlertDialog.<span style="color: #FF0000">Builder</span>(M1_AlertDialog.<span style="color: #FF0000">this</span>);
+                builder.<span style="color: #FF0000">setTitle</span>(<span style="color: #0000FF">&quot;Alert Dialog&quot;</span>)
+                .<span style="color: #FF0000">setMessage</span>(<span style="color: #0000FF">&quot;Description/message goes here...&quot;</span> )
+                .<span style="color: #FF0000">setIcon</span>(R.<span style="color: #FF0000">drawable</span>.<span style="color: #FF0000">info_black</span>)
+                .<span style="color: #FF0000">setPositiveButton</span>(<span style="color: #0000FF">&quot;Ok&quot;</span>, <span style="color: #000080; font-weight: bold">new</span> DialogInterface.<span style="color: #FF0000">OnClickListener</span>() {
+                    @Override
+                    <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> onClick(DialogInterface dialog, <span style="color: #000080; font-weight: bold">int</span> i) {
+                        Toast.<span style="color: #FF0000">makeText</span>(M1_AlertDialog.<span style="color: #FF0000">this</span>, <span style="color: #0000FF">&quot;you clicked Ok&quot;</span>, Toast.<span style="color: #FF0000">LENGTH_SHORT</span>).<span style="color: #FF0000">show</span>();
+                    }
+                })
+                .<span style="color: #FF0000">setNegativeButton</span>(<span style="color: #0000FF">&quot;Cancel&quot;</span>, <span style="color: #000080; font-weight: bold">new</span> DialogInterface.<span style="color: #FF0000">OnClickListener</span>() {
+                    @Override
+                    <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> onClick(DialogInterface dialog, <span style="color: #000080; font-weight: bold">int</span> which) {
+                        Toast.<span style="color: #FF0000">makeText</span>(M1_AlertDialog.<span style="color: #FF0000">this</span>, <span style="color: #0000FF">&quot;you clicked cancel&quot;</span>, Toast.<span style="color: #FF0000">LENGTH_SHORT</span>).<span style="color: #FF0000">show</span>();
+                    }
+                });
+                AlertDialog dialog = builder.<span style="color: #FF0000">create</span>();
+                dialog.<span style="color: #FF0000">show</span>();
+            }
+        });
+
+        alert2.<span style="color: #FF0000">setOnClickListener</span>(<span style="color: #000080; font-weight: bold">new</span> View.<span style="color: #FF0000">OnClickListener</span>() {
+            @Override
+            <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> onClick(View v) {
+                AlertDialog.<span style="color: #FF0000">Builder</span> builder = <span style="color: #000080; font-weight: bold">new</span> AlertDialog.<span style="color: #FF0000">Builder</span>(M1_AlertDialog.<span style="color: #FF0000">this</span>);
+                builder.<span style="color: #FF0000">setTitle</span>(<span style="color: #0000FF">&quot;Choose any item&quot;</span>);
+                <span style="color: #000080; font-weight: bold">final</span> List&lt;String&gt; lables = <span style="color: #000080; font-weight: bold">new</span> ArrayList&lt;&gt;();
+                lables.<span style="color: #FF0000">add</span>(<span style="color: #0000FF">&quot;Item 1&quot;</span>);
+                lables.<span style="color: #FF0000">add</span>(<span style="color: #0000FF">&quot;Item 2&quot;</span>);
+                lables.<span style="color: #FF0000">add</span>(<span style="color: #0000FF">&quot;Item 3&quot;</span>);
+                lables.<span style="color: #FF0000">add</span>(<span style="color: #0000FF">&quot;Item 4&quot;</span>);
+                ArrayAdapter&lt;String&gt; dataAdapter = <span style="color: #000080; font-weight: bold">new</span> ArrayAdapter&lt;String&gt;(M1_AlertDialog.<span style="color: #FF0000">this</span>, android.<span style="color: #FF0000">R</span>.<span style="color: #FF0000">layout</span>.<span style="color: #FF0000">simple_list_item_1</span>, lables);
+                builder.<span style="color: #FF0000">setAdapter</span>(dataAdapter, <span style="color: #000080; font-weight: bold">new</span> DialogInterface.<span style="color: #FF0000">OnClickListener</span>() {
+                    @Override
+                    <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> onClick(DialogInterface dialog, <span style="color: #000080; font-weight: bold">int</span> which) {
+                        Toast.<span style="color: #FF0000">makeText</span>(M1_AlertDialog.<span style="color: #FF0000">this</span>,<span style="color: #0000FF">&quot;You have selected &quot;</span> + lables.<span style="color: #FF0000">get</span>(which),Toast.<span style="color: #FF0000">LENGTH_LONG</span>).<span style="color: #FF0000">show</span>();
+                    }
+                });
+                AlertDialog dialog = builder.<span style="color: #FF0000">create</span>();
+                dialog.<span style="color: #FF0000">show</span>();
+            }
+        });
+
+        alert3.<span style="color: #FF0000">setOnClickListener</span>(<span style="color: #000080; font-weight: bold">new</span> View.<span style="color: #FF0000">OnClickListener</span>() {
+            @Override
+            <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> onClick(View v) {
+                LayoutInflater li = LayoutInflater.<span style="color: #FF0000">from</span>(M1_AlertDialog.<span style="color: #FF0000">this</span>);
+                View promptsView = li.<span style="color: #FF0000">inflate</span>(R.<span style="color: #FF0000">layout</span>.<span style="color: #FF0000">alert_dialog</span>, <span style="color: #000080; font-weight: bold">null</span>);
+                AlertDialog.<span style="color: #FF0000">Builder</span> alertDialogBuilder = <span style="color: #000080; font-weight: bold">new</span> AlertDialog.<span style="color: #FF0000">Builder</span>(M1_AlertDialog.<span style="color: #FF0000">this</span>);
+                alertDialogBuilder.<span style="color: #FF0000">setView</span>(promptsView);
+                <span style="color: #000080; font-weight: bold">final</span> EditText userInput = (EditText) promptsView.<span style="color: #FF0000">findViewById</span>(R.<span style="color: #FF0000">id</span>.<span style="color: #FF0000">etUserInput</span>);
+                alertDialogBuilder.<span style="color: #FF0000">setCancelable</span>(<span style="color: #000080; font-weight: bold">true</span>)
+                .<span style="color: #FF0000">setPositiveButton</span>(<span style="color: #0000FF">&quot;OK&quot;</span>, <span style="color: #000080; font-weight: bold">new</span> DialogInterface.<span style="color: #FF0000">OnClickListener</span>() {
+                    <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> onClick(DialogInterface dialog, <span style="color: #000080; font-weight: bold">int</span> id) {
+                        String x = userInput.<span style="color: #FF0000">getText</span>().<span style="color: #FF0000">toString</span>();
+                        <span style="color: #000080; font-weight: bold">if</span> (x.<span style="color: #FF0000">length</span>() == <span style="color: #0000FF">0</span>){
+                            Toast.<span style="color: #FF0000">makeText</span>(M1_AlertDialog.<span style="color: #FF0000">this</span>, <span style="color: #0000FF">&quot;You clicked Ok&quot;</span>, Toast.<span style="color: #FF0000">LENGTH_SHORT</span>).<span style="color: #FF0000">show</span>();
+                        }
+                        <span style="color: #000080; font-weight: bold">else</span> {
+                            Toast.<span style="color: #FF0000">makeText</span>(M1_AlertDialog.<span style="color: #FF0000">this</span>, <span style="color: #0000FF">&quot;Entered: &quot;</span> + userInput.<span style="color: #FF0000">getText</span>().<span style="color: #FF0000">toString</span>(), Toast.<span style="color: #FF0000">LENGTH_LONG</span>).<span style="color: #FF0000">show</span>();
+                        }
+                    }
+                })
+                .<span style="color: #FF0000">setNegativeButton</span>(<span style="color: #0000FF">&quot;Cancel&quot;</span>, <span style="color: #000080; font-weight: bold">new</span> DialogInterface.<span style="color: #FF0000">OnClickListener</span>() {
+                    <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> onClick(DialogInterface dialog, <span style="color: #000080; font-weight: bold">int</span> id) {
+                        dialog.<span style="color: #FF0000">cancel</span>();
+                        Toast.<span style="color: #FF0000">makeText</span>(M1_AlertDialog.<span style="color: #FF0000">this</span>, <span style="color: #0000FF">&quot;You clicked Cancel&quot;</span>, Toast.<span style="color: #FF0000">LENGTH_SHORT</span>).<span style="color: #FF0000">show</span>();
+                    }
+                });
+                AlertDialog alertDialog = alertDialogBuilder.<span style="color: #FF0000">create</span>();
+                alertDialog.<span style="color: #FF0000">show</span>();
+            }
+        });
+
+        alert4.<span style="color: #FF0000">setOnClickListener</span>(<span style="color: #000080; font-weight: bold">new</span> View.<span style="color: #FF0000">OnClickListener</span>() {
+            @Override
+            <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> onClick(View v) {
+                Dialog mDialog = <span style="color: #000080; font-weight: bold">new</span> Dialog(M1_AlertDialog.<span style="color: #FF0000">this</span>, R.<span style="color: #FF0000">style</span>.<span style="color: #FF0000">AppBaseTheme</span>);
+                mDialog.<span style="color: #FF0000">setContentView</span>(R.<span style="color: #FF0000">layout</span>.<span style="color: #FF0000">w_fullscreen</span>);
+                mDialog.<span style="color: #FF0000">show</span>();
+            }
+        });
+
+        alert5.<span style="color: #FF0000">setOnClickListener</span>(<span style="color: #000080; font-weight: bold">new</span> View.<span style="color: #FF0000">OnClickListener</span>() {
+            @Override
+            <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> onClick(View v) {
+                Dialog d = <span style="color: #000080; font-weight: bold">new</span> Dialog(M1_AlertDialog.<span style="color: #FF0000">this</span>);
+                d.<span style="color: #FF0000">requestWindowFeature</span>(Window.<span style="color: #FF0000">FEATURE_NO_TITLE</span>);
+                d.<span style="color: #FF0000">getWindow</span>().<span style="color: #FF0000">setBackgroundDrawable</span>(<span style="color: #000080; font-weight: bold">new</span> ColorDrawable(Color.<span style="color: #FF0000">TRANSPARENT</span>));
+                d.<span style="color: #FF0000">setContentView</span>(R.<span style="color: #FF0000">layout</span>.<span style="color: #FF0000">custom_alert</span>);
+                d.<span style="color: #FF0000">show</span>();
+
+            }
+        });
+
+        alert6.<span style="color: #FF0000">setOnClickListener</span>(<span style="color: #000080; font-weight: bold">new</span> View.<span style="color: #FF0000">OnClickListener</span>() {
+            @Override
+            <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> onClick(View v) {
+                AlertDialog.<span style="color: #FF0000">Builder</span> builder = <span style="color: #000080; font-weight: bold">new</span> AlertDialog.<span style="color: #FF0000">Builder</span>(M1_AlertDialog.<span style="color: #FF0000">this</span>);
+                View view = getLayoutInflater().<span style="color: #FF0000">inflate</span>(R.<span style="color: #FF0000">layout</span>.<span style="color: #FF0000">custom_alert2</span>, <span style="color: #000080; font-weight: bold">null</span>);
+                builder.<span style="color: #FF0000">setView</span>(view);
+                <span style="color: #000080; font-weight: bold">final</span> AlertDialog d = builder.<span style="color: #FF0000">create</span>();
+                d.<span style="color: #FF0000">getWindow</span>().<span style="color: #FF0000">setBackgroundDrawable</span>(<span style="color: #000080; font-weight: bold">new</span> ColorDrawable(Color.<span style="color: #FF0000">TRANSPARENT</span>));
+                d.<span style="color: #FF0000">show</span>();
+
+                Button yes = (Button) view.<span style="color: #FF0000">findViewById</span>(R.<span style="color: #FF0000">id</span>.<span style="color: #FF0000">btnyes</span>);
+                ImageButton cancel = (ImageButton) view.<span style="color: #FF0000">findViewById</span>(R.<span style="color: #FF0000">id</span>.<span style="color: #FF0000">btncancel</span>);
+
+                yes.<span style="color: #FF0000">setOnClickListener</span>(<span style="color: #000080; font-weight: bold">new</span> View.<span style="color: #FF0000">OnClickListener</span>() {
+                    @Override
+                    <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> onClick(View v) {
+                        d.<span style="color: #FF0000">cancel</span>();
+                        Toast.<span style="color: #FF0000">makeText</span>(M1_AlertDialog.<span style="color: #FF0000">this</span>, <span style="color: #0000FF">&quot;You accepted the terms!&quot;</span>, Toast.<span style="color: #FF0000">LENGTH_SHORT</span>).<span style="color: #FF0000">show</span>();
+                    }
+                });
+
+                cancel.<span style="color: #FF0000">setOnClickListener</span>(<span style="color: #000080; font-weight: bold">new</span> View.<span style="color: #FF0000">OnClickListener</span>() {
+                    @Override
+                    <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> onClick(View v) {
+                        d.<span style="color: #FF0000">cancel</span>();
+                        Toast.<span style="color: #FF0000">makeText</span>(M1_AlertDialog.<span style="color: #FF0000">this</span>, <span style="color: #0000FF">&quot;You clicked exit!&quot;</span>, Toast.<span style="color: #FF0000">LENGTH_SHORT</span>).<span style="color: #FF0000">show</span>();
+                    }
+                });
+
+            }
+        });
+
+        alert7.<span style="color: #FF0000">setOnClickListener</span>(<span style="color: #000080; font-weight: bold">new</span> View.<span style="color: #FF0000">OnClickListener</span>() {
+            @Override
+            <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> onClick(View v) {
+                AlertDialog.<span style="color: #FF0000">Builder</span> builder = <span style="color: #000080; font-weight: bold">new</span> AlertDialog.<span style="color: #FF0000">Builder</span>( M1_AlertDialog.<span style="color: #FF0000">this</span> );
+                AlertDialog dialog = builder.<span style="color: #FF0000">create</span>();
+                dialog.<span style="color: #FF0000">setTitle</span>(<span style="color: #0000FF">&quot;Animated Dialog&quot;</span>);
+                dialog.<span style="color: #FF0000">setMessage</span>(<span style="color: #0000FF">&quot;Description goes here...&quot;</span>);
+                dialog.<span style="color: #FF0000">setCancelable</span>(<span style="color: #000080; font-weight: bold">true</span>);
+                dialog.<span style="color: #FF0000">getWindow</span>().<span style="color: #FF0000">getAttributes</span>().<span style="color: #FF0000">windowAnimations</span> = R.<span style="color: #FF0000">style</span>.<span style="color: #FF0000">alertDialog</span>;
+                dialog.<span style="color: #FF0000">show</span>();
+            }
+        });
+
+    }
+
+    @Override
+    <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">boolean</span> onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().<span style="color: #FF0000">inflate</span>(R.<span style="color: #FF0000">menu</span>.<span style="color: #FF0000">menu2</span>, menu);
+        <span style="color: #000080; font-weight: bold">return</span> <span style="color: #000080; font-weight: bold">super</span>.<span style="color: #FF0000">onCreateOptionsMenu</span>(menu);
+    }
+
+    @Override
+    <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">boolean</span> onOptionsItemSelected(MenuItem item) {
+
+        <span style="color: #000080; font-weight: bold">if</span> (item.<span style="color: #FF0000">getItemId</span>() == R.<span style="color: #FF0000">id</span>.<span style="color: #FF0000">show_source</span>) {
+            Intent intent = <span style="color: #000080; font-weight: bold">new</span> Intent(getApplicationContext(), Viewer.<span style="color: #FF0000">class</span>);
+            intent.<span style="color: #FF0000">putExtra</span>(<span style="color: #0000FF">&quot;file&quot;</span>, <span style="color: #0000FF">&quot;&quot;</span>);
+            startActivity(intent);
+        }
+
+        <span style="color: #000080; font-weight: bold">return</span> <span style="color: #000080; font-weight: bold">super</span>.<span style="color: #FF0000">onOptionsItemSelected</span>(item);
+    }
+
+
+}
+</pre></div>
+
+
+</body>
+</html>

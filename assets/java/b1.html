@@ -1,0 +1,103 @@
+<!-- HTML generated using hilite.me -->
+<style>
+    body {
+        margin: 0px;
+    }
+</style>
+
+<div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">package</span> <span style="color: #f8f8f2">com</span><span style="color: #f92672">.</span><span style="color: #a6e22e">orosoft</span><span style="color: #f92672">.</span><span style="color: #a6e22e">landroid</span><span style="color: #f92672">;</span>
+
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.content.Intent</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.os.Bundle</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.Gravity</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.LayoutInflater</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.Menu</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.MenuItem</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.View</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.ViewGroup</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.animation.Animation</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.view.animation.AnimationUtils</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.widget.Button</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.widget.TextView</span><span style="color: #f92672">;</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">android.widget.Toast</span><span style="color: #f92672">;</span>
+
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">androidx.appcompat.app.AppCompatActivity</span><span style="color: #f92672">;</span>
+
+
+<span style="color: #66d9ef">public</span> <span style="color: #66d9ef">class</span> <span style="color: #a6e22e">B1_Toast</span> <span style="color: #66d9ef">extends</span> <span style="color: #f8f8f2">AppCompatActivity</span> <span style="color: #f92672">{</span>
+
+    <span style="color: #f8f8f2">Button</span> <span style="color: #f8f8f2">normaltoast</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">customtoast</span><span style="color: #f92672">;</span>
+
+    <span style="color: #a6e22e">@Override</span>
+    <span style="color: #66d9ef">protected</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">onCreate</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">Bundle</span> <span style="color: #f8f8f2">savedInstanceState</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+        <span style="color: #66d9ef">super</span><span style="color: #f92672">.</span><span style="color: #a6e22e">onCreate</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">savedInstanceState</span><span style="color: #f92672">);</span>
+        <span style="color: #f8f8f2">setContentView</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">layout</span><span style="color: #f92672">.</span><span style="color: #a6e22e">activity_b1_toast</span><span style="color: #f92672">);</span>
+
+        <span style="color: #f8f8f2">normaltoast</span> <span style="color: #f92672">=</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">Button</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">normaltoast</span><span style="color: #f92672">);</span>
+        <span style="color: #f8f8f2">customtoast</span> <span style="color: #f92672">=</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">Button</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">customtoast</span><span style="color: #f92672">);</span>
+
+        <span style="color: #f8f8f2">Animation</span> <span style="color: #f8f8f2">anim1</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">AnimationUtils</span><span style="color: #f92672">.</span><span style="color: #a6e22e">loadAnimation</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">getApplicationContext</span><span style="color: #f92672">(),</span> <span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">anim</span><span style="color: #f92672">.</span><span style="color: #a6e22e">bounce</span><span style="color: #f92672">);</span>
+        <span style="color: #f8f8f2">normaltoast</span><span style="color: #f92672">.</span><span style="color: #a6e22e">startAnimation</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">anim1</span><span style="color: #f92672">);</span>
+
+        <span style="color: #f8f8f2">Animation</span> <span style="color: #f8f8f2">anim2</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">AnimationUtils</span><span style="color: #f92672">.</span><span style="color: #a6e22e">loadAnimation</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">getApplicationContext</span><span style="color: #f92672">(),</span> <span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">anim</span><span style="color: #f92672">.</span><span style="color: #a6e22e">bounce</span><span style="color: #f92672">);</span>
+        <span style="color: #f8f8f2">customtoast</span><span style="color: #f92672">.</span><span style="color: #a6e22e">startAnimation</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">anim2</span><span style="color: #f92672">);</span>
+
+        <span style="color: #f8f8f2">normaltoast</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setOnClickListener</span><span style="color: #f92672">(</span><span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">View</span><span style="color: #f92672">.</span><span style="color: #a6e22e">OnClickListener</span><span style="color: #f92672">()</span> <span style="color: #f92672">{</span>
+            <span style="color: #a6e22e">@Override</span>
+            <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">onClick</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">View</span> <span style="color: #f8f8f2">v</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+                <span style="color: #f8f8f2">showNormalToast</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;Hello, this is me. a Toast!&quot;</span><span style="color: #f92672">);</span>
+            <span style="color: #f92672">}</span>
+
+        <span style="color: #f92672">});</span>
+
+        <span style="color: #f8f8f2">customtoast</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setOnClickListener</span><span style="color: #f92672">(</span><span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">View</span><span style="color: #f92672">.</span><span style="color: #a6e22e">OnClickListener</span><span style="color: #f92672">()</span> <span style="color: #f92672">{</span>
+            <span style="color: #a6e22e">@Override</span>
+            <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">onClick</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">View</span> <span style="color: #f8f8f2">v</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+                <span style="color: #f8f8f2">showCustomToast</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;Message sent!&quot;</span><span style="color: #f92672">,</span> <span style="color: #e6db74">&quot;Message sent successfully !&quot;</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">Toast</span><span style="color: #f92672">.</span><span style="color: #a6e22e">LENGTH_LONG</span><span style="color: #f92672">);</span>
+            <span style="color: #f92672">}</span>
+        <span style="color: #f92672">});</span>
+
+    <span style="color: #f92672">}</span>
+
+    
+
+    <span style="color: #a6e22e">@Override</span>
+    <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">boolean</span> <span style="color: #a6e22e">onCreateOptionsMenu</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">Menu</span> <span style="color: #f8f8f2">menu</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+        <span style="color: #f8f8f2">getMenuInflater</span><span style="color: #f92672">().</span><span style="color: #a6e22e">inflate</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">menu</span><span style="color: #f92672">.</span><span style="color: #a6e22e">menu2</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">menu</span><span style="color: #f92672">);</span>
+        <span style="color: #66d9ef">return</span> <span style="color: #66d9ef">super</span><span style="color: #f92672">.</span><span style="color: #a6e22e">onCreateOptionsMenu</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">menu</span><span style="color: #f92672">);</span>
+    <span style="color: #f92672">}</span>
+
+    <span style="color: #a6e22e">@Override</span>
+    <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">boolean</span> <span style="color: #a6e22e">onOptionsItemSelected</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">MenuItem</span> <span style="color: #f8f8f2">item</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+
+        <span style="color: #66d9ef">if</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">item</span><span style="color: #f92672">.</span><span style="color: #a6e22e">getItemId</span><span style="color: #f92672">()</span> <span style="color: #f92672">==</span> <span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">show_source</span><span style="color: #f92672">){</span>
+            <span style="color: #f8f8f2">Intent</span> <span style="color: #f8f8f2">intent</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">Intent</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">getApplicationContext</span><span style="color: #f92672">(),</span> <span style="color: #f8f8f2">Viewer</span><span style="color: #f92672">.</span><span style="color: #a6e22e">class</span><span style="color: #f92672">);</span>
+            <span style="color: #f8f8f2">intent</span><span style="color: #f92672">.</span><span style="color: #a6e22e">putExtra</span><span style="color: #f92672">(</span><span style="color: #e6db74">&quot;file&quot;</span><span style="color: #f92672">,</span> <span style="color: #e6db74">&quot;toast&quot;</span><span style="color: #f92672">);</span>
+            <span style="color: #f8f8f2">startActivity</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">intent</span><span style="color: #f92672">);</span>
+        <span style="color: #f92672">}</span>
+
+        <span style="color: #66d9ef">return</span> <span style="color: #66d9ef">super</span><span style="color: #f92672">.</span><span style="color: #a6e22e">onOptionsItemSelected</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">item</span><span style="color: #f92672">);</span>
+    <span style="color: #f92672">}</span>
+
+    <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">showCustomToast</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">String</span> <span style="color: #f8f8f2">msgTitle</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">String</span> <span style="color: #f8f8f2">msgDesc</span><span style="color: #f92672">,</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">length</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+        <span style="color: #f8f8f2">LayoutInflater</span> <span style="color: #f8f8f2">inflater</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">getLayoutInflater</span><span style="color: #f92672">();</span>
+        <span style="color: #f8f8f2">View</span> <span style="color: #f8f8f2">layout</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">inflater</span><span style="color: #f92672">.</span><span style="color: #a6e22e">inflate</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">layout</span><span style="color: #f92672">.</span><span style="color: #a6e22e">toast_layout</span><span style="color: #f92672">,</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">ViewGroup</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">toast_container</span><span style="color: #f92672">));</span>
+        <span style="color: #75715e">// Set the title and description TextViews from our custom layout</span>
+        <span style="color: #f8f8f2">TextView</span> <span style="color: #f8f8f2">title</span> <span style="color: #f92672">=</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">TextView</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">layout</span><span style="color: #f92672">.</span><span style="color: #a6e22e">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">title</span><span style="color: #f92672">);</span>
+        <span style="color: #f8f8f2">title</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setText</span><span style="color: #f92672">(</span> <span style="color: #f8f8f2">msgTitle</span> <span style="color: #f92672">);</span>
+        <span style="color: #f8f8f2">TextView</span> <span style="color: #f8f8f2">description</span> <span style="color: #f92672">=</span> <span style="color: #f92672">(</span><span style="color: #f8f8f2">TextView</span><span style="color: #f92672">)</span> <span style="color: #f8f8f2">layout</span><span style="color: #f92672">.</span><span style="color: #a6e22e">findViewById</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">R</span><span style="color: #f92672">.</span><span style="color: #a6e22e">id</span><span style="color: #f92672">.</span><span style="color: #a6e22e">description</span><span style="color: #f92672">);</span>
+        <span style="color: #f8f8f2">description</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setText</span><span style="color: #f92672">(</span> <span style="color: #f8f8f2">msgDesc</span> <span style="color: #f92672">);</span>
+        <span style="color: #75715e">// Create and show the Toast object</span>
+        <span style="color: #f8f8f2">Toast</span> <span style="color: #f8f8f2">toast</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">Toast</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">getApplicationContext</span><span style="color: #f92672">());</span>
+        <span style="color: #f8f8f2">toast</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setGravity</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">Gravity</span><span style="color: #f92672">.</span><span style="color: #a6e22e">BOTTOM</span><span style="color: #f92672">,</span> <span style="color: #ae81ff">0</span><span style="color: #f92672">,</span> <span style="color: #ae81ff">30</span><span style="color: #f92672">);</span>
+        <span style="color: #f8f8f2">toast</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setDuration</span><span style="color: #f92672">(</span> <span style="color: #f8f8f2">length</span> <span style="color: #f92672">);</span>
+        <span style="color: #f8f8f2">toast</span><span style="color: #f92672">.</span><span style="color: #a6e22e">setView</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">layout</span><span style="color: #f92672">);</span>
+        <span style="color: #f8f8f2">toast</span><span style="color: #f92672">.</span><span style="color: #a6e22e">show</span><span style="color: #f92672">();</span>
+    <span style="color: #f92672">}</span>
+
+    <span style="color: #66d9ef">public</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">showNormalToast</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">String</span> <span style="color: #f8f8f2">message</span><span style="color: #f92672">)</span> <span style="color: #f92672">{</span>
+        <span style="color: #f8f8f2">Toast</span><span style="color: #f92672">.</span><span style="color: #a6e22e">makeText</span><span style="color: #f92672">(</span><span style="color: #f8f8f2">getApplicationContext</span><span style="color: #f92672">(),</span> <span style="color: #f8f8f2">message</span><span style="color: #f92672">,</span> <span style="color: #f8f8f2">Toast</span><span style="color: #f92672">.</span><span style="color: #a6e22e">LENGTH_SHORT</span><span style="color: #f92672">).</span><span style="color: #a6e22e">show</span><span style="color: #f92672">();</span>
+    <span style="color: #f92672">}</span>
+
+<span style="color: #f92672">}</span>
+</pre></div>

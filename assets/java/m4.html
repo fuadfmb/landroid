@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>code</title>
+</head>
+<body>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #000080; font-weight: bold">package</span> com.<span style="color: #FF0000">orosoft</span>.<span style="color: #FF0000">landroid</span>;
+
+<span style="color: #000080; font-weight: bold">import</span> android.app.Notification;
+<span style="color: #000080; font-weight: bold">import</span> android.app.NotificationChannel;
+<span style="color: #000080; font-weight: bold">import</span> android.app.NotificationManager;
+<span style="color: #000080; font-weight: bold">import</span> android.app.PendingIntent;
+<span style="color: #000080; font-weight: bold">import</span> android.content.Context;
+<span style="color: #000080; font-weight: bold">import</span> android.content.Intent;
+<span style="color: #000080; font-weight: bold">import</span> android.graphics.Bitmap;
+<span style="color: #000080; font-weight: bold">import</span> android.graphics.BitmapFactory;
+<span style="color: #000080; font-weight: bold">import</span> android.graphics.Color;
+<span style="color: #000080; font-weight: bold">import</span> android.os.Build;
+<span style="color: #000080; font-weight: bold">import</span> android.os.Bundle;
+<span style="color: #000080; font-weight: bold">import</span> android.view.Menu;
+<span style="color: #000080; font-weight: bold">import</span> android.view.MenuItem;
+<span style="color: #000080; font-weight: bold">import</span> android.view.View;
+<span style="color: #000080; font-weight: bold">import</span> android.widget.Button;
+
+<span style="color: #000080; font-weight: bold">import</span> androidx.appcompat.app.AppCompatActivity;
+<span style="color: #000080; font-weight: bold">import</span> androidx.core.app.NotificationCompat;
+<span style="color: #000080; font-weight: bold">import</span> androidx.core.app.NotificationManagerCompat;
+<span style="color: #000080; font-weight: bold">import</span> androidx.core.content.ContextCompat;
+
+<span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">class</span> M4_Notifications <span style="color: #000080; font-weight: bold">extends</span> AppCompatActivity {
+
+    Button notify_simple, notify_headsup, notify3, notify4;
+    <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">static</span> <span style="color: #000080; font-weight: bold">int</span> CALL_NOTIFY_ID = <span style="color: #0000FF">10001</span>;
+
+
+    @Override
+    <span style="color: #000080; font-weight: bold">protected</span> <span style="color: #000080; font-weight: bold">void</span> onCreate(Bundle savedInstanceState) {
+        <span style="color: #000080; font-weight: bold">super</span>.<span style="color: #FF0000">onCreate</span>(savedInstanceState);
+        setContentView(R.<span style="color: #FF0000">layout</span>.<span style="color: #FF0000">activity_m4_notifications</span>);
+
+        notify_simple = (Button) findViewById(R.<span style="color: #FF0000">id</span>.<span style="color: #FF0000">notify_simple</span>);
+        notify_headsup = (Button) findViewById(R.<span style="color: #FF0000">id</span>.<span style="color: #FF0000">notify2</span>);
+        notify3 = (Button) findViewById(R.<span style="color: #FF0000">id</span>.<span style="color: #FF0000">notify3</span>);
+        notify4 = (Button) findViewById(R.<span style="color: #FF0000">id</span>.<span style="color: #FF0000">notify4</span>);
+
+
+
+        <span style="color: #008800; font-style: italic">//cancel if there are any notifications..</span>
+        NotificationManager notificationMgr = (NotificationManager) M4_Notifications.<span style="color: #FF0000">this</span>.<span style="color: #FF0000">getSystemService</span>(Context.<span style="color: #FF0000">NOTIFICATION_SERVICE</span>);
+        notificationMgr.<span style="color: #FF0000">cancel</span>(M4_Notifications.<span style="color: #FF0000">CALL_NOTIFY_ID</span>);
+        notificationMgr.<span style="color: #FF0000">cancel</span>(<span style="color: #0000FF">999</span>);
+
+
+        notify_simple.<span style="color: #FF0000">setOnClickListener</span>(<span style="color: #000080; font-weight: bold">new</span> View.<span style="color: #FF0000">OnClickListener</span>() {
+            @Override
+            <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> onClick(View v) {
+
+                <span style="color: #000080; font-weight: bold">int</span> notificationID = <span style="color: #0000FF">10101</span>;
+
+                NotificationCompat.<span style="color: #FF0000">Builder</span> builder = <span style="color: #000080; font-weight: bold">new</span> NotificationCompat.<span style="color: #FF0000">Builder</span>(M4_Notifications.<span style="color: #FF0000">this</span>)
+                        .<span style="color: #FF0000">setSmallIcon</span>(R.<span style="color: #FF0000">drawable</span>.<span style="color: #FF0000">info</span>) <span style="color: #008800; font-style: italic">// notification icon</span>
+                        .<span style="color: #FF0000">setContentTitle</span>(<span style="color: #0000FF">&quot;Simple notification&quot;</span>)
+                        .<span style="color: #FF0000">setContentText</span>(<span style="color: #0000FF">&quot;Description goes here...&quot;</span>)
+                        .<span style="color: #FF0000">setAutoCancel</span>(<span style="color: #000080; font-weight: bold">true</span>)
+                        .<span style="color: #FF0000">setDefaults</span>(Notification.<span style="color: #FF0000">DEFAULT_LIGHTS</span> | Notification.<span style="color: #FF0000">DEFAULT_SOUND</span>)
+                        .<span style="color: #FF0000">setWhen</span>(System.<span style="color: #FF0000">currentTimeMillis</span>());
+
+                Intent intent = <span style="color: #000080; font-weight: bold">new</span> Intent(M4_Notifications.<span style="color: #FF0000">this</span>, MainActivity.<span style="color: #FF0000">class</span>);
+                PendingIntent pi = PendingIntent.<span style="color: #FF0000">getActivity</span>(M4_Notifications.<span style="color: #FF0000">this</span>, <span style="color: #0000FF">0</span>, intent, PendingIntent.<span style="color: #FF0000">FLAG_UPDATE_CURRENT</span>);
+                builder.<span style="color: #FF0000">setContentIntent</span>(pi);
+
+                NotificationManager mNotificationManager = (NotificationManager)getSystemService(Context.<span style="color: #FF0000">NOTIFICATION_SERVICE</span>);
+                mNotificationManager.<span style="color: #FF0000">notify</span>(notificationID, builder.<span style="color: #FF0000">build</span>());
+
+            }
+        });
+
+        notify_headsup.<span style="color: #FF0000">setOnClickListener</span>(<span style="color: #000080; font-weight: bold">new</span> View.<span style="color: #FF0000">OnClickListener</span>() {
+            @Override
+            <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> onClick(View v) {
+                <span style="color: #000080; font-weight: bold">int</span> notificationID = <span style="color: #0000FF">10102</span>;
+                <span style="color: #008800; font-style: italic">// this is dynamic, device independent notification</span>
+                Intent i = <span style="color: #000080; font-weight: bold">new</span> Intent(M4_Notifications.<span style="color: #FF0000">this</span>, M4_Notifications.<span style="color: #FF0000">class</span>);
+                i.<span style="color: #FF0000">setAction</span>(<span style="color: #0000FF">&quot;com.example.myapp.notification&quot;</span>);
+                i.<span style="color: #FF0000">putExtra</span>(<span style="color: #0000FF">&quot;some_extra&quot;</span>, <span style="color: #0000FF">&quot;testValue&quot;</span>);
+                i.<span style="color: #FF0000">setFlags</span>(Intent.<span style="color: #FF0000">FLAG_ACTIVITY_REORDER_TO_FRONT</span> | Intent.<span style="color: #FF0000">FLAG_ACTIVITY_SINGLE_TOP</span>);
+                PendingIntent notificationIntent = PendingIntent.<span style="color: #FF0000">getActivity</span>(M4_Notifications.<span style="color: #FF0000">this</span>, <span style="color: #0000FF">999</span>, i,
+                        PendingIntent.<span style="color: #FF0000">FLAG_UPDATE_CURRENT</span>);
+                NotificationCompat.<span style="color: #FF0000">Builder</span> builder = <span style="color: #000080; font-weight: bold">new</span> NotificationCompat.<span style="color: #FF0000">Builder</span>(M4_Notifications.<span style="color: #FF0000">this</span>.<span style="color: #FF0000">getApplicationContext</span>());
+                builder.<span style="color: #FF0000">setContentIntent</span>(notificationIntent);
+                builder.<span style="color: #FF0000">setAutoCancel</span>(<span style="color: #000080; font-weight: bold">true</span>);
+                builder.<span style="color: #FF0000">setLargeIcon</span>(BitmapFactory.<span style="color: #FF0000">decodeResource</span>(M4_Notifications.<span style="color: #FF0000">this</span>.<span style="color: #FF0000">getResources</span>(), R.<span style="color: #FF0000">drawable</span>.<span style="color: #FF0000">person</span>));
+                builder.<span style="color: #FF0000">setSmallIcon</span>(R.<span style="color: #FF0000">drawable</span>.<span style="color: #FF0000">ic_comment</span>);
+                builder.<span style="color: #FF0000">setContentTitle</span>(<span style="color: #0000FF">&quot;John Doe&quot;</span>);
+                builder.<span style="color: #FF0000">setContentText</span>(<span style="color: #0000FF">&quot;Hello&quot;</span>);
+                builder.<span style="color: #FF0000">setTicker</span>(<span style="color: #0000FF">&quot;1&quot;</span>);
+
+                <span style="color: #008800; font-style: italic">//for button click events</span>
+                Intent intent = <span style="color: #000080; font-weight: bold">new</span> Intent(M4_Notifications.<span style="color: #FF0000">this</span>, MainActivity.<span style="color: #FF0000">class</span>);
+                intent.<span style="color: #FF0000">setFlags</span>(Intent.<span style="color: #FF0000">FLAG_ACTIVITY_NEW_TASK</span> | Intent.<span style="color: #FF0000">FLAG_ACTIVITY_CLEAR_TASK</span>);
+                PendingIntent pIntent = PendingIntent.<span style="color: #FF0000">getActivity</span>(M4_Notifications.<span style="color: #FF0000">this</span>, <span style="color: #0000FF">0</span>, intent, PendingIntent.<span style="color: #FF0000">FLAG_ONE_SHOT</span>);
+
+                builder.<span style="color: #FF0000">addAction</span>(R.<span style="color: #FF0000">drawable</span>.<span style="color: #FF0000">ic_call</span>, <span style="color: #0000FF">&quot;VOICE&quot;</span>, pIntent);
+                builder.<span style="color: #FF0000">addAction</span>(R.<span style="color: #FF0000">drawable</span>.<span style="color: #FF0000">ic_videos</span>, <span style="color: #0000FF">&quot;VIDEO&quot;</span>, pIntent);
+                builder.<span style="color: #FF0000">addAction</span>(R.<span style="color: #FF0000">drawable</span>.<span style="color: #FF0000">ic_comment</span>, <span style="color: #0000FF">&quot;MESSAGE&quot;</span>, pIntent);
+
+                builder.<span style="color: #FF0000">setPriority</span>(NotificationCompat.<span style="color: #FF0000">PRIORITY_HIGH</span>);
+                builder.<span style="color: #FF0000">setVisibility</span>(NotificationCompat.<span style="color: #FF0000">VISIBILITY_PUBLIC</span>);
+                <span style="color: #000080; font-weight: bold">if</span> (Build.<span style="color: #FF0000">VERSION</span>.<span style="color: #FF0000">SDK_INT</span> &gt;= <span style="color: #0000FF">21</span>) builder.<span style="color: #FF0000">setVibrate</span>(<span style="color: #000080; font-weight: bold">new</span> <span style="color: #000080; font-weight: bold">long</span>[<span style="color: #0000FF">0</span>]);
+                NotificationManager mNotificationManager = (NotificationManager)getSystemService(Context.<span style="color: #FF0000">NOTIFICATION_SERVICE</span>);
+                mNotificationManager.<span style="color: #FF0000">notify</span>(<span style="color: #0000FF">999</span>, builder.<span style="color: #FF0000">build</span>());
+            }
+        });
+
+        notify3.<span style="color: #FF0000">setOnClickListener</span>(<span style="color: #000080; font-weight: bold">new</span> View.<span style="color: #FF0000">OnClickListener</span>() {
+            @Override
+            <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> onClick(View v) {
+                String message = <span style="color: #0000FF">&quot;This is a custom notification with a very very very very very very very very very very long text. &quot;</span> +
+                        <span style="color: #0000FF">&quot;This is a custom notification with a very very very very very very very very very very long text&quot;</span>;
+                Bitmap largeIcon = BitmapFactory.<span style="color: #FF0000">decodeResource</span>(getResources(), R.<span style="color: #FF0000">drawable</span>.<span style="color: #FF0000">error</span>);
+                NotificationCompat.<span style="color: #FF0000">Builder</span> builder = <span style="color: #000080; font-weight: bold">new</span> NotificationCompat.<span style="color: #FF0000">Builder</span>(M4_Notifications.<span style="color: #FF0000">this</span>);
+                builder.<span style="color: #FF0000">setContentTitle</span>(<span style="color: #0000FF">&quot;Title&quot;</span>).<span style="color: #FF0000">setContentText</span>(message)
+                        .<span style="color: #FF0000">setSmallIcon</span>( R.<span style="color: #FF0000">drawable</span>.<span style="color: #FF0000">error</span> )
+                        .<span style="color: #FF0000">setLargeIcon</span>(largeIcon)
+                        .<span style="color: #FF0000">setAutoCancel</span>(<span style="color: #000080; font-weight: bold">true</span>)
+                        .<span style="color: #FF0000">setWhen</span>(System.<span style="color: #FF0000">currentTimeMillis</span>())
+                        .<span style="color: #FF0000">setStyle</span>(<span style="color: #000080; font-weight: bold">new</span> NotificationCompat.<span style="color: #FF0000">BigTextStyle</span>().<span style="color: #FF0000">bigText</span>(message));
+                Notification notification = builder.<span style="color: #FF0000">build</span>();
+                NotificationManagerCompat notificationManager = NotificationManagerCompat.<span style="color: #FF0000">from</span>(M4_Notifications.<span style="color: #FF0000">this</span>);
+                notificationManager.<span style="color: #FF0000">notify</span>(<span style="color: #0000FF">101</span>, notification);
+            }
+        });
+
+        notify4.<span style="color: #FF0000">setOnClickListener</span>(<span style="color: #000080; font-weight: bold">new</span> View.<span style="color: #FF0000">OnClickListener</span>() {
+            @Override
+            <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">void</span> onClick(View v) {
+
+                <span style="color: #008800; font-style: italic">// Cancel older notification with same id,</span>
+                NotificationManager notificationMgr = (NotificationManager) M4_Notifications.<span style="color: #FF0000">this</span>.<span style="color: #FF0000">getSystemService</span>(Context.<span style="color: #FF0000">NOTIFICATION_SERVICE</span>);
+                notificationMgr.<span style="color: #FF0000">cancel</span>(CALL_NOTIFY_ID);<span style="color: #008800; font-style: italic">// any constant value</span>
+                <span style="color: #008800; font-style: italic">// Notification builder</span>
+                NotificationCompat.<span style="color: #FF0000">Builder</span> builder = <span style="color: #000080; font-weight: bold">new</span> NotificationCompat.<span style="color: #FF0000">Builder</span>(M4_Notifications.<span style="color: #FF0000">this</span>);
+                builder.<span style="color: #FF0000">setContentTitle</span>(<span style="color: #0000FF">&quot;This is a title&quot;</span>)
+                        .<span style="color: #FF0000">setContentText</span>(<span style="color: #0000FF">&quot;Description goes here...&quot;</span>)
+                        .<span style="color: #FF0000">setSmallIcon</span>(R.<span style="color: #FF0000">drawable</span>.<span style="color: #FF0000">error</span>)
+                        .<span style="color: #FF0000">setUsesChronometer</span>(<span style="color: #000080; font-weight: bold">true</span>)
+                        .<span style="color: #FF0000">setDefaults</span>(Notification.<span style="color: #FF0000">DEFAULT_LIGHTS</span>)
+                        .<span style="color: #FF0000">setAutoCancel</span>(<span style="color: #000080; font-weight: bold">true</span>)
+                        .<span style="color: #FF0000">setOngoing</span>(<span style="color: #000080; font-weight: bold">true</span>);
+                <span style="color: #008800; font-style: italic">// dismiss notification after one click</span>
+                builder.<span style="color: #FF0000">setAutoCancel</span>(<span style="color: #000080; font-weight: bold">true</span>);
+                <span style="color: #008800; font-style: italic">// Add action button in the notification</span>
+                Intent intent = <span style="color: #000080; font-weight: bold">new</span> Intent(M4_Notifications.<span style="color: #FF0000">this</span>, MainActivity.<span style="color: #FF0000">class</span>);
+                intent.<span style="color: #FF0000">setFlags</span>(Intent.<span style="color: #FF0000">FLAG_ACTIVITY_NEW_TASK</span> | Intent.<span style="color: #FF0000">FLAG_ACTIVITY_CLEAR_TASK</span>);
+                PendingIntent pIntent = PendingIntent.<span style="color: #FF0000">getActivity</span>(M4_Notifications.<span style="color: #FF0000">this</span>, <span style="color: #0000FF">0</span>, intent, PendingIntent.<span style="color: #FF0000">FLAG_ONE_SHOT</span>);
+                builder.<span style="color: #FF0000">addAction</span>(R.<span style="color: #FF0000">drawable</span>.<span style="color: #FF0000">error</span>, <span style="color: #0000FF">&quot;Cancel&quot;</span>, pIntent);
+
+                <span style="color: #008800; font-style: italic">// Notify using notificationMgr</span>
+                Notification finalNotification = builder.<span style="color: #FF0000">build</span>();
+                notificationMgr.<span style="color: #FF0000">notify</span>(CALL_NOTIFY_ID, finalNotification);
+            }
+        });
+
+
+    }
+
+
+    @Override
+    <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">boolean</span> onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().<span style="color: #FF0000">inflate</span>(R.<span style="color: #FF0000">menu</span>.<span style="color: #FF0000">menu2</span>, menu);
+        <span style="color: #000080; font-weight: bold">return</span> <span style="color: #000080; font-weight: bold">super</span>.<span style="color: #FF0000">onCreateOptionsMenu</span>(menu);
+    }
+
+    @Override
+    <span style="color: #000080; font-weight: bold">public</span> <span style="color: #000080; font-weight: bold">boolean</span> onOptionsItemSelected(MenuItem item) {
+
+        <span style="color: #000080; font-weight: bold">if</span> (item.<span style="color: #FF0000">getItemId</span>() == R.<span style="color: #FF0000">id</span>.<span style="color: #FF0000">show_source</span>){
+            Intent intent = <span style="color: #000080; font-weight: bold">new</span> Intent(getApplicationContext(), Viewer.<span style="color: #FF0000">class</span>);
+            intent.<span style="color: #FF0000">putExtra</span>(<span style="color: #0000FF">&quot;file&quot;</span>, <span style="color: #0000FF">&quot;m4&quot;</span>);
+            startActivity(intent);
+        }
+
+        <span style="color: #000080; font-weight: bold">return</span> <span style="color: #000080; font-weight: bold">super</span>.<span style="color: #FF0000">onOptionsItemSelected</span>(item);
+    }
+
+
+
+}
+</pre></div>
+
+	
+</body>
+</html>
